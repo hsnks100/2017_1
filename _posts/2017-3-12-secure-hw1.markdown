@@ -1,0 +1,42 @@
+---
+layout: post
+tags: 
+title2: 컴퓨터보안 유클리디안 알고리즘 SAGEMATH HW1
+comments: true
+---
+
+
+# SAGEMATH
+SageMath 는 free open-source 수학 S/W 이고 라이센스는 GPL 을 따른다.  
+이 package 는 NumPy, SciPy, matplotlib,, Sympy, Maxima, GAP, FLINT 을 포함한다. 수치계산하기에 좋고 유명한 패키지들을 모아놨다고 보면 된다.  
+[SAGEMATH](http://www.sagemath.org) 에서 관련 정보를 모두 얻을 수 있다.  
+
+
+# 과제
+과제는 GCD 를 구하는 것을 SAGEMATH 로 해보는 것이다.  
+
+# 소스
+
+``` python
+import sys
+from sage.all import *
+
+def GCD(a, b):
+    if b == 0:
+        return a
+    else:
+        return GCD(b, a % b)
+
+print GCD(20, 16) 
+
+print("sage test");
+print(factor(100));
+```
+
+# 설명
+def GCD 는 유클리디안 알고리즘을 적용한 GCD 함수다.
+
+![](../images/comsecure/hw1.png)  
+출력값은 위와 같다.
+
+sagemath 가 정상적으로 설치되었는지 확인하기 위해서 sagemath 패키지 함수인 factor 를 써본 모습이다.
