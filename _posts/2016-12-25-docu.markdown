@@ -1,5 +1,4 @@
 ---
-title:컴퓨터보안 HW1
 layout: post
 tags: 
 comments: true
