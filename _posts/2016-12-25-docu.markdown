@@ -9,7 +9,7 @@ comments: true
 # SAGEMATH
 SageMath 는 free open-source 수학 S/W 이고 라이센스는 GPL 을 따른다.  
 이 package 는 NumPy, SciPy, matplotlib,, Sympy, Maxima, GAP, FLINT 을 포함한다. 수치계산하기에 좋고 유명한 패키지들을 모아놨다고 보면 된다.  
-![SAGEMATH](http://www.sagemath.org) 에서 관련 정보를 모두 얻을 수 있다.  
+[SAGEMATH](http://www.sagemath.org) 에서 관련 정보를 모두 얻을 수 있다.  
 
 
 # 과제
