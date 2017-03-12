@@ -1,6 +1,7 @@
 ---
 layout: post
 tags: 
+title2: 컴보 hw1
 comments: true
 ---
 
