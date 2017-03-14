@@ -1,0 +1,55 @@
+---
+layout: post
+tags: 
+title2: 컴퓨터보안 SAESAR cipher 구현 HW2
+comments: true
+---
+
+
+# SAESAR cipher
+SAESAR cipher 는 고전적인 암호화 방식의 일종인데, 알파벳을 A-Z 부터 나열할 때 모든 알파벳을 shift 시키는 방식으로 한다.  
+예를 들어 ABC 라는 문자열이 있으면, +3 방식으로 seasar 한다고 할 때 DEF 으로 암호화된다.  
+
+# 소스 
+
+``` python
+
+base = ord('a')
+
+def encrypt(plaintext, n):
+    result = '' 
+    for l in plaintext:
+        result += chr((ord(l) - base + n) % 26 + base)
+
+    return result
+
+
+def decrypt(ciphertext, n):
+    result = ''
+
+    for l in ciphertext:
+        result += chr((ord(l) - base - n) % 26 + base)
+
+    return result
+
+
+
+enc = encrypt('helloworld', 3)
+print enc
+print decrypt(enc, 3)
+``` 
+
+# 설명
+
+![](../images/comsecure/hw1.png)  
+
+ord 는 문자의 아스키코드를 가져온다.  
+chr 는 아스키 코드로부터 문자를 생성한다.  
+n 만큼 더한 부분을 출력하는 함수가 encrypt, 역으로 n 만큼 뺀 부분을 출력하는 함수가 decrypt 다.  
+
+
+
+
+
+
+
