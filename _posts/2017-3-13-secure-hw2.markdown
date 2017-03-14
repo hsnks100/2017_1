@@ -41,7 +41,7 @@ print decrypt(enc, 3)
 
 # 설명
 
-![](../images/comsecure/hw1.png)  
+![](../images/comsecure/hw2.png)  
 
 ord 는 문자의 아스키코드를 가져온다.  
 chr 는 아스키 코드로부터 문자를 생성한다.  
