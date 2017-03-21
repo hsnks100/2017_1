@@ -1,0 +1,334 @@
+---
+layout: post
+tags: 
+title2: 시각개론 문자 세그먼테이션 HW1
+comments: true
+---
+
+# 문자 세그먼테이션
+
+![](../images/visual/lotto.jpg)
+
+이번 과제는 위와 같은 삐뚤어진 글자를 영역을 구하고 해당하는 글자를 구하는 과제다.
+
+# TOOL
+
+![](../images/visual/logo.png)
+
+유명한 Computer Vision 툴인 OpenCV 를 이용하여 과제를 했다.
+
+[http://opencv.org](http://opencv.org/) 에서 관련 정보를 모두 얻을 수 있다.
+
+나는 OpenCV 는 C/C++ 를 포함하여 파이썬까지 다양한 언어를 지원하고 있어서 그 중에 파이썬을 이용하여 과제를 했다.
+
+# 그레이 스케일 및 변환
+
+
+``` python
+imgfile = 'lotto.jpg'
+img = cv2.imread(imgfile, cv2.IMREAD_GRAYSCALE)  
+
+M = cv2.getRotationMatrix2D((cols/2,rows/2),-19,1) # rotate
+img = cv2.warpAffine(img,M,(cols,rows))  
+img2 = img[500:700, 140:720] # cut
+rows, cols = img2.shape
+ret, croppedImage = cv2.threshold(img2, 200, 255, cv2.THRESH_BINARY_INV) 
+```
+
+일단 이미지를 원하는 형태로 주무르기 위해서 변환이 필요하다. 일단 기울어져있고, 불필요한 영역들이 많고, 색상값이 필요가 없다.
+
+이를 위해서 위의 코드를 이용하여 회전, 자르기, 스레숄딩을 가한다.  
+
+# 프로젝션 
+
+``` python
+
+def getProjection(img):
+    size = img.shape
+    verticalM = np.zeros(size, dtype=np.uint8) # ?
+    verticalM = cv2.cvtColor(verticalM, cv2.COLOR_GRAY2BGR)
+
+    horizonalM = np.zeros(size, dtype=np.uint8) # ?
+    horizonalM = cv2.cvtColor(horizonalM, cv2.COLOR_GRAY2BGR)
+
+    vertList = []
+    horizList = []
+    for y in range(0, rows):
+        data = img[y, 0:cols]
+        nonzeros =  np.count_nonzero(data)
+        cv2.line(verticalM, (0, y), (nonzeros, y), (0, 0, 255), 1)
+        vertList.append(nonzeros)
+    for x in range(0, cols):
+        data = img[0:rows, x]
+        nonzeros =  np.count_nonzero(data)
+        cv2.line(horizonalM, (x, 0), (x, nonzeros), (0, 0, 255), 1)
+        horizList.append(nonzeros)
+
+    yList = []
+    xList = []
+
+    for idx, y in enumerate(vertList):
+        if vertList[idx] > 0 and (vertList[idx-1] == 0 or vertList[idx+1] == 0):
+            # print idx
+            yList.append(idx)
+            cv2.line(img, (0, idx), (cols, idx), (255, 255, 255), 1)
+
+    for idx, x in enumerate(horizList):
+        if idx - 1 >= 0 and idx + 1 < len(horizList):
+            if horizList[idx] > 10 and (horizList[idx-1] <= 10 or horizList[idx+1] <= 10):
+                cv2.line(img, (idx, 0), (idx, rows), (255, 255, 255), 1)
+                xList.append(idx) 
+
+    for i in range(0, len(yList) - 1):
+        for j in range(0, len(xList) - 1):
+            # print xList[j], yList[i]
+            # print xList[j+1], yList[i+1]
+            getProjectionArr(croppedImage, (xList[j], yList[i]),
+                    (xList[j+1], yList[i+1])) 
+    
+    return horizonalM, verticalM, img
+```
+
+위의 코드는 영역 분할을 위해 프로젝션을 하고 영역 분할을 시각적으로 보여주는 코드다.
+
+다소 길지만 핵심 코드만 보자면, 
+
+``` python
+    for y in range(0, rows):
+        data = img[y, 0:cols]
+        nonzeros =  np.count_nonzero(data)
+        cv2.line(verticalM, (0, y), (nonzeros, y), (0, 0, 255), 1)
+        vertList.append(nonzeros)
+    for x in range(0, cols):
+        data = img[0:rows, x]
+        nonzeros =  np.count_nonzero(data)
+        cv2.line(horizonalM, (x, 0), (x, nonzeros), (0, 0, 255), 1)
+        horizList.append(nonzeros) 
+```
+
+스레숄딩 이후 zero 가 아닌 부분의 개수를 가로로 세고 세로로 세고 하는 부분이다. 이 부분을 거치고 빈 canvas 에 line 을 그리는 것으로 마무리 한다. 
+
+
+![](../images/visual/hw1.png)
+
+수행된 모습은 위와 같다.
+
+# 문자 인식 
+
+
+
+
+# 코드
+
+``` python
+
+import cv2
+import numpy as np
+
+from matplotlib import pyplot as plt
+
+# 15 18 20 26 37 44
+# 01 07 08 16 23 28
+# 04 05 14 20 26 44
+# 01 02 12 15 28 36
+# 02 11 20 21 31 38
+# 0 : [0, 8, 15, 17, 9, 9, 10, 10, 9, 10, 10, 9, 9, 10, 9, 9, 10, 9, 9, 12, 18, 15, 6, 0, 0] [6, 18, 18, 20, 20, 6, 7, 6, 6, 4, 6, 5, 6, 7, 5, 20, 20, 20, 18, 14, 0]
+# 1 : [0, 0, 7, 8, 8, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 0, 0] [0, 0, 0, 0, 3, 3, 3, 19, 21, 21, 21, 20, 0, 0, 0, 0, 0, 0, 0, 0]
+# 2 : [0, 8, 15, 17, 11, 9, 9, 5, 5, 6, 7, 8, 8, 8, 7, 6, 6, 6, 5, 7, 19, 19, 18, 0, 0] [8, 11, 13, 14, 15, 12, 11, 10, 9, 10, 9, 10, 9, 10, 12, 13, 13, 11, 9, 0]
+# 3 : [0, 12, 15, 18, 10, 9, 8, 5, 6, 6, 8, 8, 8, 8, 7, 6, 7, 6, 5, 19, 19, 19, 13, 0, 0] [9, 11, 13, 14, 15, 12, 12, 11, 11, 11, 11, 10, 11, 12, 12, 14, 13, 11, 9, 0]
+# 4 : [0, 5, 7, 9, 10, 11, 10, 10, 9, 11, 9, 9, 9, 9, 9, 18, 19, 19, 18, 5, 4, 4, 2, 0] [3, 5, 7, 8, 10, 11, 11, 11, 11, 10, 9, 9, 9, 13, 21, 22, 22, 20, 4, 0]
+# 5 : [0, 0, 18, 18, 13, 4, 4, 4, 4, 5, 16, 17, 19, 7, 5, 5, 5, 5, 5, 7, 19, 17, 16, 0, 0] [14, 14, 14, 14, 10, 9, 8, 9, 9, 8, 9, 9, 11, 11, 16, 15, 13, 11, 9, 0]
+# 6 : [0, 18, 19, 19, 5, 6, 5, 6, 5, 5, 6, 6, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 0, 0] [3, 3, 3, 3, 3, 3, 3, 10, 12, 15, 16, 12, 12, 12, 11, 10, 8, 7, 4]
+# 7 : [0, 3, 8, 8, 7, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 5, 4, 4, 5, 4, 4, 3, 0, 0] [0, 0, 0, 0, 2, 3, 3, 3, 21, 22, 22, 21, 3, 0, 0, 0, 0, 0, 0, 0]
+# 8 : [0, 4, 14, 16, 10, 9, 9, 9, 9, 11, 18, 16, 18, 11, 9, 9, 9, 9, 9, 12, 19, 17, 14, 0, 0] [16, 19, 21, 21, 12, 9, 9, 9, 9, 8, 8, 9, 8, 12, 21, 21, 19, 17, 13]
+baseNum = [ 
+        ([0, 8, 15, 17, 9, 9, 10, 10, 9, 10, 10, 9, 9, 10, 9, 9, 10, 9, 9, 12, 18, 15, 6, 0, 0], [6, 18, 18, 20, 20, 6, 7, 6, 6, 4, 6, 5, 6, 7, 5, 20, 20, 20, 18, 14, 0]),
+([0, 0, 7, 8, 8, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 0, 0], [0, 0, 0, 0, 3, 3, 3, 19, 21, 21, 21, 20, 0, 0, 0, 0, 0, 0, 0, 0]),
+([0, 8, 15, 17, 11, 9, 9, 5, 5, 6, 7, 8, 8, 8, 7, 6, 6, 6, 5, 7, 19, 19, 18, 0, 0], [8, 11, 13, 14, 15, 12, 11, 10, 9, 10, 9, 10, 9, 10, 12, 13, 13, 11, 9, 0]),
+([0, 12, 15, 18, 10, 9, 8, 5, 6, 6, 8, 8, 8, 8, 7, 6, 7, 6, 5, 19, 19, 19, 13, 0, 0], [9, 11, 13, 14, 15, 12, 12, 11, 11, 11, 11, 10, 11, 12, 12, 14, 13, 11, 9, 0]),
+([0, 5, 7, 9, 10, 11, 10, 10, 9, 11, 9, 9, 9, 9, 9, 18, 19, 19, 18, 5, 4, 4, 2, 0], [3, 5, 7, 8, 10, 11, 11, 11, 11, 10, 9, 9, 9, 13, 21, 22, 22, 20, 4, 0]),
+([0, 0, 18, 18, 13, 4, 4, 4, 4, 5, 16, 17, 19, 7, 5, 5, 5, 5, 5, 7, 19, 17, 16, 0, 0], [14, 14, 14, 14, 10, 9, 8, 9, 9, 8, 9, 9, 11, 11, 16, 15, 13, 11, 9, 0]),
+([0, 18, 19, 19, 5, 6, 5, 6, 5, 5, 6, 6, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 0, 0], [3, 3, 3, 3, 3, 3, 3, 10, 12, 15, 16, 12, 12, 12, 11, 10, 8, 7, 4]),
+([0, 3, 8, 8, 7, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 5, 4, 4, 5, 4, 4, 3, 0, 0], [0, 0, 0, 0, 2, 3, 3, 3, 21, 22, 22, 21, 3, 0, 0, 0, 0, 0, 0, 0]),
+([0, 4, 14, 16, 10, 9, 9, 9, 9, 11, 18, 16, 18, 11, 9, 9, 9, 9, 9, 12, 19, 17, 14, 0, 0], [16, 19, 21, 21, 12, 9, 9, 9, 9, 8, 8, 9, 8, 12, 21, 21, 19, 17, 13])
+]
+
+
+def average(l):
+    return sum(l) / float(len(l))
+
+def dev(l):
+    avg = sum(l) / float(len(l))
+    sume = 0
+    for x in l:
+        sume += (x - avg)*(x - avg)
+
+    return sume / len(l)
+
+def classificationProjection(horiz, vert):
+    curNum = 0
+    minDiff = 99999
+    for i in range(0, 9):
+
+        diff = 0
+
+        # avg = sum(baseNum[i][0]) / float(len(baseNum[i][0]))
+        diff += abs(dev(baseNum[i][0]) - dev(horiz))
+        diff += abs(dev(baseNum[i][1]) - dev(vert))
+        
+
+        # for j in range(0, min(len(horiz), len(baseNum[i][0]))):
+            # diff += abs(horiz[j] - baseNum[i][0][j])
+
+        # for j in range(0, min(len(vert), len(baseNum[i][1]))):
+            # diff += abs(vert[j] - baseNum[i][1][j])
+
+        if minDiff > diff:
+            minDiff = diff
+            curNum = i
+
+    
+    print horiz, vert
+    print curNum
+    # if minDiff < 50:
+
+        # print ""
+    # print curNum, minDiff
+    return curNum
+croppedImage = 0
+
+
+# def classificationProjection(horiz, vert):
+    # pass
+
+
+def getProjectionArr(img, lefttop, rightbottom):
+    minX = lefttop[0]
+    minY = lefttop[1]
+    maxX = rightbottom[0]
+    maxY = rightbottom[1]
+
+    # print minX, maxX
+    # print minY, maxY
+
+    vertProj = []
+    horizProj = []
+    for y in range(minY, maxY + 1):
+
+        nonzeros = np.count_nonzero(img[y, minX:maxX + 1])
+        horizProj.append(nonzeros)
+
+    for x in range(minX, maxX + 1):
+        nonzeros = np.count_nonzero(img[minY:maxY + 1, x])
+        vertProj.append(nonzeros)
+
+
+    if(sum(horizProj) > 20 and sum(vertProj) > 20 and 
+            len(horizProj) > 10 and len(vertProj) > 10): 
+        classificationProjection(horizProj, vertProj)
+
+    # print horizProj, ",", vertProj
+
+    return horizProj, vertProj
+
+
+def getProjection(img):
+    size = img.shape
+    verticalM = np.zeros(size, dtype=np.uint8) # ?
+    verticalM = cv2.cvtColor(verticalM, cv2.COLOR_GRAY2BGR)
+
+    horizonalM = np.zeros(size, dtype=np.uint8) # ?
+    horizonalM = cv2.cvtColor(horizonalM, cv2.COLOR_GRAY2BGR)
+
+    vertList = []
+    horizList = []
+    for y in range(0, rows):
+        data = img[y, 0:cols]
+        # print data
+        nonzeros =  np.count_nonzero(data)
+        cv2.line(verticalM, (0, y), (nonzeros, y), (0, 0, 255), 1)
+        vertList.append(nonzeros)
+    for x in range(0, cols):
+        data = img[0:rows, x]
+        # print data
+        nonzeros =  np.count_nonzero(data)
+        cv2.line(horizonalM, (x, 0), (x, nonzeros), (0, 0, 255), 1)
+        horizList.append(nonzeros)
+        # cv2.line(
+
+    yList = []
+    xList = []
+
+    for idx, y in enumerate(vertList):
+        if vertList[idx] > 0 and (vertList[idx-1] == 0 or vertList[idx+1] == 0):
+            # print idx
+            yList.append(idx)
+            cv2.line(img, (0, idx), (cols, idx), (255, 255, 255), 1)
+
+    for idx, x in enumerate(horizList):
+        if idx - 1 >= 0 and idx + 1 < len(horizList):
+            if horizList[idx] > 10 and (horizList[idx-1] <= 10 or horizList[idx+1] <= 10):
+                cv2.line(img, (idx, 0), (idx, rows), (255, 255, 255), 1)
+                xList.append(idx)
+
+
+    print "--------"
+    for i in range(0, len(yList) - 1):
+        for j in range(0, len(xList) - 1):
+            # print xList[j], yList[i]
+            # print xList[j+1], yList[i+1]
+            getProjectionArr(croppedImage, (xList[j], yList[i]),
+                    (xList[j+1], yList[i+1])) 
+        print ""
+    
+    return horizonalM, verticalM, img
+
+
+
+
+
+
+
+
+imgfile = 'lotto.jpg'
+img = cv2.imread(imgfile, cv2.IMREAD_GRAYSCALE) 
+rows,cols = img.shape
+
+M = cv2.getRotationMatrix2D((cols/2,rows/2),-19,1)
+img = cv2.warpAffine(img,M,(cols,rows))
+# img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+
+
+img2 = img[500:700, 140:720]
+rows, cols = img2.shape
+ret, croppedImage = cv2.threshold(img2, 200, 255, cv2.THRESH_BINARY_INV) 
+
+
+
+
+
+cv2.imshow('main', croppedImage)
+cv2.moveWindow('main', 300, 300)
+
+horizM, vertM, segmentImg = getProjection(croppedImage.copy())
+# plt.imshow(segmentImg, interpolation='bicubic')
+# plt.xticks([]), plt.yticks([])
+# plt.show()
+
+cv2.imshow('new', segmentImg)
+cv2.moveWindow('new', 100, 100)
+cv2.imshow('b', horizM)
+cv2.moveWindow('b', 100 + 0, 100 + rows)
+cv2.imshow('c', vertM)
+cv2.moveWindow('c', 100 + cols, 100 + 0)
+
+while(cv2.waitKey(0) != 25):
+    continue
+
+
+
+# cv2.waitKey(0)
+# plt.imshow(img, cmap='gray', interpolation='bicubic')
+# plt.xticks([]), plt.yticks([])
+# plt.show()
+```
