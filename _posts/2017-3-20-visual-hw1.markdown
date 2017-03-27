@@ -118,21 +118,21 @@ def getProjection(img):
 
 ``` python
 
-def classificationprojection(horiz, vert):
+def classificationProjection(horiz, vert):
     curnum = 0
     mindiff = 99999
     for i in range(0, 9): 
         diff = 0 
-        # avg = sum(basenum[i][0]) / float(len(basenum[i][0]))
-        diff += abs(dev(basenum[i][0]) - dev(horiz))
-        diff += abs(dev(basenum[i][1]) - dev(vert))
+        # avg = sum(baseNum[i][0]) / float(len(baseNum[i][0]))
+        diff += abs(dev(baseNum[i][0]) - dev(horiz))
+        diff += abs(dev(baseNum[i][1]) - dev(vert))
         
 
-        # for j in range(0, min(len(horiz), len(basenum[i][0]))):
-            # diff += abs(horiz[j] - basenum[i][0][j])
+        # for j in range(0, min(len(horiz), len(baseNum[i][0]))):
+            # diff += abs(horiz[j] - baseNum[i][0][j])
 
-        # for j in range(0, min(len(vert), len(basenum[i][1]))):
-            # diff += abs(vert[j] - basenum[i][1][j])
+        # for j in range(0, min(len(vert), len(baseNum[i][1]))):
+            # diff += abs(vert[j] - baseNum[i][1][j])
 
         if mindiff > diff:
             mindiff = diff
