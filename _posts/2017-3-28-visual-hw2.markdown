@@ -29,7 +29,8 @@ def distanceTransform(img):
         for y in range(1, copyImg.shape[0] - 1):
             for x in range(1, copyImg.shape[1] - 1):
                 temp = retImg[y, x]
-                retImg[y, x] = img[y, x] + min(copyImg[y-1, x], copyImg[y + 1, x], copyImg[y, x-1], copyImg[y, x+1])
+                retImg[y, x] = img[y, x] + min(copyImg[y-1, x], \
+                  copyImg[y + 1, x], copyImg[y, x-1], copyImg[y, x+1])
                 if temp != retImg[y, x]:
                     change = True
     return retImg
@@ -52,7 +53,8 @@ def getSkeleton(img):
     for y in range(1, img.shape[0] - 1):
         for x in range(1, img.shape[1] - 1):
             baseValue = copyImg[y, x]
-            if baseValue < copyImg[y - 1, x] or baseValue < copyImg[y + 1, x] or baseValue < copyImg[y, x - 1] or baseValue < copyImg[y, x + 1]:
+            if baseValue < copyImg[y - 1, x] or baseValue < copyImg[y + 1, x] \ 
+              or baseValue < copyImg[y, x - 1] or baseValue < copyImg[y, x + 1]:
                 retImg[y, x] = 0
 
 
@@ -342,7 +344,8 @@ def distanceTransform(img):
         for y in range(1, copyImg.shape[0] - 1):
             for x in range(1, copyImg.shape[1] - 1):
                 temp = retImg[y, x]
-                retImg[y, x] = img[y, x] + min(copyImg[y-1, x], copyImg[y + 1, x], copyImg[y, x-1], copyImg[y, x+1])
+                retImg[y, x] = img[y, x] + min(copyImg[y-1, x], \
+                  copyImg[y + 1, x], copyImg[y, x-1], copyImg[y, x+1])
                 if temp != retImg[y, x]:
                     change = True
     return retImg
@@ -354,7 +357,8 @@ def getSkeleton(img):
     for y in range(1, img.shape[0] - 1):
         for x in range(1, img.shape[1] - 1):
             baseValue = copyImg[y, x]
-            if baseValue < copyImg[y - 1, x] or baseValue < copyImg[y + 1, x] or baseValue < copyImg[y, x - 1] or baseValue < copyImg[y, x + 1]:
+            if baseValue < copyImg[y - 1, x] or baseValue < copyImg[y + 1, x] \ 
+              or baseValue < copyImg[y, x - 1] or baseValue < copyImg[y, x + 1]:
                 retImg[y, x] = 0
 
 
