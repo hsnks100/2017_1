@@ -211,7 +211,176 @@ x7|x6|x5|x4|x3|x2|x1|x0
 
 
 # 결과
+```
+
+m = 0b100011011
+for x in range(0, 0xF+1):
+    for y in range(0, 0xF+1):
+        num = x * 16 + y
+        res = getInv(m, num)
+        print "{:02X}".format(affine(res)),
+    print ""
+의 코드 실행은 다음과 같다.
+
+└─[$] sage sbox_aes.py                                   [17:58:55]
+63 7C 77 7B F2 6B 6F C5 30 01 67 2B FE D7 AB 76 
+CA 82 C9 7D FA 59 47 F0 AD D4 A2 AF 9C A4 72 C0 
+B7 FD 93 26 36 3F F7 CC 34 A5 E5 F1 71 D8 31 15 
+04 C7 23 C3 18 96 05 9A 07 12 80 E2 EB 27 B2 75 
+09 83 2C 1A 1B 6E 5A A0 52 3B D6 B3 29 E3 2F 84 
+53 D1 00 ED 20 FC B1 5B 6A CB BE 39 4A 4C 58 CF 
+D0 EF AA FB 43 4D 33 85 45 F9 02 7F 50 3C 9F A8 
+51 A3 40 8F 92 9D 38 F5 BC B6 DA 21 10 FF F3 D2 
+CD 0C 13 EC 5F 97 44 17 C4 A7 7E 3D 64 5D 19 73 
+60 81 4F DC 22 2A 90 88 46 EE B8 14 DE 5E 0B DB 
+E0 32 3A 0A 49 06 24 5C C2 D3 AC 62 91 95 E4 79 
+E7 C8 37 6D 8D D5 4E A9 6C 56 F4 EA 65 7A AE 08 
+BA 78 25 2E 1C A6 B4 C6 E8 DD 74 1F 4B BD 8B 8A 
+70 3E B5 66 48 03 F6 0E 61 35 57 B9 86 C1 1D 9E 
+E1 F8 98 11 69 D9 8E 94 9B 1E 87 E9 CE 55 28 DF 
+8C A1 89 0D BF E6 42 68 41 99 2D 0F B0 54 BB 16 
+``` 
 
 # 코드
+
+전체 코드는 아래에 첨부한다.
+
+``` python
+
+import sys
+from sage.all import *
+import math
+
+def getMSB(b): 
+    return int(math.log(b, 2))
+
+def div(a, b):
+    Q = 0
+    tempA = a 
+    while True:
+        tempB = b
+        cnt = 0
+        # print bin(tempA), bin(tempB)
+        # print getMSB(tempA), getMSB(tempB)
+        if getMSB(tempA) < getMSB(tempB):
+            break
+        while True:
+            if getMSB(tempA) == getMSB(tempB):
+                break
+            tempB <<= 1
+            cnt += 1
+
+        tempA = tempB ^ tempA
+        Q  += 2 ** cnt
+        if cnt == 0:
+            break
+
+
+
+
+
+    return Q
+
+def mult(a, b):
+    tot = 0
+    for (i, x) in enumerate(bin(b)[:1:-1]):
+        g = int(x) 
+        if g == 1: 
+            tot ^= (a << i)
+    return tot
+
+
+
+
+def getInv(m, b):
+    A1 = 1
+    A2 = 0
+    A3 = m
+
+    B1 = 0
+    B2 = 1
+    B3 = b
+    if B3 == 1:
+        return B2
+    elif B3 == 0:
+        return 0
+
+    # print "{} {} {}".format(bin(A1), bin(A2), bin(A3))
+    # print "{} {} {}".format(bin(B1), bin(B2), bin(B3))
+    # print "----------"
+    i = 0
+    while True: 
+        i += 1
+        Q = div(A3, B3)
+
+
+        T1 = A1 ^ mult(B1 , Q)
+        T2 = A2 ^ mult(B2 , Q)
+        T3 = A3 ^ mult(B3 , Q)
+
+        # print "{} {} {}".format(bin(A1), bin(A2), bin(A3))
+        # print "{} {} {}".format(bin(B1), bin(B2), bin(B3))
+        # print "Q : ", bin(Q)
+        (A1, A2, A3) = (B1, B2, B3)
+        (B1, B2, B3) = (T1, T2, T3)
+        # print "-----"
+        if B3 == 1:
+
+            # print "{} {} {}".format(bin(A1), bin(A2), bin(A3))
+            # print "{} {} {}".format(bin(B1), bin(B2), bin(B3))
+            # print "Q : ", bin(Q)
+            return B2
+        elif B3 == 0:
+            return 0
+
+        # if i > 10:
+            # break
+
+
+def bin2vector(b):
+    v = []
+    for i, x in enumerate(bin(b)[:1:-1]):
+        v.append(int(x))
+
+    while len(v) != 8:
+        v.append(0)
+
+    return vector(v)
+
+
+def affine(inv):
+    vectorInv = bin2vector(inv).row().transpose()
+    c = vector([1, 1, 0, 0, 0, 1, 1, 0]).row().transpose()
+    A = Matrix([[1, 0, 0, 0, 1, 1, 1, 1],
+            [1, 1, 0, 0, 0, 1, 1, 1],
+            [1, 1, 1, 0, 0, 0, 1, 1],
+            [1, 1, 1, 1, 0, 0, 0, 1],
+            [1, 1, 1, 1, 1, 0, 0, 0],
+            [0, 1, 1, 1, 1, 1, 0, 0],
+            [0, 0, 1, 1, 1, 1, 1, 0],
+            [0, 0, 0, 1, 1, 1, 1, 1]]) 
+
+    result = A * vectorInv + c 
+    acc = 0
+    for (i, x) in enumerate(result):
+        acc += (x[0] % 2) * (2 ** i)
+
+
+    return acc
+
+
+
+
+m = 0b100011011
+for x in range(0, 0xF+1):
+    for y in range(0, 0xF+1):
+        num = x * 16 + y
+        res = getInv(m, num)
+        print "{:02X}".format(affine(res)),
+    print ""
+
+
+
+```
 
 
