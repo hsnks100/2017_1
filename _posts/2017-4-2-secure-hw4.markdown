@@ -9,7 +9,7 @@ comments: true
 # AES 
 [기본 구조] AES(Advanced Encryption Standard)의 기본 구조  
 
-![](../images/comsecure/hw4_1png)  
+![](../images/comsecure/hw4_1.png)  
 
 위와 같은 구조로 생겼으며 plaintext 가 10round 를 돌면 cipher text 가 나오는 구조다.
 
