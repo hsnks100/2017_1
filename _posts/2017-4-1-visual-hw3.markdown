@@ -53,11 +53,10 @@ python 으로 코드를 간단히 써보면
 
 하지만 예제로 주어진 사진에서는 결과가 잘 나오지 않았다. 
 
-![](../images/visual/hw3_1.png)
+![](../images/visual/hw3_2.png)
 잘 안되는 모습
 
-![](../images/visual/hw3_2.png)
-
+![](../images/visual/hw3_1.png) 
 다른 이미지로 해보면 어떨까 싶어서 해보았더니 잘 나왔다.
 
 이러한 결과가 나온 이유는 원본 이미지가 0이 매우 많아서 histogram cumulative 시에 0 수치가 매우 높아 일종의 밝기가 개선된 모습이 나왔다.
