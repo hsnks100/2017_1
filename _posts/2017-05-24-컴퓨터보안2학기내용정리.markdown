@@ -1,0 +1,29 @@
+---
+layout: post
+tags: 
+title2: 컴퓨터보안 기말고사 정리
+comments: true
+---
+
+# X.509 Authentication Service
+
+# Public Key Infrastructure
+
+
+# 인증서 기반의 oneway, twoway
+
+# needham-schroeder protocol
+
+needham-schroeder protocol
+등장 A, B, KDC
+
+A 가 KDC 에게 B랑 통신하고 싶다고 함.
+KdC 는 A한테 Ka (A의 비밀키) 로 암호화 해서 Ks, IDb, N1, Ekb[Ks, IDa] 를 보냄.
+Ekb[Ks, IDa] 는 A 가 못 품.
+이 Ekb[Ks, IDa] 를 A가 B 에게 보냄.
+이제 서로 Ks 세션키를 가지게 됨.
+B가 A에게 Ks 로 N2 를 암호화 해서 보냄
+A는 B에게 f(N2) 을 보내서 서로 확인함.
+
+## 
+
