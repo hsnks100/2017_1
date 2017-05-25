@@ -1,0 +1,51 @@
+---
+layout: post
+title: "시각개론"
+author: 코딩도사(hsnks100@gmail.com)
+date: 2017-05-25 10:34 +0900
+tags: 
+comments: true
+---
+* table of contents
+{:toc}
+
+
+# edge
+edge 구하는건 1차 미분을 이용한다는게 중요함.  
+
+sovel, priwitt 으로 대체 하기도 함.
+
+# Subpixel Location Estimation
+
+edge 를 만드는데 있어서 edge 가 중간에 비어있을 수 있는데, 이 비어있는 픽셀을 추정한다.
+
+## Edge Filling Method
+
+```
+0 10 10
+7 14 7
+10 10 0
+
+에
+0 1 0
+0 0 0
+1 0 0 
+을 적용하게 되면 가운데가 1 이상이 되는데 이때 edge 를 이어준다.  
+
+```
+# Seqeutial Methods 
+
+자기들의 edge detector 가 성능이 좋다고 해야하지만 실제론 안그렇다. 그래서
+
+다음과 같은 방법을 쓴다.
+
+## Edge Following
+빠진 edge 에 대해 추정해서 점을 넣는 것. (Ex filling edge)
+
+
+
+## Boundary tracking
+
+
+
+
