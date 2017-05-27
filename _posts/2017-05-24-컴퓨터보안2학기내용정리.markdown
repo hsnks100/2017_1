@@ -163,11 +163,27 @@ x_B : B 의 비밀키\\
 $$
 
 $$
-K_{AB} = y_A^{x_B}\;mod\;q\\
-K_{AB} = y_B^{x_A}\;mod\;q\\
+y_A = g\;^{x_A}\;mod\;p\\
+y_B = g\;^{x_B}\;mod\;p\\
+K_{AB} = y_A\;^{x_B}\;mod\;q\\
+K_{AB} = y_B\;^{x_A}\;mod\;q\\
 $$
 
 # ElGamal Cryptography
+<http://reinliebe.tistory.com/26>  
+
+엘가말 또한, 이산로그의 어려움을 이용한다.  
+
+$$
+1 < X_A < q-1\;인 X_A선택\\
+Y_A = a\;^{X_A}\;mod\;q\\
+메세지는\;0<=M<=q-1로\;나타낼\; 수\; 있다고 한다.\\
+1 <= k <= q-1 인 랜덤 k 선택\\
+K = Y_A\;^k\;mod\;q (= a^{X_A * k}\;mod\;q\\
+C_1 = a^k\;mod\;q\\
+C_2 = K M\;mod\;q\\
+
+
 
 # ECC(Elliptic Curve Cryptography)
 <http://ezbeat.tistory.com/335>
