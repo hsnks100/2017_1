@@ -79,5 +79,5 @@ cover: true
 
 highlighter: rouge
 
-#sass:
-    #sass_dir: css
+sass:
+    sass_dir: css
