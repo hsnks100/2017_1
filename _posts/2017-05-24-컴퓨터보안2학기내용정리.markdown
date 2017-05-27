@@ -123,7 +123,7 @@ $$
 A->B : E(PU_b, E(PR_a, K_s)) 를 보낸다.  
 $$
 
-여기서 의문 : E(PU_b, K_s) 만 보내면 될거 같은데 굳이 $$PR_a$$ 로 암호화해서 보내는 이유가??
+여기서 의문 : $$E(PU_b, K_s)$$ 만 보내면 될거 같은데 굳이 $$PR_a$$ 로 암호화해서 보내는 이유가??
 
 
 
@@ -131,16 +131,26 @@ $$
 
 # Diffie-Hellman Key Exchange
 무선 네트워크에서 주로 사용하는 방법이다.  
+참고 사이트  
+<http://moaimoai.tistory.com/86>  
+<http://ezbeat.tistory.com/334>  
+
+
+
+
 
 
 
 # ElGamal Cryptography
 
 # ECC(Elliptic Curve Cryptography)
+<http://ezbeat.tistory.com/335>
+
 
 ## Why ECC?
 
 ## Diffie Hellman over ECC
+<http://ezbeat.tistory.com/336 > 
 
 # Message Authentication & Hash Functions
 
