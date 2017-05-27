@@ -2,19 +2,196 @@
 layout: post
 tags: 
 title2: 컴퓨터보안 기말고사 정리
+author: 코딩도사(hsnks100@gmail.com)
 comments: true
 ---
 
-# X.509 Authentication Service
+# RSA 
 
-# Public Key Infrastructure
+전통적인 암호화는 하나의 키를 썼다. 그래서 sender 와 receiver 가 같은 키를 공유했다.  키 분배 문제가 생긴다. 
+공개키 알고리즘은 Discrete log 의 어려움을 이용한다. 
+
+비밀키와 공개키 두가지 개념이 있다. 기본적인 흐름은 다음과 같다.
+
+1. A가  B에게 메세지를 보내기 위해서 B의 공개키로 A 가 메세지를 암호화 해서 보낸다.  
+2. 이 메세지를 푸는건 B의 비밀키로만 풀 수 있다.  
+
+신원 확인  
+
+A->B 로 보낼 때, B 가 A 가 진짜로 보내는지 확인을 하기 위해서 필요한 절차  
 
 
-# 인증서 기반의 oneway, twoway
+1. A 는 A의 비밀키로 서명을 한다.  
+2. B 는 받은 서명 데이터를 A의 공개키로 풀어본다. A 의 신분을 확인한다.  
+
+1. 신원 확인을 위해서 나는 나의 비밀키로 서명을 한다. 서명한 데이터는 나의 공개키로만 풀 수 있다. 그래서 나의 신분을 상대방들이 확인할 수 있다.  
+
+RSA 의 구체적인 방법은
+
+$$
+먼저 두 소수를 선택한다. p = 17, q = 11 \\ 
+n = pq = 18 \\ 
+\phi(n) = (p-1)(q-1) = 16 * 10 = 160 \\
+gcd(e, 160)\; =\; \text{1 인 e 를 구한다. e = 7} \\
+\text{de = 1 mod 160 인 d 를 구한다. d = 23
+공개키는 {7, 187} 
+비밀키는 {23, 17, 11}
+}
+
+$$
+
+이제 암호화와 복호화를 살펴보면
+
+$$
+C = M^e\; mod\; n \\
+M = C^d\; mod\; n \\
+
+
+$$
+
+
+
+# Key Management
+키 관리에 대한 내용이다. 4가지 유형이 있다.
+
+
+## public annoucement
+게시판 같은곳에 올려버리는 방법.  광범위하게 배포하기 때문에 접근이 용이하며 편하다. 하지만 누군가 위장을 하는 취약점이 있다.
+
+## publicly available directory
+알려져있는 공간에 올리는 방법.   
+뭔지 잘 모르겠다.
+
+
+
+## public-key autority
+어떤 기관이 관리
+public-key 를 관리하는 중앙 센터가 있다. 기관은 각 개인의 비밀키를 알기 때문에 신원 확인이 가능하며 공개키 교환을 할 수 있다.  
+하지만 이 방법또한 완벽하지 않은데, 시스템이 병목현상이 일어날 수 있다.
+
+절차  
+$$
+(1) A는 B의 공개키를 요구함\\
+(2) 기관은 A 에게 기관의 개인키로 Pu_b, Time_1 을 암호화 해서 전송한다.\\
+(3) A 는 Pu_b 로 ID_A와 N_1 을 암호화해서 B에게 보낸다.\\
+(4) B 는 기관으로부터 A의 공개키 PU_a를 얻는다.\\
+...\\
+(6) B 는 PU_a 로 N_1, N_2 를 A 에게 보낸다. (이 시점에서 A는 B임을 확인)\\
+(7) A 는 PU_b 로 N_2 를 B에게 보낸다. (이 시점에서 A의 신원 확인)\\ 
+$$
+
+
+## public-key certificates
+중요함!!  
+인증서 (한국에서 쓰는 방식)  
+공개키 인증서에 포함되는 내용{이름, 소속, 메일, 개인정보, 그 사람의 공개키}  
+인증기관의 개인키로 디지털 서명이 되어있음.  
+인증기관이 "이 공개키는 확실히 이 사람의 것이다." 라고 인정하는 수단  
+인증 기관은 디지털 인증서를 발급할 수 있는 권한을 가진 기관이다.  
+
+누군가 A 가 A 임을 확인하고 싶다면, A 의 인증서를 가지고 인증기관에 인증 요청을 보낸다.  
+
+절차
+$$
+각 가입자 A, B 는 인증기관에 자신의 공개키를 제공하면서 인증서(C_A, C_B) 받음\\
+A, B가 서로 확인하고 싶다면 서로에게 자신의 인증서를 보낸다.\\
+이 인증서는 기관의 개인키로 암호화됐기 때문에, 풀수 있고 서로 신원을 확인할 수 있다.\\ 
+$$
+
+서로 인증이 되었다면, 이제 둘만의 인증을 위해 별도의 세션키를 가질 수 있다. 그 방법은 아래에서 설명한다.  
+
+
+## Simple Secret Key distribution
+
+Merkle 방법인데,  
+이 방법은 A 가 공개키, 비밀키를 생성한다.
+A 가 B 에게 공개키를 보낸다. B 는 둘만이 가지는 세션키 $$K_S$$ 를 제공된 A의 공개키로 암호화해서 보낸다.
+
+하지만 이 방법은 Man-in-the-middle-attack 에 취약하다.  
+
+## Secret Key Distribution with Confidentiality and Authentication
+위의 방법에서 보완된 방법이다.
+$$
+가정, 서로가 풀 수 있는 상대방의 공개키로 보낸다.\\
+A->B : N_1, ID_A 를 암호화해서 보낸다.\\
+B->A : N_1, N_2 를 암호화해서 보낸다.\\ 
+A->B : N_2 를 보낸다.\\
+$$
+
+위 과정에서 A 는 B 는 상호 인증된다. 마지막으로,  
+$$
+A->B : E(PU_b, E(PR_a, K_s)) 를 보낸다.  
+$$
+
+여기서 의문 : $$E(PU_b, K_s)$$ 만 보내면 될거 같은데 굳이 $$PR_a$$ 로 암호화해서 보내는 이유가??
+
+
+
+## Hybrid Key Distribution
+
+# Diffie-Hellman Key Exchange
+무선 네트워크에서 주로 사용하는 방법이다.  
+참고 사이트  
+<http://moaimoai.tistory.com/86>  
+<http://ezbeat.tistory.com/334>  
+
+
+
+
+
+
+
+# ElGamal Cryptography
+
+# ECC(Elliptic Curve Cryptography)
+<http://ezbeat.tistory.com/335>
+
+
+## Why ECC?
+
+## Diffie Hellman over ECC
+<http://ezbeat.tistory.com/336 > 
+
+# Message Authentication & Hash Functions
+
+# Message Authentication Codes
+
+# Birthday Attacks
+
+# Classification of Hash Functions
+
+# MAC vs. MIC
+
+# Unkeyed Hash Functions
+
+# Secure Hash Algorithm
+
+# Keyed Hash Functions
+
+# HMAC
+
+# Digital Signatures
+
+# Properties
+
+# Attacks and Forgeries
+
+# Direct Digital Signature
+
+# ElGamal Digital Signature Scheme
+
+# Schnorr Digital Signature Scheme
+
+# Digial Signature Standard
+
+# X.509 Certificates & PKI
+
+# X.509 Certification Service
+
+# Public Key Infstructure
+
 
 # needham-schroeder protocol
-
-needham-schroeder protocol
 등장 A, B, KDC
 
 A 가 KDC 에게 B랑 통신하고 싶다고 함.
