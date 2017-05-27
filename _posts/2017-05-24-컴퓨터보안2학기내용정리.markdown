@@ -155,7 +155,7 @@ s 는 비밀키
 ```
 
 $$
-K_(AB) : A, B 의 비밀키\\
+K_{AB} : A, B 의 비밀키\\
 y_A : A 의 공개키\\
 y_B : B 의 공개키\\
 x_A : A 의 비밀키\\
@@ -163,8 +163,8 @@ x_B : B 의 비밀키\\
 $$
 
 $$
-K_(AB) = y_A^(x_B)\;mod\;q\\
-K_(AB) = y_B^(x_A)\;mod\;q\\
+K_{AB} = y_A^{x_B}\;mod\;q\\
+K_{AB} = y_B^{x_A}\;mod\;q\\
 $$
 
 # ElGamal Cryptography
