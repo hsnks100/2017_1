@@ -182,6 +182,7 @@ Y_A = a\;^{X_A}\;mod\;q\\
 K = Y_A\;^k\;mod\;q (= a^{X_A * k}\;mod\;q\\
 C_1 = a^k\;mod\;q\\
 C_2 = K M\;mod\;q\\
+$$
 
 
 
