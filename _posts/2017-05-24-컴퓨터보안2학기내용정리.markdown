@@ -98,6 +98,7 @@ A, B가 서로 확인하고 싶다면 서로에게 자신의 인증서를 보낸
 이 인증서는 기관의 개인키로 암호화됐기 때문에, 풀수 있고 서로 신원을 확인할 수 있다.\\ 
 $$
 
+서로 인증이 되었다면, 이제 둘만의 인증을 위해 별도의 세션키를 가질 수 있다. 그 방법은 아래에서 설명한다.  
 
 
 ## Simple Secret Key distribution
@@ -106,16 +107,32 @@ Merkle 방법인데,
 이 방법은 A 가 공개키, 비밀키를 생성한다.
 A 가 B 에게 공개키를 보낸다. B 는 둘만이 가지는 세션키 $$K_S$$ 를 제공된 A의 공개키로 암호화해서 보낸다.
 
-하지만 이 방법은 밑에서 소개할 Man-in-the-middle-attack 에 취약하다.  
-
-
-## Man-in-the-middle-attack
+하지만 이 방법은 Man-in-the-middle-attack 에 취약하다.  
 
 ## Secret Key Distribution with Confidentiality and Authentication
+위의 방법에서 보완된 방법이다.
+$$
+가정, 서로가 풀 수 있는 상대방의 공개키로 보낸다.\\
+A->B : N_1, ID_A 를 암호화해서 보낸다.\\
+B->A : N_1, N_2 를 암호화해서 보낸다.\\ 
+A->B : N_2 를 보낸다.\\
+$$
+
+위 과정에서 A 는 B 는 상호 인증된다. 마지막으로,  
+$$
+A->B : E(PU_b, E(PR_a, K_s)) 를 보낸다.  
+$$
+
+여기서 의문 : E(PU_b, K_s) 만 보내면 될거 같은데 굳이 $$PR_a$$ 로 암호화해서 보내는 이유가??
+
+
 
 ## Hybrid Key Distribution
 
 # Diffie-Hellman Key Exchange
+무선 네트워크에서 주로 사용하는 방법이다.  
+
+
 
 # ElGamal Cryptography
 
