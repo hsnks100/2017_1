@@ -42,8 +42,8 @@ $$
 이제 암호화와 복호화를 살펴보면
 
 $$
-C = M^e mod n \\
-M = C^d mod n \\
+C = M^e\; mod\; n \\
+M = C^d\; mod\; n \\
 
 
 $$
