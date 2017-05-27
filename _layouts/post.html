@@ -4,7 +4,6 @@ layout: default
 {% assign post = page %}
 
 
-{% include mathjax_support.html %}
 
 <div class="post">
   <p style="text-align: center; font-size:30pt;margin:100px">
@@ -28,6 +27,7 @@ layout: default
       <!--{% if post.tags.size > 0 %} • <span class="post-tags">태그: {% for tag in post.tags %}<a class="post-tag" href="/tag/{{ tag | url_encode }}.html">{{ tag }}</a>,&nbsp;{% if forloop.last == false %} {% endif %}{% endfor %}</span>{% endif %}-->
     </p>
   </header>
+  {% include mathjax_support.html %}
   <article>
     <div class="post-content">
       {{ content }}
