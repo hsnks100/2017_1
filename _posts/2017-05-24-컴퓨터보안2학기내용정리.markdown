@@ -6,91 +6,77 @@ author: 코딩도사(hsnks100@gmail.com)
 comments: true
 ---
 
-수식 테스트  
-
-a + b
-
-(hsnks100@gmail.com)
-
-Let's test some inline math $x$, $y$, $x_1$, $y_1$.
-
-Now a inline math with special character
-$|\psi\rangle$, $x'$, $x^\*$. 
-
-Test a display math:
-$$
-   |\psi_1\rangle = a|0\rangle + b|1\rangle
-$$
-Is it O.K.?
-
-Test a display math with equation number:  
-
-\begin{equation}
-   |\psi_1\rangle = a|0\rangle + b|1\rangle
-\end{equation}
-
-Is it O.K.?
-
-Test a display math with equation number:
-
-$$
-  \begin{align}
-    |\psi_1\rangle &= a|0\rangle + b|1\rangle \\
-    |\psi_2\rangle &= c|0\rangle + d|1\rangle
-  \end{align}
-$$
-
-Is it O.K.?
-
-And test a display math without equaltion number:
-
-$$
-  \begin{align*}
-    |\psi_1\rangle &= a|0\rangle + b|1\rangle \\
-    |\psi_2\rangle &= c|0\rangle + d|1\rangle
-  \end{align*}
-$$
-
-Is it O.K.?
-
-Test a display math with equation number:
-
-$$
-\begin{align}
-    |\psi_1\rangle &= a|0\rangle + b|1\rangle \\
-    |\psi_2\rangle &= c|0\rangle + d|1\rangle
-\end{align}
-$$
-
-Is it O.K.?
-
-And test a display math without equaltion number:
-
-$$
-\begin{align*}
-    |\psi_1\rangle &= a|0\rangle + b|1\rangle \\
-    |\psi_2\rangle &= c|0\rangle + d|1\rangle
-\end{align*}
-$$
-
-Is it O.K.?
-
-# RSA
-
-# Public-Key Cryptography
-
-# asdasd??
-
-# X.509 Authentication Service
-
-# Public Key Infrastructure
+# RSA 
 
 
-# 인증서 기반의 oneway, twoway
+# Key Management
+
+## public annoucement
+
+## publicly available directory
+
+## public-key autority
+
+## public-key certificates
+
+## Simple Secret Key distribution
+
+## Man-in-the-middle-attack
+
+## Secret Key Distribution with Confidentiality and Authentication
+
+## Hybrid Key Distribution
+
+# Diffie-Hellman Key Exchange
+
+# ElGamal Cryptography
+
+# ECC(Elliptic Curve Cryptography)
+
+## Why ECC?
+
+## Diffie Hellman over ECC
+
+# Message Authentication & Hash Functions
+
+# Message Authentication Codes
+
+# Birthday Attacks
+
+# Classification of Hash Functions
+
+# MAC vs. MIC
+
+# Unkeyed Hash Functions
+
+# Secure Hash Algorithm
+
+# Keyed Hash Functions
+
+# HMAC
+
+# Digital Signatures
+
+# Properties
+
+# Attacks and Forgeries
+
+# Direct Digital Signature
+
+# ElGamal Digital Signature Scheme
+
+# Schnorr Digital Signature Scheme
+
+# Digial Signature Standard
+
+# X.509 Certificates & PKI
+
+# X.509 Certification Service
+
+# Public Key Infstructure
+
 
 # needham-schroeder protocol
-
-needham-schroeder protocol
 등장 A, B, KDC
 
 A 가 KDC 에게 B랑 통신하고 싶다고 함.
@@ -101,7 +87,6 @@ Ekb[Ks, IDa] 는 A 가 못 품.
 B가 A에게 Ks 로 N2 를 암호화 해서 보냄
 A는 B에게 f(N2) 을 보내서 서로 확인함.
 
-(hsnks100@gmail.com)
 
 ## 
 
