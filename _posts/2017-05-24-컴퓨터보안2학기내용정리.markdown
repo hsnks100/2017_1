@@ -216,11 +216,11 @@ $$ P+(-P) = O, 2P = R(y != 0), 2P = O (y = 0) $$
 $$ When P = (X_p, Y_p), Q = (X_Q, Y_Q) and P != Q, P != -Q) $$
 
 덧셈 정의
-$$ R = (s^2 - X_P - X_Q, s(X_P - X_R) - Y_P, \\
+$$ R = (s^2 - X_P - X_Q, s(X_P - X_R) - Y_P), \\
 s = (Y_P - Y_Q) over {X_P - X_Q} $$
 
 2P 정의  
-$$ Y_P is not O, \\
+$$ Y_P\; is\; not\; O, \\
 2P = (s^2 - 2X_P, s(X_P - X_R) - Y_P) \\
 s = (3{X_P}^2 + a) / (2Y_P) \\
 $$
@@ -232,13 +232,31 @@ PQ 선은 y = k(x-x_1)+y_1 로 나타낼 수 있다.  \\
 EC equation : y^2 = x^3 + ax + b 에 대입하면 \\
 x^3 - k^2 x^2 + ... 을 얻는다. \\
 일반적으로 ax^3 + bx^2 + cx + d = 0 의 세근을 \alpha, \beta, \gamma 라고 하면 \\
-\alpha + \beta + \gamma = -{b over a} \\
+\alpha + \beta + \gamma = -{{b}over{a}} \\
 
 x_1 + x_2 + x_3 = k^2 \\
 thus, x_3 = k^2 - (x_1 + x_2) \\
 -y_3 = k(x_3 - x_1) + y_1 \\
 y_3 = k(x_1 - x_3) - y_1 \\ 
 $$
+
+$$
+
+y^2 = x^3 + 2x + 3 \;(mod 5)\\
+곡선위의 \;점들은\;아래와\;같다.
+(1,1), (1,4), (2,0), (3,1), (3,4), (4,0)\\
+
+
+
+
+출처: http://ezbeat.tistory.com/335 [Library of Ezbeat (잠정 폐쇄)]
+
+
+$$
+
+
+출처: http://ezbeat.tistory.com/335 [Library of Ezbeat (잠정 폐쇄)]
+
 
 
 
