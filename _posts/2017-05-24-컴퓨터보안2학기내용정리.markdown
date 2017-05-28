@@ -202,10 +202,28 @@ $$
 
 
 # ECC(Elliptic Curve Cryptography)
-<http://ezbeat.tistory.com/335>
+
+$$ y^2 = x^3 + ax + b $$ 인 cubic elliptic curve of form 에서 마지막의 $$ mod\;p $$ 만 추가한 형태를 쓰게 된다.  
+
+![image](https://cloud.githubusercontent.com/assets/3623889/26527393/439f5a7c-43ce-11e7-9d87-46da478077b5.png)
+
+$$ P3 = P1 + P2 $$ 연산을 정의해야 하는데, 그 정의는 P1, P2 를 잇는 선의 연장선과 곡선의 교점을 Q 라 할 때, Q 랑 x 축의 반대쪽에 있는 점이 P3.  
+
+항상 P3 가 존재하기 위해서는 $$ 4a^3 + 27b^2 != 0 $$ 이어야 한다.  
+
+
+
+
+
+
+
+
+
+
 
 
 ## Why ECC?
+key-size 가 작다. RSA 나 다른 알고리즘에 비해서 보안성이 떨어지지 않는다. 
 
 ## Diffie Hellman over ECC
 <http://ezbeat.tistory.com/336 > 
