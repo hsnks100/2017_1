@@ -232,7 +232,7 @@ PQ 선은 y = k(x-x_1)+y_1 로 나타낼 수 있다.  \\
 EC equation : y^2 = x^3 + ax + b 에 대입하면 \\
 x^3 - k^2 x^2 + ... 을 얻는다. \\
 일반적으로 ax^3 + bx^2 + cx + d = 0 의 세근을 \alpha, \beta, \gamma 라고 하면 \\
-\alpha + \beta + \gamma = -{{b}\over{a}} \\
+\alpha + \beta + \gamma = -{ b \over a} \\
 
 x_1 + x_2 + x_3 = k^2 \\
 thus, x_3 = k^2 - (x_1 + x_2) \\
