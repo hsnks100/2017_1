@@ -6,7 +6,6 @@ author: 코딩도사(hsnks100@gmail.com)
 comments: true
 ---
 
-
 ```
 A recent article on consumer trneds claims that ____ is incresing in all areas of the electronics industry.
 spender<
