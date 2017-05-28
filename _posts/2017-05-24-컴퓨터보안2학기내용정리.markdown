@@ -348,7 +348,7 @@ N = 1.17\sqrt{M}\text{ 이 된다.}\\
 여기다\;M=365\;를\;대입하면\;N = 22.35\\ 
 $$
 
-이게 무슨 의미냐면, 만약 키가 64bits 라면 $$\sqrt{64bits} = 2^32 $$ 번 시도를 하면 50% 이상의 확률로 해시 충돌을 얻어낼 수 있다는 소리다.  
+이게 무슨 의미냐면, 만약 키가 64bits 라면 $$\sqrt{64bits} = 2^{32} $$ 번 시도를 하면 50% 이상의 확률로 해시 충돌을 얻어낼 수 있다는 소리다.  
 
 어떻게 악용할 수 있을까??
 
@@ -368,11 +368,22 @@ $$
 ``` 
 # Classification of Hash Functions
 
+Hash 는 Keyed 와 Unkeyed 로 분류할 수 있다.  
+Modification detection code(MDC), Message Integrity Codes(MIC) 은 Unkeyed.  
+Message Authenticatio code(MAC) 은 Keyed.  
+자세한 내용을 알려줘........... ㅜㅜ 
+
+
+
 # MAC vs. MIC
+자세한 내용을 알려줘........... ㅜㅜ 
 
 # Unkeyed Hash Functions
 
 # Secure Hash Algorithm
+
+SHA 라고 알려진 알고리즘이다.  
+
 
 # Keyed Hash Functions
 
