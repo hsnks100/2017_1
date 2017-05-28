@@ -209,11 +209,11 @@ $$ y^2 = x^3 + ax + b $$ 인 cubic elliptic curve of form 에서 마지막의 $$
 
 $$ P3 = P1 + P2 $$ 연산을 정의해야 하는데, 그 정의는 P1, P2 를 잇는 선의 연장선과 곡선의 교점을 Q 라 할 때, Q 랑 x 축의 반대쪽에 있는 점이 P3.  
 
-항상 P3 가 존재하기 위해서는 $$ 4a^3 + 27b^2 != 0 $$ 이어야 한다.  
+항상 P3 가 존재하기 위해서는 $$ 4a^3 + 27b^2 \ne 0 $$ 이어야 한다.  
 
-$$ P+(-P) = O, 2P = R(y != 0), 2P = O (y = 0) $$
+$$ P+(-P) = O, 2P = R(y \ne 0), 2P = O (y = 0) $$
 
-$$ When P = (X_p, Y_p), Q = (X_Q, Y_Q) and P != Q, P != -Q) $$
+$$ When P = (X_p, Y_p), Q = (X_Q, Y_Q) and P \ne Q, P \ne -Q) $$
 
 덧셈 정의
 $$ R = (s^2 - X_P - X_Q, s(X_P - X_R) - Y_P), \\
@@ -244,38 +244,28 @@ $$
 
 y^2 = x^3 + 2x + 3 \;(mod 5)\\
 곡선위의 \;점들은\;아래와\;같다.
-(1,1), (1,4), (2,0), (3,1), (3,4), (4,0)\\
+(1,1), (1,4), (2,0), (3,1), (3,4), (4,0)\\ 
+\\
 
-
-
-
-출처: http://ezbeat.tistory.com/335 [Library of Ezbeat (잠정 폐쇄)]
-
+\text{위에서 다음과 같이 정의했다.}\\
+R = (s^2 - X_P - X_Q, s(X_P - X_R) - Y_P) \; mod q, \\
+s = (Y_P - Y_Q) * {X_P - X_Q} ^-1 mod q \\
+\text{(1, 4) + (3, 1) 에 대해 살펴본다.} \\
+s = (4-1) * (1-3)^-1 = 3 * (-2)^-1 = 3 * 3^-1 = 3*2 = 6 = 1\\
+x_3 = (1^2 - 1 - 3) = 2 \\
+y_3 = 1(1 - 2) - 4 = -5 = 0 \\
+\text{즉, } (2, 0) \\ 
 
 $$
-
-
-출처: http://ezbeat.tistory.com/335 [Library of Ezbeat (잠정 폐쇄)]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Why ECC?
 key-size 가 작다. RSA 나 다른 알고리즘에 비해서 보안성이 떨어지지 않는다. 
 
 ## Diffie Hellman over ECC
+
+위에서 정의한 ECC 연산을 바탕으로 Diffie Hellman 을 생각할 수 있다.
+
 <http://ezbeat.tistory.com/336 > 
 
 # Message Authentication & Hash Functions
