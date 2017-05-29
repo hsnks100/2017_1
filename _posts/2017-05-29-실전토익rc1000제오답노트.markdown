@@ -1,0 +1,133 @@
+---
+layout: post
+tags: 
+title2: 실전토익 1000제 rc오답노트
+author: 코딩도사(hsnks100@gmail.com)
+comments: true
+---
+
+```
+A recent article on consumer trneds claims that ____ is incresing in all areas of the electronics industry.
+spender<
+spent
+spend
+spending
+that ___ is 에는 주어가 들어가야한다.
+
+
+The board of directors announced that it will ____ find a replacement for the outgoing CEO.
+usually
+extremely
+definitely< 반드시 
+formerly
+
+Mr.Johnson is ____ to apply for the managerial position at MindTek, Inc., as he lacks experience in the field of robotics.
+hesitation
+hesitant<
+hesitated
+hesitantly
+
+be hesitant to
+be about to
+
+Customers of Dillon's Furniture can view an ____ delivery date on the checkout page when placing an order online.
+estimated<
+estimating
+estimation
+estimate
+
+형용사 자리이므로
+
+As the head of the personnel department, Mr. Murphy is ____ for ensuring the happiness and welfare of all company employees.
+likley
+sincere
+responsible<
+conclusive
+
+be responsible for 
+
+The ____ estimate for the landscaping work at 525 Eglington Road was much lower than the actual final cost for the project.
+impartial 공정한
+constant
+initial<
+limited
+
+___ manufacturing costs have not significantly decresed, Matrox Chemicals has noted a sharp fall in its monthly expenditures.
+Although<
+In addition
+However
+Only
+
+문장이 두개이므로
+
+The Chief Technician will arrive at the factory at 2PM. today to ____ the damage caused to the packing machine.
+prevent
+withstand 버팀성
+result
+assess< 추정, 감사
+
+result in
+result from
+
+Please ____ all staff members that parking permits must be visibly displayed on packed vehicles at all times.
+allocate
+recruit
+attain 입수하다
+remind ~에게 상기시키다
+
+remind + 사람
+advise + 사람
+
+With regret, those who ___ Nairn Manufacturing within the past month will not be eligible for the Employee of the Quarter Award.
+are joined
+will be joining
+have joined<
+would join
+
+태부터 신경쓰자 좀.
+
+The quality assurance team uses a process ___ of several methodical steps.
+attached
+consisting<
+beneficial
+associated
+
+consisting of
+beneficial to
+associated with
+어울리는 전치사좀 써라
+
+The CEO is reluctant to slow down production of the LD20 and LD35, as ____ laptop models are still selling at a fiarly consistent rate.
+them
+theirs
+these<
+there
+
+뒤에 laptop 보고 형용사 고를려고 했는데 theirs 가 그것이 될 줄 알고 착각함.
+
+Experts confirmed that the wildlife in Houston Lake could be ___ affected if a manufacturing plant is built nearby.
+lately
+evenly
+mutually
+adversely<
+
+adversely affect 는 세트다.
+
+Thanks to the ____ earned from the sale of its former manufacturing site, the company had surplus funds.
+salary
+account
+revenue
+payroll
+
+the company 에 대한건데 salary 가 나올 수 없고 수익의 의미인 revenue 가 적절.
+
+____ the misspelling of the interviewee's name was discovered, the article had already gone to print.
+Suddenly 부사
+By the time< 접속사
+Meanwhile 부사
+Now That
+
+일단 부사는 다 제끼고 후보가 b,d 남는데 의미상 b 가 적절.  
+
+이 까지 텟3
+```
