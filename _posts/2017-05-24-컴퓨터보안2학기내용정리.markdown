@@ -503,14 +503,14 @@ $Authenticator_c$ 를 통해 c 클라인어트가 맞구나 하고 알게 됨.
 Ticket Contents
 
 Ticket 은 받는 사람이 위조가 안돼야 하고 못해야 한다.  
-Ticket_{tgs} 한테 주는 정보 $$E_{K_{tgs}}[K_{c, tgs}~||~ID_C~||~AD_C~||~ID_{tgs}~||~TS_2~||LifeTime_2]$$  
-$Ticket_v$ 한테 주는 정보  
+$Ticket_{tgs}$ 한테 주는 정보 $$E_{K_{tgs}}[K_{c, tgs}~||~ID_C~||~AD_C~||~ID_{tgs}~||~TS_2~||LifeTime_2]$$  
+$Ticket_v$ 한테 주는 정보  $E_{K_V}[...]$
 
-K_{c, tgs} : c 와 tgs 에 대한 키... tgs 위 윗단의 인증 서버가 줌
+$K_{c, tgs}$ : c 와 tgs 에 대한 키... tgs 위 윗단의 인증 서버가 줌
 
-K{c,v} : tgs 가 준 키.
+$K_{c,v}$ : tgs 가 준 키.
 
-Authenticator_c : 내가 진짜 누구다 증명하고 싶어하는것... 이것은 클라가 만듬.  
+$Authenticator_c$ : 내가 진짜 누구다 증명하고 싶어하는것... 이것은 클라가 만듬.  
 자기자신을 인증하려면 $K_{c, tgs}$ 로 암호화해서 자기의 정보를 보냄. 
 
 
