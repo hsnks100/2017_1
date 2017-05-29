@@ -414,11 +414,13 @@ SHA 라고 알려진 알고리즘이다.
 등장 A, B, KDC
 
 A 가 KDC 에게 B랑 통신하고 싶다고 함.
-KdC 는 A한테 Ka (A의 비밀키) 로 암호화 해서 Ks, IDb, N1, Ekb[Ks, IDa] 를 보냄.
-Ekb[Ks, IDa] 는 A 가 못 품.
+KdC 는 A한테 $$K_a$$ (A의 비밀키) 로 암호화 해서 $$K_s,~ID_b,~N_1,~E_{kb}[K_s,~ID_a]$$ 를 보냄.
+$$E_{kb}[K_s,~ID_a]$$ 는 A 가 못 품.
 이 Ekb[Ks, IDa] 를 A가 B 에게 보냄.
 이제 서로 Ks 세션키를 가지게 됨.
 B가 A에게 Ks 로 N2 를 암호화 해서 보냄
 A는 B에게 f(N2) 을 보내서 서로 확인함.
+
+# 
 
 
