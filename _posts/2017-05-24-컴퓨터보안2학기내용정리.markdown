@@ -464,36 +464,38 @@ Authentication Server 는 TGT 를 발급함.
 
 그림 (1)(2) 만 보면 된다.  
 
+$$
 (1) C->AS : ID_C || ID_{tgs} || TS_1  
-(@) AS->C : E_{K_c}[K_{c, tgs} || ID_{tgs} || TS_2 || LifeTime_2 || Ticket_{tgs}]  
+(2) AS->C : E_{K_c}[K_{c, tgs} || ID_{tgs} || TS_2 || LifeTime_2 || Ticket_{tgs}]  
 Ticket_{tgs} = E_{K_tgs}[K_{c, tgs} || ID_C || AD_C || ID_{tgs} || TS_2 || Lifetime_2]
+$$
 
-K_{c, tgs} : k 하고 tgs 사이의 비밀키
+$$K_{c, tgs}$$ : k 하고 tgs 사이의 비밀키
 
 
-TS_1 타임 스탬프
+$TS_1$ 타임 스탬프
 AS 는 실제 클라이언트를 인증함. 니 진짜 맞냐 확인함.  
-K_c 는 클라인어트가 모름.
+$$K_c$$ 는 클라인어트가 모름.
 
 
 
 ![image](https://cloud.githubusercontent.com/assets/3623889/26537145/df2f309e-4477-11e7-96a8-21360eb5f1a0.png)
 
-(3) C->TGS : ID_v
+(3) C->TGS : $ID_v$
 
 
 Authenticator_c 의 역할 : 클라이언트가 c 가 맞다는것을 c 스스로 인증 시키는 목적.
 
-K_{c, tgs} : c와 tgs 사이의 공유된 비밀키  
+$K_{c, tgs}$ : c와 tgs 사이의 공유된 비밀키  
 클라인언트는 비밀키를 생성하거나 그러지 않음.  
 
 
 
 ![image](https://cloud.githubusercontent.com/assets/3623889/26537187/27dc1640-4478-11e7-8008-16e1906ee63f.png)
 
-Authenticator_c 를 통해 c 클라인어트가 맞구나 하고 알게 됨.
+$Authenticator_c$ 를 통해 c 클라인어트가 맞구나 하고 알게 됨.
 
-(6) 상호 인증 목적으로 TS_5 + 1 해서 티켓을 던져줌.  
+(6) 상호 인증 목적으로 $TS_5$ + 1 해서 티켓을 던져줌.  
 
 
 # 추가 설명
@@ -525,6 +527,9 @@ Authenticator_c : 내가 진짜 누구다 증명하고 싶어하는것... 이것
 사실 비교 대상이 아님.
 
 한번 봐라.
+
+
+
 
 
 
