@@ -91,7 +91,9 @@ lambda 는 유사도
 $$\lambda~\gt~\tau$$ 이면 변화가 일어난 것.  
 
 
-![image](https://cloud.githubusercontent.com/assets/3623889/26565808/65c94c1e-4529-11e7-8a93-2d035a332f46.png)
+
+
+![image](https://cloud.githubusercontent.com/assets/3623889/26565963/78b80da0-452a-11e7-8e61-ee119f9a1fcd.png)
 
 위는 중첩이 아니라서 픽셀이 큼, 아래는 중첩시켜서 부드럽게 추출이 가능함.
 
@@ -104,13 +106,36 @@ $$\lambda~\gt~\tau$$ 이면 변화가 일어난 것.
 
 # 실제 사례
 
-![image](https://cloud.githubusercontent.com/assets/3623889/26565808/65c94c1e-4529-11e7-8a93-2d035a332f46.png)
+![image](https://cloud.githubusercontent.com/assets/3623889/26565967/8590be50-452a-11e7-9848-87121c6353ca.png)
+
 
 이거 시험은 안내는데 방법은 알아놔라
 
 빨간건 UFO 임. 탐지하자.  
 
 위 식은 계산은 틀렸지만 방법의 예시임.  
+
+
+# 중첩 차영상
+
+레퍼런스 프레임 = 첫프레임
+
+중첩은
+
+(1,2) (1, 3) (1, 4) ( 1, 5) ...  
+
+
+$$DP_{1k}$$ 1 기준이라는ㄱ 중요함. 
+
+
+
+![image](https://cloud.githubusercontent.com/assets/3623889/26565977/9a61fc54-452a-11e7-83ba-836d7a11982e.png)
+
+그림을 보면 오브젝트의 모양과 이동 경로를 알 수 있음.
+
+흰->검
+
+
 
 
 
