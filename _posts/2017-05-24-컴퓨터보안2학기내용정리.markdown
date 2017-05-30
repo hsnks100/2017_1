@@ -413,12 +413,138 @@ SHA 라고 알려진 알고리즘이다.
 # needham-schroeder protocol
 등장 A, B, KDC
 
-A 가 KDC 에게 B랑 통신하고 싶다고 함.
-KdC 는 A한테 Ka (A의 비밀키) 로 암호화 해서 Ks, IDb, N1, Ekb[Ks, IDa] 를 보냄.
-Ekb[Ks, IDa] 는 A 가 못 품.
-이 Ekb[Ks, IDa] 를 A가 B 에게 보냄.
-이제 서로 Ks 세션키를 가지게 됨.
-B가 A에게 Ks 로 N2 를 암호화 해서 보냄
-A는 B에게 f(N2) 을 보내서 서로 확인함.
+A 가 KDC 에게 B랑 통신하고 싶다고 함.  
+KdC 는 A한테 $$K_a$$ (A의 비밀키) 로 암호화 해서 $$K_s,~ID_b,~N_1,~E_{kB}[K_s,~ID_a]$$ 를 보냄.  
+$$E_{kB}[K_s,~ID_a]$$ 는 A 가 못 품.  
+이 $$E_{kB}[K_s,~ID_a]$$ 를 A가 B 에게 보냄.  이 정보는 B만 풀 수 있음  
+이제 서로 $$K_s$$ 세션키를 가지게 됨.  
+B가 A에게 $$K_s$$ 로 $$N_2$$ 를 암호화 해서 보냄  
+A는 B에게 f($$N_2$$) 을 보내서 서로 확인함.  
+
+
+ID_a 가 뒤에 나오는 kerberos 의 티켓과 같은 역할.
+
+
+하지만 헛점이 있음.
+
+3.A 에서 A 가 공격자다. 3번은 예전에 A->B 로 보내는 패킷을 캡쳐해논거, 어디선가 K_s 를 확보.  
+3~5번의 K_s 는 예전값.  
+
+어떻게 해결 할까? Nonce 나 time 을 집어넣음.  
+# Using Symmetric Encryption - pass  
+
+# Kerberos
+장점은 무지 빠름. 토큰방식, Reliable 하다. 사용자 입장에선 어디서 인증이 일어나는지 신경쓸 필요 없다.  
+
+![image](https://cloud.githubusercontent.com/assets/3623889/26536948/470053a8-4476-11e7-8554-a14f58a69a15.png)
+
+
+왼쪽은 사용자 피시. 오른쪽 위는 인증서버,  
+
+TGS : 티켓주는 서버  
+
+1) 사용자는 인증을 한다.  
+2) 티켓을 발급해주는 티켓을 받는다.  2번은 사용자가 뭐 할 필요가 없음. 
+3) 어떤 서비스를 받을 티켓을 줌.  
+4) 사용자가 티켓을 사용해서 서비스를 받음.  
+
+장점 : 사용자는 로그인으로 인증만 하면 티켓 서버가 있는지도 모르고 그냥 클릭하면 서비스를 받을 수 있음.  
+클릭만 하면 거기에 대한 티켓이 날아감.  
+
+trusted third-party 가 상호인증을 해줌.  
+
+Single-sign-on : 한번 로그인하면 쓸 수 있다.
+Trusted Third-party : 믿을 수 있다.
+Mutual authentication : 프토코ᅟᅩᆯ 보면 안다.
+
+Authentication Server 는 TGT 를 발급함.  
+
+
+이러한 과정들이 어떻게 이뤄질까??
+
+그림 (1)(2) 만 보면 된다.  
+
+$$
+(1) C->AS : ID_C || ID_{tgs} || TS_1  \\
+(2) AS->C : E_{K_c}[K_{c, tgs} || ID_{tgs} || TS_2 || LifeTime_2 || Ticket_{tgs}]  \\
+Ticket_{tgs} = E_{K_tgs}[K_{c, tgs} || ID_C || AD_C || ID_{tgs} || TS_2 || Lifetime_2] \\
+$$
+
+$$K_{c, tgs}$$ : k 하고 tgs 사이의 비밀키
+
+
+$TS_1$ 타임 스탬프
+AS 는 실제 클라이언트를 인증함. 니 진짜 맞냐 확인함.  
+$$K_c$$ 는 클라인어트가 모름.
+
+
+
+![image](https://cloud.githubusercontent.com/assets/3623889/26537145/df2f309e-4477-11e7-96a8-21360eb5f1a0.png)
+
+(3) C->TGS : $ID_v$
+
+
+Authenticator_c 의 역할 : 클라이언트가 c 가 맞다는것을 c 스스로 인증 시키는 목적.
+
+$K_{c, tgs}$ : c와 tgs 사이의 공유된 비밀키  
+클라인언트는 비밀키를 생성하거나 그러지 않음.  
+
+
+
+![image](https://cloud.githubusercontent.com/assets/3623889/26537187/27dc1640-4478-11e7-8008-16e1906ee63f.png)
+
+$Authenticator_c$ 를 통해 c 클라인어트가 맞구나 하고 알게 됨.
+
+(6) 상호 인증 목적으로 $TS_5$ + 1 해서 티켓을 던져줌.  
+
+
+# 추가 설명
+
+Ticket Contents
+
+Ticket 은 받는 사람이 위조가 안돼야 하고 못해야 한다.  
+$Ticket_{tgs}$ 한테 주는 정보 $$E_{K_{tgs}}[K_{c, tgs}~||~ID_C~||~AD_C~||~ID_{tgs}~||~TS_2~||LifeTime_2]$$  
+$Ticket_v$ 한테 주는 정보  $E_{K_V}[...]$
+
+$K_{c, tgs}$ : c 와 tgs 에 대한 키... tgs 위 윗단의 인증 서버가 줌
+
+$K_{c,v}$ : tgs 가 준 키.
+
+$Authenticator_c$ : 내가 진짜 누구다 증명하고 싶어하는것... 이것은 클라가 만듬.  
+자기자신을 인증하려면 $K_{c, tgs}$ 로 암호화해서 자기의 정보를 보냄. 
+
+
+
+
+![image](https://cloud.githubusercontent.com/assets/3623889/26537224/75a338cc-4478-11e7-8e33-18d182bf7361.png)
+
+사용자는 인증 서버가 있는지 모름.  
+
+중간자 공격이 힘듬.  통신의 딜레이가 있지만 암호학적으로 딜레이가 거의 없음.  
+
+# SSL vs. Kerberos
+
+사실 비교 대상이 아님.
+
+한번 봐라.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
