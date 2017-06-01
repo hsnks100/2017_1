@@ -142,6 +142,16 @@ $$DP_{1k}$$ 1 기준이라는ㄱ 중요함.
 흰->검
 
 
+
+# Static Segmentation and Matching
+
+Segmentation 은 영역을 따내는 것.
+
+영역화, semantic... 의미 있는 오브젝트를 밝혀내는 것, 그룹화 하는것... 등등... 즉 관심 있는거 따내는 거임.
+
+
+
+
 # Stationary Camera
 
 
@@ -167,15 +177,37 @@ $$\gt T$$ 도 가능하고 $$\lt T$$ 인 경우에도 되게끔 설정이 가능
 
 그래서 Stationary Camera 가 뭐냐?
 
-# Static Segmentation and Matching
 
-Segmentation 은 영역을 따내는 것.
+# Disparity Computations as Relaxation Labeling
 
-영역화, semantic... 의미 있는 오브젝트를 밝혀내는 것, 그룹화 하는것... 등등... 즉 관심 있는거 따내는 거임.
+첫번째 프레임에서 피쳐가 5개, 두번째도 5개 탐지됐으면...
+
+피쳐의 픽셀의 위치가 어디로 갔다고 해야 가장 일치성이 있느냐... (b) ...
+
+거리가 최소가 되는것을 매칭함.
+
+5개의 점은 intereset Points Points ... 즉 Moravec 으로 탐지한 것임. (a) 는 두 프레임을 겹쳐 놓은 것.
 
 
 
+# 이런건 시험 ㄴㄴ
+![2017cv14nn2 1 -14](https://cloud.githubusercontent.com/assets/3623889/26661018/a45b2356-46b6-11e7-9f87-055c0be33426.jpg)
 
+# 모라벡
+![2017cv14nn2 1 -27](https://cloud.githubusercontent.com/assets/3623889/26661028/a4b78894-46b6-11e7-92be-61dbf929a70c.jpg)
+
+경우의수를 따져서 가장 최소의 거리가 되는 것이 매칭되는 것임.
+
+
+
+# Image Flow
+![2017cv14nn2 1 -28](https://cloud.githubusercontent.com/assets/3623889/26661032/a4e018ea-46b6-11e7-8940-e3eefd30556e.jpg)
+
+계속 도는것 처럼 보인다. 화상뷰.
+
+속도장.
+
+이것은 관측자, 오브젝트의 움직임, 조명변화때문에 생긴다.
 
 
 
@@ -215,10 +247,31 @@ Segmentation 은 영역을 따내는 것.
 ![2017cv14nn2 1 -28](https://cloud.githubusercontent.com/assets/3623889/26661032/a4e018ea-46b6-11e7-8940-e3eefd30556e.jpg)
 ![2017cv14nn2 1 -29](https://cloud.githubusercontent.com/assets/3623889/26661033/a4e16d94-46b6-11e7-963f-11cf01adc373.jpg)
 ![2017cv14nn2 1 -30](https://cloud.githubusercontent.com/assets/3623889/26661034/a4e1ccd0-46b6-11e7-9020-cbebd2c7d52c.jpg)
+
+광뷰... 스몰 타임으로 함.
+
+밝기값 기반, 여윽시 셤 ㄴㄴ?
+
+속도장은 3차원 벡터
+
+
+
+
 ![2017cv14nn2 1 -31](https://cloud.githubusercontent.com/assets/3623889/26661035/a4e2ef02-46b6-11e7-95d2-f230a1854076.jpg)
+
+운동장은 오른쪽이지망 밝기 기반이니까 업
+
+cube 오른쪽 그림은 화살표다.
+
+
 ![2017cv14nn2 1 -32](https://cloud.githubusercontent.com/assets/3623889/26661036/a4e3898a-46b6-11e7-8316-83d4cf992ced.jpg)
+플로우를 구하기 위해서 어떤 가정을 한다. 
+
+속도, 가속, 비슷한 방법으로 모든게 움직인다.(고체)
 ![2017cv14nn2 1 -33](https://cloud.githubusercontent.com/assets/3623889/26661037/a4ec8daa-46b6-11e7-8378-6f3089f02e49.jpg)
 ![2017cv14nn2 1 -34](https://cloud.githubusercontent.com/assets/3623889/26661038/a50ba12c-46b6-11e7-81c3-dcc1c9d33d4f.jpg)
+
+시험  
 ![2017cv14nn2 1 -35](https://cloud.githubusercontent.com/assets/3623889/26661039/a50e2cf8-46b6-11e7-9cc5-25d3183f9cf1.jpg)
 ![2017cv14nn2 1 -36](https://cloud.githubusercontent.com/assets/3623889/26661041/a5107d64-46b6-11e7-893b-fd1dcfa70aa1.jpg)
 ![2017cv14nn2 1 -37](https://cloud.githubusercontent.com/assets/3623889/26661040/a50fa8b2-46b6-11e7-8d5f-28c6450f7be6.jpg)
@@ -249,6 +302,8 @@ Segmentation 은 영역을 따내는 것.
 ![2017cv14nn2 1 -62](https://cloud.githubusercontent.com/assets/3623889/26661065/a5cc8342-46b6-11e7-9cf9-0db7a147a9ad.jpg)
 ![2017cv14nn2 1 -63](https://cloud.githubusercontent.com/assets/3623889/26661067/a5f405ac-46b6-11e7-8afc-858aa9c89e64.jpg)
 ![2017cv14nn2 1 -64](https://cloud.githubusercontent.com/assets/3623889/26661068/a5f6ee0c-46b6-11e7-9a13-a982a058cf7b.jpg)
+
+시험
 ![2017cv14nn2 1 -65](https://cloud.githubusercontent.com/assets/3623889/26661069/a5f73650-46b6-11e7-83f7-fbdf43e9e44c.jpg)
 ![2017cv14nn2 1 -66](https://cloud.githubusercontent.com/assets/3623889/26661072/a60cb30e-46b6-11e7-9d0d-4da83a73c3e9.jpg)
 ![2017cv14nn2 1 -67](https://cloud.githubusercontent.com/assets/3623889/26661071/a60be42e-46b6-11e7-84b0-fb3928a161ab.jpg)
