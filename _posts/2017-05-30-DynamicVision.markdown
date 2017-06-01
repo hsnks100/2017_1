@@ -150,7 +150,34 @@ $$DP_{1k}$$ 1 기준이라는ㄱ 중요함.
 
 차영상에서 절대값 안붙인게 어느 부분에서 양수도 나오고 음수도 나온다.
 
-\gt T 도 가능하고 \lt T 인 경우에도 되게끔 설정이 가능하다.
+$$\gt T$$ 도 가능하고 $$\lt T$$ 인 경우에도 되게끔 설정이 가능하다.
+
+
+![2017cv14nn2 1 -22](https://cloud.githubusercontent.com/assets/3623889/26661027/a4b0257c-46b6-11e7-84a7-287116dda704.jpg)
+
+3개의 이미지는 각각 AADP, PADP, NADP 
+
+세번째꺼는 오른쪽 끝끼리 이으면 운동 방향을 알 수 있다. 
+
+자세한건 다음 그림 참고 해라.
+
+
+![2017cv14nn2 1 -20](https://cloud.githubusercontent.com/assets/3623889/26661025/a48c7e74-46b6-11e7-9a09-459b4b4d217d.jpg)
+
+
+그래서 Stationary Camera 가 뭐냐?
+
+# Static Segmentation and Matching
+
+Segmentation 은 영역을 따내는 것.
+
+영역화, semantic... 의미 있는 오브젝트를 밝혀내는 것, 그룹화 하는것... 등등... 즉 관심 있는거 따내는 거임.
+
+
+
+
+
+
 
 
 
