@@ -11,41 +11,159 @@ comments: true
 
 
 
+# 악성 솝트웨어 
 
-![ch19_computersecurity_malicioussw-01](https://cloud.githubusercontent.com/assets/3623889/26770582/38323166-49f3-11e7-847a-fa106eee81bd.jpg)
-![ch19_computersecurity_malicioussw-02](https://cloud.githubusercontent.com/assets/3623889/26770584/3878ead4-49f3-11e7-858f-1b1c27361768.jpg)
-![ch19_computersecurity_malicioussw-03](https://cloud.githubusercontent.com/assets/3623889/26770583/386dadea-49f3-11e7-874a-f73da2f13c13.jpg)
-![ch19_computersecurity_malicioussw-04](https://cloud.githubusercontent.com/assets/3623889/26770586/3887d864-49f3-11e7-930e-3620c9e9b6a0.jpg)
-![ch19_computersecurity_malicioussw-05](https://cloud.githubusercontent.com/assets/3623889/26770588/388975ca-49f3-11e7-8504-474caf9a42eb.jpg)
+self-contained 독립적으로 동작한다.
+
+warm
+
+virus : 자기 자신이 다른 프로그램에 기생한다.
+
+worm : 스스로 복제해서 카피된다.
+
+logic bomb : 어떤 조건하에 트리거
+
+trojan horse : 기대하지 않던 추가된 기능
+
+backdoor : 권한 없는데 들어가는것.
+
+mobile code sw : 다양한 플랫폼에서 ... 사용되는 코드
+
+auto-rooter : 공격set 을 만들어서 공격한다.
+
+
 ![ch19_computersecurity_malicioussw-06](https://cloud.githubusercontent.com/assets/3623889/26770587/38887102-49f3-11e7-851a-f7afc1ee811c.jpg)
+
+Dormant phase, Propagation phase 등등 설명 읽어보기.
+
 ![ch19_computersecurity_malicioussw-07](https://cloud.githubusercontent.com/assets/3623889/26770585/38875b14-49f3-11e7-96fd-9c9f50e3ea62.jpg)
+
+Triggering phase 조건 하에 실행된다. 
+
+Execution phase 실행 단계
+
+이쪽 파트는 용어만 좀 알아놓자.
+
+
+
+# 바이러스 구조
 ![ch19_computersecurity_malicioussw-08](https://cloud.githubusercontent.com/assets/3623889/26770589/389b646a-49f3-11e7-9023-e86fafa515f3.jpg)
+
+
+
+
 ![ch19_computersecurity_malicioussw-09](https://cloud.githubusercontent.com/assets/3623889/26770590/38a6bae0-49f3-11e7-9933-37d52f5798ba.jpg)
+
+전형적인 구조.
+
+실행파일을 랜덤하게 선택. 이미 감염된지 확인하고 그게 아니면 prepend 가따 부쳐라.
+
+trigger 상태가 되면 악의적인 행위를 하게끔 한다.
+
+
 ![ch19_computersecurity_malicioussw-10](https://cloud.githubusercontent.com/assets/3623889/26770593/38b3f494-49f3-11e7-8430-a4a33fd0da9e.jpg)
-![ch19_computersecurity_malicioussw-11](https://cloud.githubusercontent.com/assets/3623889/26770591/38b2b1e2-49f3-11e7-96ba-6f75fd90a323.jpg)
+
+숨어있을 땐 packing, 실행시 unpacking
+
+
 ![ch19_computersecurity_malicioussw-12](https://cloud.githubusercontent.com/assets/3623889/26770592/38b37122-49f3-11e7-944a-2c2d9d82c3ed.jpg)
-![ch19_computersecurity_malicioussw-13](https://cloud.githubusercontent.com/assets/3623889/26770594/38b68f1a-49f3-11e7-84d5-1ea214e29fa8.jpg)
-![ch19_computersecurity_malicioussw-14](https://cloud.githubusercontent.com/assets/3623889/26770595/38c693ce-49f3-11e7-86c6-ad82e5e273da.jpg)
+
+바이러스의 종류
+
+실행파일을 암호화 themida ㅋㅋ 같은거 개꿀임.
+
+polymorphic virus : for-loop 같은걸 다양한 형태로 만들 수 있는데, 비슷한 명령어로 대체 함.
+
+실행 구조를 변형 시킴. 탐지가 정말 힘들다.
+
+metamorphic virus : 코드가 바뀌고 악의 행동 자체가 바뀌는 것.  
+
 ![ch19_computersecurity_malicioussw-15](https://cloud.githubusercontent.com/assets/3623889/26770596/38cea50a-49f3-11e7-8e80-bce5c7fce2c1.jpg)
+
+감염시 찾아내는게 현실적인 목표. 그리고 신원 확인, 없애기
+
+
+
 ![ch19_computersecurity_malicioussw-16](https://cloud.githubusercontent.com/assets/3623889/26770600/38e420b0-49f3-11e7-87b4-ede9bb0511dd.jpg)
+
+first - 코드의 패턴을 db 화 해서 찾기. 
+
+second - 휴리스틱
+
+identify action : 악의 적인 행위 자체를 찾아냄
+
+fourth - 조합
+
+
 ![ch19_computersecurity_malicioussw-17](https://cloud.githubusercontent.com/assets/3623889/26770597/38e01312-49f3-11e7-9eb3-ddfdf7f2397e.jpg)
+
+# Generic Decryption
+
+
 ![ch19_computersecurity_malicioussw-18](https://cloud.githubusercontent.com/assets/3623889/26770599/38e15d3a-49f3-11e7-9b78-6f8cfb53efa1.jpg)
+
+cpu emulator 가 실행하면서 digital immune system 이 구성될 수 있다.
+
+디지털 면역 체계.
+
 ![ch19_computersecurity_malicioussw-19](https://cloud.githubusercontent.com/assets/3623889/26770598/38e14eb2-49f3-11e7-8bf1-b8ff86395d68.jpg)
+동작이 이상하다 -> 실행파일 전체를 싸서 KISA 에 보낸다 -> 돌려 보면서 분석한다 -> 
+시그니쳐 뽑아냄 -> 룰 만들어서 -> 퍼트리면 해당하는 파일들을 다 적용시켜서 치료한다 ->
+다른 클라이언트한테도 시그니쳐 공유함. 
+
+이렇게 치유함.
+
+
 ![ch19_computersecurity_malicioussw-20](https://cloud.githubusercontent.com/assets/3623889/26770601/38f0ce5a-49f3-11e7-9e42-7839a7243a52.jpg)
+
 ![ch19_computersecurity_malicioussw-21](https://cloud.githubusercontent.com/assets/3623889/26770602/38faac9a-49f3-11e7-9664-0d2213925402.jpg)
+
+행위기반으로 악의적인것을 잡아낸다.
+
+관리자가 정책을 만들어서 white-list 허용가능한 행위를 만들어서 어떤 시스템에 적용시킨다.
+
+이제 공격자가 방화벽 뚫음 -> 악의적인 행동을 감지하는것이 돌아가면서 white-list 벗어나서 딱 잡아냄.
+
+이때 사용되는 개념이 sandbox, sandbox 는 그 안에서만 영향을 미침. 벗어날 수가 없음.
+
+false positive 오탐지가 됨.
+
+
 ![ch19_computersecurity_malicioussw-22](https://cloud.githubusercontent.com/assets/3623889/26770604/390d5480-49f3-11e7-8d9f-868bb9a02ef8.jpg)
 ![ch19_computersecurity_malicioussw-23](https://cloud.githubusercontent.com/assets/3623889/26770606/3913623a-49f3-11e7-8537-f827df9a2311.jpg)
+# Worm 전파
 ![ch19_computersecurity_malicioussw-24](https://cloud.githubusercontent.com/assets/3623889/26770603/390d1448-49f3-11e7-9ada-141a19620d05.jpg)
+
+웜은 갑자기 확산이 됨.
+
+요즘은 갑자기 요청이 많으면 router 에서 차단시켜 버림.
+
+
 ![ch19_computersecurity_malicioussw-25](https://cloud.githubusercontent.com/assets/3623889/26770605/3912ea9e-49f3-11e7-87b8-45c714f7807c.jpg)
+
+1.25 대란 ㄷ ㄷ  전부 backborn 이 다운됨 ㄷ ㄷ 
+
 ![ch19_computersecurity_malicioussw-26](https://cloud.githubusercontent.com/assets/3623889/26770607/391ce792-49f3-11e7-9022-014fbf671411.jpg)
+
+zero-day 어택이란 : 취약성이 발견되면 공개를 함. 이때 배포가 됨. 근데!! 그 취약점이 외부에 오픈 안된 상태에서 그 정보를 이용해서 공격을 함.
+
+대책 없음. 
 ![ch19_computersecurity_malicioussw-27](https://cloud.githubusercontent.com/assets/3623889/26770608/39251a52-49f3-11e7-87fc-bd3e787826a7.jpg)
+
+rate limiting 어느정도 bandwidth 넘어서면 halting 시킴.
+
+
 ![ch19_computersecurity_malicioussw-28](https://cloud.githubusercontent.com/assets/3623889/26770609/3937120c-49f3-11e7-9eae-70c062b2729b.jpg)
 ![ch19_computersecurity_malicioussw-29](https://cloud.githubusercontent.com/assets/3623889/26770610/39389460-49f3-11e7-9b25-7f7a339f3e52.jpg)
-![ch19_computersecurity_malicioussw-30](https://cloud.githubusercontent.com/assets/3623889/26770611/393cc526-49f3-11e7-83a1-96469892f27a.jpg)
-![ch19_computersecurity_malicioussw-31](https://cloud.githubusercontent.com/assets/3623889/26770612/393e51f2-49f3-11e7-8f37-f7de2c5e1a5f.jpg)
-![ch19_computersecurity_malicioussw-32](https://cloud.githubusercontent.com/assets/3623889/26770613/394c5874-49f3-11e7-9a84-0fce74aea108.jpg)
+
+proactive : 사전대응하기 
+
+
 ![ch19_computersecurity_malicioussw-33](https://cloud.githubusercontent.com/assets/3623889/26770614/39519e42-49f3-11e7-995b-11aef9376275.jpg)
-![ch19_computersecurity_malicioussw-34](https://cloud.githubusercontent.com/assets/3623889/26770615/396258ae-49f3-11e7-9f0a-0a557ed27e98.jpg)
-![ch19_computersecurity_malicioussw-35](https://cloud.githubusercontent.com/assets/3623889/26770616/39674936-49f3-11e7-9389-33c0ba672883.jpg)
-![ch19_computersecurity_malicioussw-36](https://cloud.githubusercontent.com/assets/3623889/26770617/396985fc-49f3-11e7-8444-94c4f363932f.jpg)
+api hooking 가튼거.
+
+진도 끝.
+
+
+
 
