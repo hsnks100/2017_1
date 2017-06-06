@@ -375,42 +375,154 @@ Message Authenticatio code(MAC) 은 Keyed.
 
 
 
-# MAC vs. MIC
-자세한 내용을 알려줘........... ㅜㅜ 
+# MAC 과 MIC
+이해한 대로 함 써보자.
 
-# Unkeyed Hash Functions
+Message Authentication Code 이하 MAC
+
+이건 keyed 인 해시함수다. 
+
+파라메터로 비밀키와 임의의 길이의 메세지를 받는다.
+
+Message Integrity Code 이하 MIC
+
+MIC 은 key 를 받지 않는다. 메세지로만 mic 이 생성된다. 
+
+
+대표적인 unkeyed 알고리즘인 SHA 에 대해서 알아보자.
+
 
 # Secure Hash Algorithm
-
-SHA 라고 알려진 알고리즘이다.  
-
-
-# Keyed Hash Functions
+md4 에 기반한다. sha 512 에 대해서 알아본다.
 
 # HMAC
 
+대표적인 keyed hash algorithm 이다.
+
+md5 에 기반한다.
+
+
+
 # Digital Signatures
 
-# Properties
+## Properties
 
-# Attacks and Forgeries
+메세지 인증은 메시지를 교환하는 두 사람간을 제 삼자로부터 보호한다.
 
-# Direct Digital Signature
+하지만 이 보호방법은 한계가 있다.
 
-# ElGamal Digital Signature Scheme
+메리가 존의 메시지를 위조 하고 존으로부터 메시지가 왔다고 하는 경우에 대해 취약점이 있다.
 
-# Schnorr Digital Signature Scheme
+디지털 인증이 이를 보완한다.
 
-# Digial Signature Standard
+## Attacks and Forgeries
+
+
+## Direct Digital Signature
+
+## ElGamal Digital Signature Scheme
+
+## Schnorr Digital Signature Scheme
+
+## Digial Signature Standard
+
 
 # X.509 Certificates & PKI
 
-# X.509 Certification Service
 
-# Public Key Infstructure
+X.509는 암호학에서 공개키 인증서와 인증알고리즘의 표준 가운데에서 공개 키 기반(PKI)의 ITU-T 표준이다.
+
+공개키를 관리하고 디지털 인증을 제공한다. 
+
+public-key certificate 생성의 과정
+
+먼저 인증되지 않은 개인 인증서가 있다. 
+
+CA's private key 로 암호화(H(개인인증서)) 를 원래의 개인 인증서에 가따 부치면 signed certificate 가 된다.
+
+그러면 제 삼자가 밥의 정보만을 포함하는 H(개인인증서) 와 signed 정보를 CA's public key 로 풀어본 결과와 비교하면 
+
+인증을 할 수 있다.  
+
+X.509 Certificates 에서 한가지 표기방법을 알아야 한다. 
+
+```
+CA<<A>> 
+```
+
+라는 표현은CA 에 의해 A 가 signed 되었다는 뜻이다. 
+
+각 client 는 parents certificates 를 믿는다고 가정한다 .
+
+
+![6198440617826](https://cloud.githubusercontent.com/assets/3623889/26824628/237d85d6-4aed-11e7-9454-1271b0104833.jpg)
+
+이 그림에서 
+
+```
+X<<A>> 가 X 가 A 를 인증하는건데, 
+A 가 B 를 확인하고 싶다면, 
+Z<<B>> 를 얻어내야 한다.
+자기 자신의 상위 기관은 믿는다고 가정하면
+X<<W>>, W<<V>>, V<<Y>>, Y<<Z>>, Z<<B>> 
+
+```
+
+
+# X.509 에서 oneway authentication
+
+![my_ch14_authentication_x509_certificate-28](https://cloud.githubusercontent.com/assets/3623889/26826571/9a2258ea-4af4-11e7-8066-ec6449b6c914.jpg)
+
+B가 A를 확인하는 것임. 공유했던 세션키를 보내므로써 신원 확인함
+
+# two-way
+
+![my_ch14_authentication_x509_certificate-30](https://cloud.githubusercontent.com/assets/3623889/26826573/9a392908-4af4-11e7-8ab5-bf61144adba8.jpg)
+
+위의 그림에서 2번이 추가됐다. 구조는 비슷하고 nonce 값 $ r_A $ 를 그대로 넘겨주는 모습을 볼 수 있다.
+
+# three-way
+
+![my_ch14_authentication_x509_certificate-31](https://cloud.githubusercontent.com/assets/3623889/26826575/9a42ab40-4af4-11e7-9303-bcceecd6ea46.jpg)
+
+a 가 확인을 했다라는 목적으로 보내는 것.
+
+two-way 에서 추가적으로 $ r_B $ 를 보낸다. 그것을 a 가 다시 보낸다.
+
+
+# User Authentication
+
+용어 두가지 기밀성, 적시성
+
+기밀성은 세션키를 보호한다.
+
+적시성은 replay attack 을 막는다.
+
+Replay attack 을 막기위해, sequence numbers, timestamps, unique nonce 를 사용 한다.
+
+seq numbers : 서로 last seq number 를 유지하는 것이다. 비실용적임.
+
+timestamps : 메시지에 timestamp 를 넣어서 너무 오래된게 아닌가 검사함.
+
+unique nonce : A가 B 에게 인증해봐라 도전 보냄, B는 이 도전을 받아들임.
+
+
+
+
 
 
 # needham-schroeder protocol
+
+
+![my_ch15_user_authentication-11](https://cloud.githubusercontent.com/assets/3623889/26828018/ada7711a-4afa-11e7-9cb2-65ff51cfc20e.jpg)
+
+
+키 교환 프로토콜 중 하나다.
+
+
+
+
+
 등장 A, B, KDC
 
 A 가 KDC 에게 B랑 통신하고 싶다고 함.  
@@ -422,16 +534,21 @@ B가 A에게 $$K_s$$ 로 $$N_2$$ 를 암호화 해서 보냄
 A는 B에게 f($$N_2$$) 을 보내서 서로 확인함.  
 
 
-ID_a 가 뒤에 나오는 kerberos 의 티켓과 같은 역할.
+$ID_a$ 가 뒤에 나오는 kerberos 의 티켓과 같은 역할.
 
 
 하지만 헛점이 있음.
 
-3.A 에서 A 가 공격자다. 3번은 예전에 A->B 로 보내는 패킷을 캡쳐해논거, 어디선가 K_s 를 확보.  
-3~5번의 K_s 는 예전값.  
+3.A 에서 A 가 공격자다. 3번은 예전에 A->B 로 보내는 패킷을 캡쳐해논거, 어디선가 $K_s$ 를 확보.  
+3~5번의 $K_s$ 는 예전값.  
 
 어떻게 해결 할까? Nonce 나 time 을 집어넣음.  
-# Using Symmetric Encryption - pass  
+
+![my_ch15_user_authentication-12](https://cloud.githubusercontent.com/assets/3623889/26828016/ada52cfc-4afa-11e7-998b-90590ddbcdaf.jpg)
+
+# KDC 를 위한 One-Way?
+
+![my_ch15_user_authentication-14](https://cloud.githubusercontent.com/assets/3623889/26828020/add24f66-4afa-11e7-91bf-2cb7b532f78b.jpg)
 
 # Kerberos
 장점은 무지 빠름. 토큰방식, Reliable 하다. 사용자 입장에선 어디서 인증이 일어나는지 신경쓸 필요 없다.  
@@ -527,24 +644,6 @@ $Authenticator_c$ : 내가 진짜 누구다 증명하고 싶어하는것... 이�
 사실 비교 대상이 아님.
 
 한번 봐라.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
