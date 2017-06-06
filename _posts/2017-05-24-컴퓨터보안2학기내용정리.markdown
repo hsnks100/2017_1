@@ -23,17 +23,10 @@ comments: true
 
 이 세션키의 핵심 구성요소는 서로 개인키를 교환하지 않고 어떻게 같은 세션키를 가질 수 있는지다.
 
-그 뒤로 메시지 인증, 메시지 인증에 대한 birthday attack, hash, kerbors 를 다룬다.
+그 뒤로 메시지 인증, 메시지 인증에 대한 birthday attack, hash, kerbors 를 다룬다.  
 
 
-
-
-
-
-
-
-
-
+인증과 키 교환 쪽은 <http://kit2013.tistory.com/213> 여기를 참조. 참조가 아니고 여기서 먼저 카테고리에 대한 개념을 잡고 들어가는게 좋을 듯 싶음.
 
 
 
