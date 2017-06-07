@@ -147,7 +147,7 @@ A 가 B 에게 공개키를 보낸다. B 는 둘만이 가지는 세션키 $$K_S
 
 하지만 이 방법은 Man-in-the-middle-attack 에 취약하다.  
 
-즉, $$PU_a~||~ID_A$$ 를 Eve 가 가로채고 위의 과정을 $$PU_e$$ 로 B 와 하게 되면,
+즉, $$ PU_a~||~ID_A $$ 를 Eve 가 가로채고 위의 과정을 $$PU_e$$ 로 B 와 하게 되면,
 
 셋이서 같은 $$K_s$$ 를 공유하게 된다.
 
@@ -681,9 +681,9 @@ TGS : 티켓주는 서버
 
 trusted third-party 가 상호인증을 해줌.  
 
-Single-sign-on : 한번 로그인하면 쓸 수 있다.
-Trusted Third-party : 믿을 수 있다.
-Mutual authentication : 프토코ᅟᅩᆯ 보면 안다.
+Single-sign-on : 한번 로그인하면 쓸 수 있다.  
+Trusted Third-party : 믿을 수 있다.  
+Mutual authentication : 프토코콜 보면 안다.  
 
 Authentication Server 는 TGT 를 발급함.  
 
