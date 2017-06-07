@@ -695,9 +695,9 @@ Authentication Server 는 TGT 를 발급함.
 그림 (1)(2) 만 보면 된다.  
 
 $$
-(1)~C->AS~:~ID_C~,~~ID_{tgs}~,~TS_1~~\\
-(2)~AS->C~:~E_{K_c}[K_{c,~tgs}~,~~ID_{tgs}~,~TS_2~,~LifeTime_2~,~Ticket_{tgs}]~~\\
-Ticket_{tgs}~=~E_{K_{tgs}}[K_{c,~tgs}~,~~ID_C~,~AD_C~,~ID_{tgs}~,~TS_2~,~Lifetime_2]~\\
+(1)~C->AS~:~ID_C~||~ID_{tgs}~||~TS_1~~\\
+(2)~AS->C~:~E_{K_c}[K_{c,~tgs}~||~ID_{tgs}~||~TS_2~||~LifeTime_2~||~Ticket_{tgs}]~~\\
+Ticket_{tgs}~=~E_{K_{tgs}}[K_{c,~tgs}~||~ID_C~||~AD_C~||~ID_{tgs}~||~TS_2~||~Lifetime_2]~\\
 $$
 
 $$K_{c, tgs}$$ : c 하고 tgs 사이의 비밀키
