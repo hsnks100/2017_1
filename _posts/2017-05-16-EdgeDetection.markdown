@@ -1,6 +1,5 @@
 ---
 layout: post
-title: "시각개론edge구하기"
 author: 코딩도사(hsnks100@gmail.com)
 date: 2017-05-16 10:41 +0900
 tags: 
