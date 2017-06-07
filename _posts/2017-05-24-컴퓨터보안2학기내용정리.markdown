@@ -147,7 +147,7 @@ A 가 B 에게 공개키를 보낸다. B 는 둘만이 가지는 세션키 $$K_S
 
 하지만 이 방법은 Man-in-the-middle-attack 에 취약하다.  
 
-즉, $ PU_a || ID_A $ 를 Eve 가 가로채고 위의 과정을 
+즉, $ PU_a || ID_A  $ 를 Eve 가 가로채고 위의 과정을
 
 $ PU_e $ 로 B 와 하게 되면,
 
@@ -695,12 +695,12 @@ Authentication Server 는 TGT 를 발급함.
 그림 (1)(2) 만 보면 된다.  
 
 $$
-(1) C->AS : ID_C || ID_{tgs} || TS_1  \\
-(2) AS->C : E_{K_c}[K_{c, tgs} || ID_{tgs} || TS_2 || LifeTime_2 || Ticket_{tgs}]  \\
-Ticket_{tgs} = E_{K_tgs}[K_{c, tgs} || ID_C || AD_C || ID_{tgs} || TS_2 || Lifetime_2] \\
+(1)~C->AS~:~ID_C~,~~ID_{tgs}~,~TS_1~~\\
+(2)~AS->C~:~E_{K_c}[K_{c,~tgs}~,~~ID_{tgs}~,~TS_2~,~LifeTime_2~,~Ticket_{tgs}]~~\\
+Ticket_{tgs}~=~E_{K_{tgs}}[K_{c,~tgs}~,~~ID_C~,~AD_C~,~ID_{tgs}~,~TS_2~,~Lifetime_2]~\\
 $$
 
-$$K_{c, tgs}$$ : k 하고 tgs 사이의 비밀키
+$$K_{c, tgs}$$ : c 하고 tgs 사이의 비밀키
 
 
 $TS_1$ 타임 스탬프
