@@ -154,11 +154,12 @@ Feature-based methods 는 쉽지 않다. 너무 sementic 적이다.
 
 두개의 프레임에서 어떤 f(x, y) 을 생각한다. 
 
-$ E = f(x, y, t)\\
+$
+E = f(x, y, t)\\
 E = f(x, y, t + 1) 
 $
 
-짧은 시간에서 $ dE over {dt} = 0 $ 이기 때문에 밑의 식을 쓴다. 
+짧은 시간에서 $ {dE {over} dt} = 0 $ 이기 때문에 밑의 식을 쓴다. 
 
 
 ![2017cv14nn2-34](https://user-images.githubusercontent.com/3623889/26906822-4d7de2de-4c2a-11e7-88d1-25752c331f63.jpg)
