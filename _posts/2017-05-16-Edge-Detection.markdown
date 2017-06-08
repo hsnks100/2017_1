@@ -9,14 +9,42 @@ comments: true
 {:toc}
 
 
+# Edge Detecting
+
 ![2017cv05f-01](https://user-images.githubusercontent.com/3623889/26906688-fecc3c08-4c29-11e7-8962-8e40e8ab1822.jpg)
 ![2017cv05f-02](https://user-images.githubusercontent.com/3623889/26906689-fef4d3ac-4c29-11e7-81bd-85aa94bbb964.jpg)
 ![2017cv05f-03](https://user-images.githubusercontent.com/3623889/26906691-ff081570-4c29-11e7-86d7-c4b8430ce2e4.jpg)
 ![2017cv05f-04](https://user-images.githubusercontent.com/3623889/26906690-ff06fa0a-4c29-11e7-8d92-6d4c033b7dda.jpg)
 ![2017cv05f-05](https://user-images.githubusercontent.com/3623889/26906692-ff08781c-4c29-11e7-8c49-e7c19d62cb1c.jpg)
 ![2017cv05f-06](https://user-images.githubusercontent.com/3623889/26906694-ff0c10c6-4c29-11e7-9da9-0e3a7d1f3203.jpg)
+이것저것 용어들 정의하고 일단은 edge 는 밝기의 변화값 차이를 잡아내는 것이다.
+
+그래서 편미분을 도입하고 수식을 유도하는데 결국은 method2 를 쓴다.
+
+$ f[x+1, y] - f[x, y] $ 
+
+그러면 $ G_x = [-1 1],~G_y = [1; -1] $ 으로 operator 를 정의 할 수 있다.  
+
 ![2017cv05f-07](https://user-images.githubusercontent.com/3623889/26906693-ff0aef2a-4c29-11e7-9fd9-3fd039a93e22.jpg)
+
+# Derivative Operator
+
 ![2017cv05f-08](https://user-images.githubusercontent.com/3623889/26906695-ff1d6a06-4c29-11e7-9e27-83db327ed97c.jpg)
+$$
+G_x = 
+\begin{matrix}
+-1 & 1 \\
+-1 & 1 \\ 
+\end{matrix} 
+$$
+
+$$
+G_y = 
+\begin{matrix}
+-1 & 1 \\
+-1 & 1 \\ 
+\end{matrix} 
+$$
 ![2017cv05f-09](https://user-images.githubusercontent.com/3623889/26906698-ff2f92f8-4c29-11e7-9583-384bb3b6dc69.jpg)
 ![2017cv05f-10](https://user-images.githubusercontent.com/3623889/26906697-ff2f5a36-4c29-11e7-9e67-d16ed9c0c8de.jpg)
 ![2017cv05f-11](https://user-images.githubusercontent.com/3623889/26906696-ff2d6f0a-4c29-11e7-8783-fbfc4a42af62.jpg)
