@@ -46,6 +46,11 @@ MCMO : 움직, 움직
 ![2017cv14nn2-09](https://user-images.githubusercontent.com/3623889/26906797-4caeee16-4c2a-11e7-8ad2-6faa27a27d10.jpg) 
 두개의 영상이 있다고 생각한다.
 ![2017cv14nn2-10](https://user-images.githubusercontent.com/3623889/26906800-4cc60be6-4c2a-11e7-830e-ced2e0e493bc.jpg) 
+이거 시험은 안내는데 방법은 알아놔라
+
+빨간건 UFO 임. 탐지하자.  
+
+위 식은 계산은 틀렸지만 방법의 예시임.  
 
 
 $$\lambda$$ 는 유사도  
@@ -54,33 +59,6 @@ $$\lambda$$ 는 유사도
 $$\lambda~\gt~\tau$$ 이면 변화가 일어난 것.  
 
 
-
-
-![2017cv14nn2-11](https://user-images.githubusercontent.com/3623889/26906799-4cb6226c-4c2a-11e7-80b4-99d6473bb5b3.jpg)
-![2017cv14nn2-12](https://user-images.githubusercontent.com/3623889/26906801-4cc6b2ee-4c2a-11e7-9ead-2a3a173c38a1.jpg)
-
-위는 중첩이 아니라서 픽셀이 큼, 아래는 중첩시켜서 부드럽게 추출이 가능함.
-
-밑이 노이즈에 강함.
-![2017cv14nn2-13](https://user-images.githubusercontent.com/3623889/26906802-4cd509fc-4c2a-11e7-8baf-1148b2930d2b.jpg)
-통계적인 방법  
-
-각 3 by 3 에 대해서 평균값, 분산을 비교하여 특정 $$\tau$$ 보다 크면 탐지, 아니면 노이즈라고 봄.  
-
-중첩안시키고 해도 되고 중첩 시켜도 된다. 
-
-(a) 는 노중첩, (b) 중첩
-
-
-## 실제 사례
-
-
-
-이거 시험은 안내는데 방법은 알아놔라
-
-빨간건 UFO 임. 탐지하자.  
-
-위 식은 계산은 틀렸지만 방법의 예시임.  
 
 
 ## 중첩 차영상
@@ -98,9 +76,16 @@ $$\lambda~\gt~\tau$$ 이면 변화가 일어난 것.
 
 $$DP_{1k}$$ 1 기준이라는ㄱ 중요함.  
 
+![2017cv14nn2-12](https://user-images.githubusercontent.com/3623889/26906801-4cc6b2ee-4c2a-11e7-9ead-2a3a173c38a1.jpg)
 그림을 보면 오브젝트의 모양과 이동 경로를 알 수 있음.
 
 흰->검
+
+
+
+
+
+
 
 
 # Segmentation Using Motion
@@ -161,9 +146,6 @@ Feature-based methods 는 쉽지 않다. 너무 sementic 적이다.
 그래서 Gradient-based methods 설명을 한다.
 
 ## 시험
-![2017cv14nn2-31](https://user-images.githubusercontent.com/3623889/26906821-4d6d8cc2-4c2a-11e7-9fab-0ec39592c440.jpg)
-![2017cv14nn2-32](https://user-images.githubusercontent.com/3623889/26906824-4d80affa-4c2a-11e7-867c-1d37bb8cf906.jpg)
-![2017cv14nn2 1 -33](https://cloud.githubusercontent.com/assets/3623889/26661037/a4ec8daa-46b6-11e7-8378-6f3089f02e49.jpg)
 ![2017cv14nn2 1 -34](https://cloud.githubusercontent.com/assets/3623889/26661038/a50ba12c-46b6-11e7-81c3-dcc1c9d33d4f.jpg) 
 
 특징 기반은 앞에서 했음. 영상 프레임에서 코너점 찾고,,.. 에지 찾는다 등등 
