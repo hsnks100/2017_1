@@ -10,42 +10,8 @@ comments: true
 {:toc}
 
 
-
-
-![2017cv14nn2-01](https://user-images.githubusercontent.com/3623889/26906793-4c824af0-4c2a-11e7-8b83-c7acdecb6e36.jpg)
-![2017cv14nn2-03](https://user-images.githubusercontent.com/3623889/26906791-4c811770-4c2a-11e7-9eda-0db203ba546b.jpg)
-
-
-
-
-![2017cv14nn2-07](https://user-images.githubusercontent.com/3623889/26906798-4cb09e0a-4c2a-11e7-9bac-7880381cd949.jpg)
-
-
-
-
-![2017cv14nn2-18](https://user-images.githubusercontent.com/3623889/26906806-4d042692-4c2a-11e7-8d91-582cf5c420e5.jpg)
-![2017cv14nn2-19](https://user-images.githubusercontent.com/3623889/26906810-4d121590-4c2a-11e7-97d1-e1d7bea13936.jpg)
-![2017cv14nn2-20](https://user-images.githubusercontent.com/3623889/26906807-4d042e9e-4c2a-11e7-8337-1213d3b9d16a.jpg)
-![2017cv14nn2-21](https://user-images.githubusercontent.com/3623889/26906809-4d09f48c-4c2a-11e7-8b6a-d040165af558.jpg)
-![2017cv14nn2-22](https://user-images.githubusercontent.com/3623889/26906811-4d190e04-4c2a-11e7-9409-770b7f0d12a8.jpg)
-![2017cv14nn2-23](https://user-images.githubusercontent.com/3623889/26906815-4d402b38-4c2a-11e7-8d18-aa75a6d3a911.jpg)
-![2017cv14nn2-24](https://user-images.githubusercontent.com/3623889/26906816-4d4070c0-4c2a-11e7-93d6-79f4e390eafd.jpg)
-![2017cv14nn2-25](https://user-images.githubusercontent.com/3623889/26906817-4d422b7c-4c2a-11e7-8caa-7717249adbfd.jpg)
-![2017cv14nn2-26](https://user-images.githubusercontent.com/3623889/26906812-4d31d74a-4c2a-11e7-9b77-cdde6e3d4ff7.jpg)
-![2017cv14nn2-27](https://user-images.githubusercontent.com/3623889/26906813-4d3b7dc2-4c2a-11e7-8c31-b0c643feb133.jpg)
-![2017cv14nn2-28](https://user-images.githubusercontent.com/3623889/26906814-4d3dc21c-4c2a-11e7-9703-b11479613f0e.jpg)
-![2017cv14nn2-29](https://user-images.githubusercontent.com/3623889/26906818-4d58b4dc-4c2a-11e7-9352-4e738a41f598.jpg)
-![2017cv14nn2-30](https://user-images.githubusercontent.com/3623889/26906819-4d64aba2-4c2a-11e7-98c6-213c4c62f6bf.jpg)
-
-광류...?
-
-앞에서는 흑미점?
-
-흥미점
-
-
-
-
+# Dynamic Vision
+여러 프레임이 있을 때 물체를 탐지한다.
 
 # 개요
 고체를 가정.
@@ -252,36 +218,6 @@ $$\gt T$$ 도 가능하고 $$\lt T$$ 인 경우에도 되게끔 설정이 가능
 
 
 
-![2017cv14nn2 1 -01](https://cloud.githubusercontent.com/assets/3623889/26661005/a3faf95e-46b6-11e7-836b-2ece817da6db.jpg)
-![2017cv14nn2 1 -02](https://cloud.githubusercontent.com/assets/3623889/26661008/a3ff3000-46b6-11e7-86de-97a2f7f9f227.jpg)
-![2017cv14nn2 1 -03](https://cloud.githubusercontent.com/assets/3623889/26661007/a3fee1f4-46b6-11e7-8594-fe226129d25d.jpg)
-![2017cv14nn2 1 -04](https://cloud.githubusercontent.com/assets/3623889/26661009/a3ff86d6-46b6-11e7-9317-54e9915b5214.jpg)
-![2017cv14nn2 1 -05](https://cloud.githubusercontent.com/assets/3623889/26661006/a3fdbb76-46b6-11e7-89b6-b6d5bc655fcb.jpg)
-![2017cv14nn2 1 -06](https://cloud.githubusercontent.com/assets/3623889/26661011/a42d0624-46b6-11e7-80a9-03089f434d3b.jpg)
-![2017cv14nn2 1 -07](https://cloud.githubusercontent.com/assets/3623889/26661010/a42a7e40-46b6-11e7-9bf1-7beb2701af82.jpg)
-![2017cv14nn2 1 -08](https://cloud.githubusercontent.com/assets/3623889/26661012/a42cfe4a-46b6-11e7-86ea-967f2a92e9f5.jpg)
-![2017cv14nn2 1 -09](https://cloud.githubusercontent.com/assets/3623889/26661013/a42fd3ea-46b6-11e7-9727-ed37e8a67cb2.jpg)
-![2017cv14nn2 1 -10](https://cloud.githubusercontent.com/assets/3623889/26661014/a4410f02-46b6-11e7-9975-8a19aa27e2b5.jpg)
-![2017cv14nn2 1 -11](https://cloud.githubusercontent.com/assets/3623889/26661019/a45ec556-46b6-11e7-9479-7ddc23632501.jpg)
-![2017cv14nn2 1 -12](https://cloud.githubusercontent.com/assets/3623889/26661015/a454ee46-46b6-11e7-8373-61bd677040cc.jpg)
-![2017cv14nn2 1 -13](https://cloud.githubusercontent.com/assets/3623889/26661016/a45567ae-46b6-11e7-9cdf-76eb31e4f79c.jpg)
-![2017cv14nn2 1 -14](https://cloud.githubusercontent.com/assets/3623889/26661018/a45b2356-46b6-11e7-9f87-055c0be33426.jpg)
-![2017cv14nn2 1 -15](https://cloud.githubusercontent.com/assets/3623889/26661017/a45a9f3a-46b6-11e7-8bf5-8dcbe20c8007.jpg)
-![2017cv14nn2 1 -16](https://cloud.githubusercontent.com/assets/3623889/26661020/a47957e0-46b6-11e7-97d7-ff75b2c2ce1d.jpg)
-![2017cv14nn2 1 -17](https://cloud.githubusercontent.com/assets/3623889/26661022/a481a954-46b6-11e7-87c4-59c87af1221a.jpg)
-![2017cv14nn2 1 -18](https://cloud.githubusercontent.com/assets/3623889/26661021/a47f933a-46b6-11e7-97a8-7b9e8e069e18.jpg)
-![2017cv14nn2 1 -19](https://cloud.githubusercontent.com/assets/3623889/26661023/a488284c-46b6-11e7-8b4b-461f6fc77935.jpg)
-![2017cv14nn2 1 -20](https://cloud.githubusercontent.com/assets/3623889/26661025/a48c7e74-46b6-11e7-9a09-459b4b4d217d.jpg)
-![2017cv14nn2 1 -21](https://cloud.githubusercontent.com/assets/3623889/26661024/a48a48a2-46b6-11e7-8bbe-c4a742a07f79.jpg)
-![2017cv14nn2 1 -22](https://cloud.githubusercontent.com/assets/3623889/26661027/a4b0257c-46b6-11e7-84a7-287116dda704.jpg)
-![2017cv14nn2 1 -23](https://cloud.githubusercontent.com/assets/3623889/26661031/a4c1b38c-46b6-11e7-9121-ad139a2b80db.jpg)
-![2017cv14nn2 1 -24](https://cloud.githubusercontent.com/assets/3623889/26661026/a4ae781c-46b6-11e7-94c8-a659c863d3c0.jpg)
-![2017cv14nn2 1 -25](https://cloud.githubusercontent.com/assets/3623889/26661030/a4ba8daa-46b6-11e7-9c10-f060f7305eb4.jpg)
-![2017cv14nn2 1 -26](https://cloud.githubusercontent.com/assets/3623889/26661029/a4b93dc4-46b6-11e7-9bca-2b643e2f63b1.jpg)
-![2017cv14nn2 1 -27](https://cloud.githubusercontent.com/assets/3623889/26661028/a4b78894-46b6-11e7-92be-61dbf929a70c.jpg)
-![2017cv14nn2 1 -28](https://cloud.githubusercontent.com/assets/3623889/26661032/a4e018ea-46b6-11e7-8940-e3eefd30556e.jpg)
-![2017cv14nn2 1 -29](https://cloud.githubusercontent.com/assets/3623889/26661033/a4e16d94-46b6-11e7-963f-11cf01adc373.jpg)
-![2017cv14nn2 1 -30](https://cloud.githubusercontent.com/assets/3623889/26661034/a4e1ccd0-46b6-11e7-9020-cbebd2c7d52c.jpg)
 
 광뷰... 스몰 타임으로 함.
 
@@ -525,3 +461,33 @@ $ weight = w_1 + w_2 = 1 $
 
 
 
+![2017cv14nn2 1 -01](https://cloud.githubusercontent.com/assets/3623889/26661005/a3faf95e-46b6-11e7-836b-2ece817da6db.jpg)
+![2017cv14nn2 1 -02](https://cloud.githubusercontent.com/assets/3623889/26661008/a3ff3000-46b6-11e7-86de-97a2f7f9f227.jpg)
+![2017cv14nn2 1 -03](https://cloud.githubusercontent.com/assets/3623889/26661007/a3fee1f4-46b6-11e7-8594-fe226129d25d.jpg)
+![2017cv14nn2 1 -04](https://cloud.githubusercontent.com/assets/3623889/26661009/a3ff86d6-46b6-11e7-9317-54e9915b5214.jpg)
+![2017cv14nn2 1 -05](https://cloud.githubusercontent.com/assets/3623889/26661006/a3fdbb76-46b6-11e7-89b6-b6d5bc655fcb.jpg)
+![2017cv14nn2 1 -06](https://cloud.githubusercontent.com/assets/3623889/26661011/a42d0624-46b6-11e7-80a9-03089f434d3b.jpg)
+![2017cv14nn2 1 -07](https://cloud.githubusercontent.com/assets/3623889/26661010/a42a7e40-46b6-11e7-9bf1-7beb2701af82.jpg)
+![2017cv14nn2 1 -08](https://cloud.githubusercontent.com/assets/3623889/26661012/a42cfe4a-46b6-11e7-86ea-967f2a92e9f5.jpg)
+![2017cv14nn2 1 -09](https://cloud.githubusercontent.com/assets/3623889/26661013/a42fd3ea-46b6-11e7-9727-ed37e8a67cb2.jpg)
+![2017cv14nn2 1 -10](https://cloud.githubusercontent.com/assets/3623889/26661014/a4410f02-46b6-11e7-9975-8a19aa27e2b5.jpg)
+![2017cv14nn2 1 -11](https://cloud.githubusercontent.com/assets/3623889/26661019/a45ec556-46b6-11e7-9479-7ddc23632501.jpg)
+![2017cv14nn2 1 -12](https://cloud.githubusercontent.com/assets/3623889/26661015/a454ee46-46b6-11e7-8373-61bd677040cc.jpg)
+![2017cv14nn2 1 -13](https://cloud.githubusercontent.com/assets/3623889/26661016/a45567ae-46b6-11e7-9cdf-76eb31e4f79c.jpg)
+![2017cv14nn2 1 -14](https://cloud.githubusercontent.com/assets/3623889/26661018/a45b2356-46b6-11e7-9f87-055c0be33426.jpg)
+![2017cv14nn2 1 -15](https://cloud.githubusercontent.com/assets/3623889/26661017/a45a9f3a-46b6-11e7-8bf5-8dcbe20c8007.jpg)
+![2017cv14nn2 1 -16](https://cloud.githubusercontent.com/assets/3623889/26661020/a47957e0-46b6-11e7-97d7-ff75b2c2ce1d.jpg)
+![2017cv14nn2 1 -17](https://cloud.githubusercontent.com/assets/3623889/26661022/a481a954-46b6-11e7-87c4-59c87af1221a.jpg)
+![2017cv14nn2 1 -18](https://cloud.githubusercontent.com/assets/3623889/26661021/a47f933a-46b6-11e7-97a8-7b9e8e069e18.jpg)
+![2017cv14nn2 1 -19](https://cloud.githubusercontent.com/assets/3623889/26661023/a488284c-46b6-11e7-8b4b-461f6fc77935.jpg)
+![2017cv14nn2 1 -20](https://cloud.githubusercontent.com/assets/3623889/26661025/a48c7e74-46b6-11e7-9a09-459b4b4d217d.jpg)
+![2017cv14nn2 1 -21](https://cloud.githubusercontent.com/assets/3623889/26661024/a48a48a2-46b6-11e7-8bbe-c4a742a07f79.jpg)
+![2017cv14nn2 1 -22](https://cloud.githubusercontent.com/assets/3623889/26661027/a4b0257c-46b6-11e7-84a7-287116dda704.jpg)
+![2017cv14nn2 1 -23](https://cloud.githubusercontent.com/assets/3623889/26661031/a4c1b38c-46b6-11e7-9121-ad139a2b80db.jpg)
+![2017cv14nn2 1 -24](https://cloud.githubusercontent.com/assets/3623889/26661026/a4ae781c-46b6-11e7-94c8-a659c863d3c0.jpg)
+![2017cv14nn2 1 -25](https://cloud.githubusercontent.com/assets/3623889/26661030/a4ba8daa-46b6-11e7-9c10-f060f7305eb4.jpg)
+![2017cv14nn2 1 -26](https://cloud.githubusercontent.com/assets/3623889/26661029/a4b93dc4-46b6-11e7-9bca-2b643e2f63b1.jpg)
+![2017cv14nn2 1 -27](https://cloud.githubusercontent.com/assets/3623889/26661028/a4b78894-46b6-11e7-92be-61dbf929a70c.jpg)
+![2017cv14nn2 1 -28](https://cloud.githubusercontent.com/assets/3623889/26661032/a4e018ea-46b6-11e7-8940-e3eefd30556e.jpg)
+![2017cv14nn2 1 -29](https://cloud.githubusercontent.com/assets/3623889/26661033/a4e16d94-46b6-11e7-963f-11cf01adc373.jpg)
+![2017cv14nn2 1 -30](https://cloud.githubusercontent.com/assets/3623889/26661034/a4e1ccd0-46b6-11e7-9020-cbebd2c7d52c.jpg)
