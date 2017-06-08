@@ -11,6 +11,7 @@ comments: true
 
 
 
+# Edge Detecting
 
 ![2017cv14nn2-01](https://user-images.githubusercontent.com/3623889/26906793-4c824af0-4c2a-11e7-8b83-c7acdecb6e36.jpg)
 ![2017cv14nn2-02](https://user-images.githubusercontent.com/3623889/26906790-4c802dba-4c2a-11e7-8e79-7902e002023f.jpg)
@@ -18,10 +19,49 @@ comments: true
 ![2017cv14nn2-04](https://user-images.githubusercontent.com/3623889/26906792-4c81d49e-4c2a-11e7-8598-b946f94580cb.jpg)
 ![2017cv14nn2-05](https://user-images.githubusercontent.com/3623889/26906795-4c9a92cc-4c2a-11e7-975f-e1cd9a5307c7.jpg)
 ![2017cv14nn2-06](https://user-images.githubusercontent.com/3623889/26906794-4c834bee-4c2a-11e7-88e9-4e542779d176.jpg)
+
+이것저것 용어들 정의하고 일단은 edge 는 밝기의 변화값 차이를 잡아내는 것이다.
+
+그래서 편미분을 도입하고 수식을 유도하는데 결국은 method2 를 쓴다.
+
+$ f[x+1, y] - f[x, y] $ 
+
+그러면 $ G_x = [-1 1],~G_y = [1; -1] $ 으로 operator 를 정의 할 수 있다.  
+
+
+
+
 ![2017cv14nn2-07](https://user-images.githubusercontent.com/3623889/26906798-4cb09e0a-4c2a-11e7-9bac-7880381cd949.jpg)
+
+# Derivative Operator
 ![2017cv14nn2-08](https://user-images.githubusercontent.com/3623889/26906796-4cadc05e-4c2a-11e7-84ec-54b6ea46ceb6.jpg)
+
+$$
+G_x = 
+\begin{matrix}
+-1 & 1 \\
+-1 & 1 \\ 
+\end{matrix} 
+$$
+
+$$
+G_y = 
+\begin{matrix}
+-1 & 1 \\
+-1 & 1 \\ 
+\end{matrix} 
+$$
+
+
 ![2017cv14nn2-09](https://user-images.githubusercontent.com/3623889/26906797-4caeee16-4c2a-11e7-8ad2-6faa27a27d10.jpg)
+
+
+# Roberts Operator
 ![2017cv14nn2-10](https://user-images.githubusercontent.com/3623889/26906800-4cc60be6-4c2a-11e7-830e-ced2e0e493bc.jpg)
+
+
+
+
 ![2017cv14nn2-11](https://user-images.githubusercontent.com/3623889/26906799-4cb6226c-4c2a-11e7-80b4-99d6473bb5b3.jpg)
 ![2017cv14nn2-12](https://user-images.githubusercontent.com/3623889/26906801-4cc6b2ee-4c2a-11e7-9ead-2a3a173c38a1.jpg)
 ![2017cv14nn2-13](https://user-images.githubusercontent.com/3623889/26906802-4cd509fc-4c2a-11e7-8baf-1148b2930d2b.jpg)
