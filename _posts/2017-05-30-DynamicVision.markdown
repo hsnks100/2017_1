@@ -13,36 +13,16 @@ comments: true
 
 
 ![2017cv14nn2-01](https://user-images.githubusercontent.com/3623889/26906793-4c824af0-4c2a-11e7-8b83-c7acdecb6e36.jpg)
-![2017cv14nn2-02](https://user-images.githubusercontent.com/3623889/26906790-4c802dba-4c2a-11e7-8e79-7902e002023f.jpg)
 ![2017cv14nn2-03](https://user-images.githubusercontent.com/3623889/26906791-4c811770-4c2a-11e7-9eda-0db203ba546b.jpg)
-![2017cv14nn2-04](https://user-images.githubusercontent.com/3623889/26906792-4c81d49e-4c2a-11e7-8598-b946f94580cb.jpg)
-![2017cv14nn2-05](https://user-images.githubusercontent.com/3623889/26906795-4c9a92cc-4c2a-11e7-975f-e1cd9a5307c7.jpg)
-![2017cv14nn2-06](https://user-images.githubusercontent.com/3623889/26906794-4c834bee-4c2a-11e7-88e9-4e542779d176.jpg)
 
 
 
 
 ![2017cv14nn2-07](https://user-images.githubusercontent.com/3623889/26906798-4cb09e0a-4c2a-11e7-9bac-7880381cd949.jpg)
 
-![2017cv14nn2-08](https://user-images.githubusercontent.com/3623889/26906796-4cadc05e-4c2a-11e7-84ec-54b6ea46ceb6.jpg)
 
 
 
-![2017cv14nn2-09](https://user-images.githubusercontent.com/3623889/26906797-4caeee16-4c2a-11e7-8ad2-6faa27a27d10.jpg)
-
-
-![2017cv14nn2-10](https://user-images.githubusercontent.com/3623889/26906800-4cc60be6-4c2a-11e7-830e-ced2e0e493bc.jpg)
-
-
-
-
-![2017cv14nn2-11](https://user-images.githubusercontent.com/3623889/26906799-4cb6226c-4c2a-11e7-80b4-99d6473bb5b3.jpg)
-![2017cv14nn2-12](https://user-images.githubusercontent.com/3623889/26906801-4cc6b2ee-4c2a-11e7-9ead-2a3a173c38a1.jpg)
-![2017cv14nn2-13](https://user-images.githubusercontent.com/3623889/26906802-4cd509fc-4c2a-11e7-8baf-1148b2930d2b.jpg)
-![2017cv14nn2-14](https://user-images.githubusercontent.com/3623889/26906803-4cd686e2-4c2a-11e7-8426-600829fa89d1.jpg)
-![2017cv14nn2-15](https://user-images.githubusercontent.com/3623889/26906805-4cec8b7c-4c2a-11e7-8b4f-96558915de33.jpg)
-![2017cv14nn2-16](https://user-images.githubusercontent.com/3623889/26906804-4ce0878c-4c2a-11e7-8119-e8ed258d01dc.jpg)
-![2017cv14nn2-17](https://user-images.githubusercontent.com/3623889/26906808-4d04d092-4c2a-11e7-8b8b-c02bc2a2fb6a.jpg)
 ![2017cv14nn2-18](https://user-images.githubusercontent.com/3623889/26906806-4d042692-4c2a-11e7-8d91-582cf5c420e5.jpg)
 ![2017cv14nn2-19](https://user-images.githubusercontent.com/3623889/26906810-4d121590-4c2a-11e7-97d1-e1d7bea13936.jpg)
 ![2017cv14nn2-20](https://user-images.githubusercontent.com/3623889/26906807-4d042e9e-4c2a-11e7-8337-1213d3b9d16a.jpg)
@@ -79,6 +59,7 @@ comments: true
 카메라와 객체 사이의 관계  
 
 
+![2017cv14nn2-02](https://user-images.githubusercontent.com/3623889/26906790-4c802dba-4c2a-11e7-8e79-7902e002023f.jpg)
 # 용어
 
 SCSO : 정지된 카메라 정지된 객체  
@@ -95,6 +76,7 @@ $$F(x, y, t)$$ 이 들어옴. 연속된 영상이 들어온다. 시간 t 일 수
 
 
 # Change Detection
+![2017cv14nn2-04](https://user-images.githubusercontent.com/3623889/26906792-4c81d49e-4c2a-11e7-8598-b946f94580cb.jpg)
 변화를 체크...  
 프레임의 변화를 모아서... 탐지함. 그 단위가 pixel, edge, 영역, 등으로 변화 탐지하는 단위를 조절할 수 있음.  
 
@@ -104,7 +86,7 @@ $$F(x, y, t)$$ 이 들어옴. 연속된 영상이 들어온다. 시간 t 일 수
 # Difference Pictures
 
 
-![image](https://cloud.githubusercontent.com/assets/3623889/26565498/bf4f020e-4526-11e7-9b04-2ec78b01954e.png)
+![2017cv14nn2-05](https://user-images.githubusercontent.com/3623889/26906795-4c9a92cc-4c2a-11e7-975f-e1cd9a5307c7.jpg)
 
 
 차이의 영상을 만든다.
@@ -114,7 +96,7 @@ $$F(x, y, t)$$ 이 들어옴. 연속된 영상이 들어온다. 시간 t 일 수
 마지막 1,0 프레임에서 어떻게 30 을 뽑아내지??
 
 
-![image](https://cloud.githubusercontent.com/assets/3623889/26565585/576994be-4527-11e7-9c84-ac9119c02f5f.png)
+![2017cv14nn2-06](https://user-images.githubusercontent.com/3623889/26906794-4c834bee-4c2a-11e7-88e9-4e542779d176.jpg)
 
 모션과 조명의 변화에서 위 방법을 적용한 모습.  
 
@@ -130,7 +112,8 @@ $$F(x, y, t)$$ 이 들어옴. 연속된 영상이 들어온다. 시간 t 일 수
 
 # Robust Change Detection
 
-![image](https://cloud.githubusercontent.com/assets/3623889/26565541/07cbf744-4527-11e7-99b1-c60efe793ae2.png)
+![2017cv14nn2-08](https://user-images.githubusercontent.com/3623889/26906796-4cadc05e-4c2a-11e7-84ec-54b6ea46ceb6.jpg)
+![2017cv14nn2-13](https://user-images.githubusercontent.com/3623889/26906802-4cd509fc-4c2a-11e7-8baf-1148b2930d2b.jpg)
 통계적인 방법  
 
 각 3 by 3 에 대해서 평균값, 분산을 비교하여 특정 $$\tau$$ 보다 크면 탐지, 아니면 노이즈라고 봄.  
@@ -139,8 +122,9 @@ $$F(x, y, t)$$ 이 들어옴. 연속된 영상이 들어온다. 시간 t 일 수
 
 (a) 는 노중첩, (b) 중첩
 
+![2017cv14nn2-09](https://user-images.githubusercontent.com/3623889/26906797-4caeee16-4c2a-11e7-8ad2-6faa27a27d10.jpg) 
 두개의 영상이 있다고 생각한다.
-![image](https://cloud.githubusercontent.com/assets/3623889/26565544/1390c2bc-4527-11e7-8793-50749048285b.png)
+![2017cv14nn2-10](https://user-images.githubusercontent.com/3623889/26906800-4cc60be6-4c2a-11e7-830e-ced2e0e493bc.jpg) 
 
 
 $$\lambda$$ 는 유사도  
@@ -151,20 +135,14 @@ $$\lambda~\gt~\tau$$ 이면 변화가 일어난 것.
 
 
 
-![image](https://cloud.githubusercontent.com/assets/3623889/26565963/78b80da0-452a-11e7-8e61-ee119f9a1fcd.png)
+![2017cv14nn2-11](https://user-images.githubusercontent.com/3623889/26906799-4cb6226c-4c2a-11e7-80b4-99d6473bb5b3.jpg)
 
 위는 중첩이 아니라서 픽셀이 큼, 아래는 중첩시켜서 부드럽게 추출이 가능함.
 
 밑이 노이즈에 강함.
 
-
-
-
-
-
 # 실제 사례
 
-![image](https://cloud.githubusercontent.com/assets/3623889/26565967/8590be50-452a-11e7-9848-87121c6353ca.png)
 
 
 이거 시험은 안내는데 방법은 알아놔라
@@ -176,6 +154,7 @@ $$\lambda~\gt~\tau$$ 이면 변화가 일어난 것.
 
 # 중첩 차영상
 ![2017cv14nn2 1 -11](https://cloud.githubusercontent.com/assets/3623889/26661019/a45ec556-46b6-11e7-9479-7ddc23632501.jpg)
+![2017cv14nn2-12](https://user-images.githubusercontent.com/3623889/26906801-4cc6b2ee-4c2a-11e7-9ead-2a3a173c38a1.jpg)
 
 
 수식을 보면 항상 1 과의 관계의 차영상
@@ -187,13 +166,7 @@ $$\lambda~\gt~\tau$$ 이면 변화가 일어난 것.
 (1,2) (1, 3) (1, 4) ( 1, 5) ...  
 
 
-$$DP_{1k}$$ 1 기준이라는ㄱ 중요함. 
-
-
-
-
-
-![image](https://cloud.githubusercontent.com/assets/3623889/26565977/9a61fc54-452a-11e7-83ba-836d7a11982e.png)
+$$DP_{1k}$$ 1 기준이라는ㄱ 중요함.  
 
 그림을 보면 오브젝트의 모양과 이동 경로를 알 수 있음.
 
@@ -202,6 +175,10 @@ $$DP_{1k}$$ 1 기준이라는ㄱ 중요함.
 
 
 # Static Segmentation and Matching
+
+![2017cv14nn2-15](https://user-images.githubusercontent.com/3623889/26906805-4cec8b7c-4c2a-11e7-8b4f-96558915de33.jpg)
+![2017cv14nn2-16](https://user-images.githubusercontent.com/3623889/26906804-4ce0878c-4c2a-11e7-8119-e8ed258d01dc.jpg)
+![2017cv14nn2-17](https://user-images.githubusercontent.com/3623889/26906808-4d04d092-4c2a-11e7-8b8b-c02bc2a2fb6a.jpg)
 
 Segmentation 은 영역을 따내는 것.
 
