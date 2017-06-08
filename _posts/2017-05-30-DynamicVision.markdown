@@ -11,19 +11,6 @@ comments: true
 
 
 # Dynamic Vision
-여러 프레임이 있을 때 물체를 탐지한다.
-
-# 개요
-고체를 가정.
-
-
-
-# 어떤 기능을 가져야 ?
-
-변화를 탐지  
-객체의 구조를 회복  
-카메라와 객체 사이의 관계  
-
 
 ![2017cv14nn2-02](https://user-images.githubusercontent.com/3623889/26906790-4c802dba-4c2a-11e7-8e79-7902e002023f.jpg)
 # 용어
@@ -33,23 +20,15 @@ SCMO : 정지 카, 정지 객
 MCSO : 움직 카, 정지 객  
 MCMO : 움직, 움직  
 
-# 인풋
-
-$$F(x, y, t)$$ 이 들어옴. 연속된 영상이 들어온다. 시간 t 일 수도 있고, t 번째 프레임이라는 걸로도 볼 수 있음.  
-
-거의 t 번째 프레임 위주로 씀.  
-
+여러 프레임이 있을 때 물체를 탐지한다.
 
 
 # Change Detection
-![2017cv14nn2-04](https://user-images.githubusercontent.com/3623889/26906792-4c81d49e-4c2a-11e7-8598-b946f94580cb.jpg)
-변화를 체크...  
-프레임의 변화를 모아서... 탐지함. 그 단위가 pixel, edge, 영역, 등으로 변화 탐지하는 단위를 조절할 수 있음.  
 
 
 
 
-# Difference Pictures
+## Difference Pictures
 
 
 ![2017cv14nn2-05](https://user-images.githubusercontent.com/3623889/26906795-4c9a92cc-4c2a-11e7-975f-e1cd9a5307c7.jpg)
@@ -61,33 +40,9 @@ $$F(x, y, t)$$ 이 들어옴. 연속된 영상이 들어온다. 시간 t 일 수
 
 마지막 1,0 프레임에서 어떻게 30 을 뽑아내지??
 
-
-![2017cv14nn2-06](https://user-images.githubusercontent.com/3623889/26906794-4c834bee-4c2a-11e7-88e9-4e542779d176.jpg)
-
-모션과 조명의 변화에서 위 방법을 적용한 모습.  
-
-곰인형의 가슴털이 많이 나옴. 그럴 때 size filter 를 쓴다.
-
-
-# Size Filter
-노이즈 제거용으로 쓰면 된다.   
-천천히 움직이면 쓰기가 어렵다. 하지만 천천히 움직이는것들을 지워버릴 가능성이 있음.  
-
-
-
-
-# Robust Change Detection
+## Robust Change Detection
 
 ![2017cv14nn2-08](https://user-images.githubusercontent.com/3623889/26906796-4cadc05e-4c2a-11e7-84ec-54b6ea46ceb6.jpg)
-![2017cv14nn2-13](https://user-images.githubusercontent.com/3623889/26906802-4cd509fc-4c2a-11e7-8baf-1148b2930d2b.jpg)
-통계적인 방법  
-
-각 3 by 3 에 대해서 평균값, 분산을 비교하여 특정 $$\tau$$ 보다 크면 탐지, 아니면 노이즈라고 봄.  
-
-중첩안시키고 해도 되고 중첩 시켜도 된다. 
-
-(a) 는 노중첩, (b) 중첩
-
 ![2017cv14nn2-09](https://user-images.githubusercontent.com/3623889/26906797-4caeee16-4c2a-11e7-8ad2-6faa27a27d10.jpg) 
 두개의 영상이 있다고 생각한다.
 ![2017cv14nn2-10](https://user-images.githubusercontent.com/3623889/26906800-4cc60be6-4c2a-11e7-830e-ced2e0e493bc.jpg) 
@@ -102,12 +57,22 @@ $$\lambda~\gt~\tau$$ 이면 변화가 일어난 것.
 
 
 ![2017cv14nn2-11](https://user-images.githubusercontent.com/3623889/26906799-4cb6226c-4c2a-11e7-80b4-99d6473bb5b3.jpg)
+![2017cv14nn2-12](https://user-images.githubusercontent.com/3623889/26906801-4cc6b2ee-4c2a-11e7-9ead-2a3a173c38a1.jpg)
 
 위는 중첩이 아니라서 픽셀이 큼, 아래는 중첩시켜서 부드럽게 추출이 가능함.
 
 밑이 노이즈에 강함.
+![2017cv14nn2-13](https://user-images.githubusercontent.com/3623889/26906802-4cd509fc-4c2a-11e7-8baf-1148b2930d2b.jpg)
+통계적인 방법  
 
-# 실제 사례
+각 3 by 3 에 대해서 평균값, 분산을 비교하여 특정 $$\tau$$ 보다 크면 탐지, 아니면 노이즈라고 봄.  
+
+중첩안시키고 해도 되고 중첩 시켜도 된다. 
+
+(a) 는 노중첩, (b) 중첩
+
+
+## 실제 사례
 
 
 
@@ -118,9 +83,8 @@ $$\lambda~\gt~\tau$$ 이면 변화가 일어난 것.
 위 식은 계산은 틀렸지만 방법의 예시임.  
 
 
-# 중첩 차영상
+## 중첩 차영상
 ![2017cv14nn2 1 -11](https://cloud.githubusercontent.com/assets/3623889/26661019/a45ec556-46b6-11e7-9479-7ddc23632501.jpg)
-![2017cv14nn2-12](https://user-images.githubusercontent.com/3623889/26906801-4cc6b2ee-4c2a-11e7-9ead-2a3a173c38a1.jpg)
 
 
 수식을 보면 항상 1 과의 관계의 차영상
@@ -139,95 +103,40 @@ $$DP_{1k}$$ 1 기준이라는ㄱ 중요함.
 흰->검
 
 
+# Segmentation Using Motion
 
-# Static Segmentation and Matching
-
-![2017cv14nn2-15](https://user-images.githubusercontent.com/3623889/26906805-4cec8b7c-4c2a-11e7-8b4f-96558915de33.jpg)
-![2017cv14nn2-16](https://user-images.githubusercontent.com/3623889/26906804-4ce0878c-4c2a-11e7-8119-e8ed258d01dc.jpg)
-![2017cv14nn2-17](https://user-images.githubusercontent.com/3623889/26906808-4d04d092-4c2a-11e7-8b8b-c02bc2a2fb6a.jpg)
-
-Segmentation 은 영역을 따내는 것.
-
-영역화, semantic... 의미 있는 오브젝트를 밝혀내는 것, 그룹화 하는것... 등등... 즉 관심 있는거 따내는 거임.
-
-
-
-
-# Stationary Camera
+## Stationary Camera 
+정지된 카메라에서 인식
 
 
 ![2017cv14nn2 1 -19](https://cloud.githubusercontent.com/assets/3623889/26661023/a488284c-46b6-11e7-8b4b-461f6fc77935.jpg)
-
-
 차영상에서 절대값 안붙인게 어느 부분에서 양수도 나오고 음수도 나온다.
 
 $$\gt T$$ 도 가능하고 $$\lt T$$ 인 경우에도 되게끔 설정이 가능하다.
-
-
-![2017cv14nn2 1 -22](https://cloud.githubusercontent.com/assets/3623889/26661027/a4b0257c-46b6-11e7-84a7-287116dda704.jpg)
-
-3개의 이미지는 각각 AADP, PADP, NADP 
-
-세번째꺼는 오른쪽 끝끼리 이으면 운동 방향을 알 수 있다. 
-
-자세한건 다음 그림 참고 해라.
-
-
 ![2017cv14nn2 1 -20](https://cloud.githubusercontent.com/assets/3623889/26661025/a48c7e74-46b6-11e7-9a09-459b4b4d217d.jpg)
 
+결과 예시들
 
-그래서 Stationary Camera 가 뭐냐?
-
-
-# Disparity Computations as Relaxation Labeling
-
-첫번째 프레임에서 피쳐가 5개, 두번째도 5개 탐지됐으면...
-
-피쳐의 픽셀의 위치가 어디로 갔다고 해야 가장 일치성이 있느냐... (b) ...
-
-거리가 최소가 되는것을 매칭함.
-
-5개의 점은 intereset Points Points ... 즉 Moravec 으로 탐지한 것임. (a) 는 두 프레임을 겹쳐 놓은 것.
+NADP 는 오른쪽 끝끼리 이으면 운동 방향을 알 수 있다.
 
 
 
-# 이런건 시험 ㄴㄴ
-![2017cv14nn2 1 -14](https://cloud.githubusercontent.com/assets/3623889/26661018/a45b2356-46b6-11e7-9f87-055c0be33426.jpg)
 
-# 모라벡
+
+
+# Motion Correspondence
+
+## 모라벡 Interest Points
+![2017cv14nn2 1 -26](https://cloud.githubusercontent.com/assets/3623889/26661029/a4b93dc4-46b6-11e7-9bca-2b643e2f63b1.jpg)
 ![2017cv14nn2 1 -27](https://cloud.githubusercontent.com/assets/3623889/26661028/a4b78894-46b6-11e7-92be-61dbf929a70c.jpg)
 
 경우의수를 따져서 가장 최소의 거리가 되는 것이 매칭되는 것임.
 
-
-
 # Image Flow
-![2017cv14nn2 1 -28](https://cloud.githubusercontent.com/assets/3623889/26661032/a4e018ea-46b6-11e7-8940-e3eefd30556e.jpg)
 
-계속 도는것 처럼 보인다. 화상뷰.
+Image Flow 는 속도장이다. 
 
-속도장.
-
-이것은 관측자, 오브젝트의 움직임, 조명변화때문에 생긴다.
-
-
-
-
-
-
-
-
-
-
-광뷰... 스몰 타임으로 함.
-
-밝기값 기반, 여윽시 셤 ㄴㄴ?
-
-속도장은 3차원 벡터
-
-
-
-
+## Motion Field And Optical Field
 ![2017cv14nn2 1 -31](https://cloud.githubusercontent.com/assets/3623889/26661035/a4e2ef02-46b6-11e7-95d2-f230a1854076.jpg)
 
 운동장은 오른쪽이지망 밝기 기반이니까 업
@@ -239,17 +148,23 @@ cube 오른쪽 그림은 화살표다.
 플로우를 구하기 위해서 어떤 가정을 한다. 
 
 속도, 가속, 비슷한 방법으로 모든게 움직인다.(고체)
-![2017cv14nn2 1 -33](https://cloud.githubusercontent.com/assets/3623889/26661037/a4ec8daa-46b6-11e7-8378-6f3089f02e49.jpg)
-![2017cv14nn2 1 -34](https://cloud.githubusercontent.com/assets/3623889/26661038/a50ba12c-46b6-11e7-81c3-dcc1c9d33d4f.jpg)
 
-시험  
+## Computing Image Flow
+크게 두가지 개념으로 한다.
+
+* Feature-based methods 
+* Gradient-based methods
 
 
+Feature-based methods 는 쉽지 않다. 너무 sementic 적이다.
+
+그래서 Gradient-based methods 설명을 한다.
+
+## 시험
 ![2017cv14nn2-31](https://user-images.githubusercontent.com/3623889/26906821-4d6d8cc2-4c2a-11e7-9fab-0ec39592c440.jpg)
 ![2017cv14nn2-32](https://user-images.githubusercontent.com/3623889/26906824-4d80affa-4c2a-11e7-867c-1d37bb8cf906.jpg)
-
-# Computing Image Flow
-![2017cv14nn2-33](https://user-images.githubusercontent.com/3623889/26906820-4d6ade28-4c2a-11e7-8b58-f2f70ea94cb1.jpg)
+![2017cv14nn2 1 -33](https://cloud.githubusercontent.com/assets/3623889/26661037/a4ec8daa-46b6-11e7-8378-6f3089f02e49.jpg)
+![2017cv14nn2 1 -34](https://cloud.githubusercontent.com/assets/3623889/26661038/a50ba12c-46b6-11e7-81c3-dcc1c9d33d4f.jpg) 
 
 특징 기반은 앞에서 했음. 영상 프레임에서 코너점 찾고,,.. 에지 찾는다 등등 
 
@@ -266,19 +181,19 @@ $
 
 ![2017cv14nn2-34](https://user-images.githubusercontent.com/3623889/26906822-4d7de2de-4c2a-11e7-88d1-25752c331f63.jpg)
 
-시험 :  14.1 를 유도해보자.
+## 시험 :  14.1 를 유도해보자.
 E 를 전 미분하면 14.1 식이 나온다. 아래 보충설명 ㄱ ㄱ 
 
 우리는 속도장을 구하는거니까 velocity vector(u, v) 를 구해야 한다. 식이 하나라서 풀 수가 없음.
 
 
 
-# 편미분과 전미분 차이 (시험 가능성 있음)
+## 편미분과 전미분 차이 (시험 가능성 있음)
 ![2017cv14nn2-35](https://user-images.githubusercontent.com/3623889/26906823-4d7edd7e-4c2a-11e7-86f1-f0d80816831c.jpg)
 
 편미분은 나머지 변수를 상수로 보고 계산한다.  
 
-# 고차 편미분과 전미분
+## 고차 편미분과 전미분
 ![2017cv14nn2-36](https://user-images.githubusercontent.com/3623889/26906825-4d90efc8-4c2a-11e7-88c2-1faea7ccc5c8.jpg)
 
 그냥 두번 미분하는거임. 딴거 없음 ㅇㅇ
@@ -306,7 +221,7 @@ Uv 는 운동벡터
 Et 시간에 대한 밝기의 변화값
 
 
-# aperture problem
+## aperture problem
 ![2017cv14nn2-38](https://user-images.githubusercontent.com/3623889/26906827-4d995514-4c2a-11e7-9f0a-ae19af65e1aa.jpg)
 이런것을 aperture problem 이라고 한다.
 
@@ -318,7 +233,7 @@ Et 시간에 대한 밝기의 변화값
 
 그럼 우야노?? 반복 계산법으로 풀어봄
 
-# 테일러 시리즈
+## 테일러 시리즈
 
 ![2017cv14nn2-39](https://user-images.githubusercontent.com/3623889/26906829-4da90072-4c2a-11e7-9fd8-a38d6c87fa7a.jpg)
 
@@ -332,7 +247,7 @@ Et 시간에 대한 밝기의 변화값
 ![2017cv14nn2-40](https://user-images.githubusercontent.com/3623889/26906828-4da57010-4c2a-11e7-88bf-f381287ad9d3.jpg)
 ![2017cv14nn2-41](https://user-images.githubusercontent.com/3623889/26906830-4dac1802-4c2a-11e7-8959-a5431173ded0.jpg)
 
-# 완화 계산 광자 플로우... 시험에 안나옴
+## 완화 계산 광자 플로우... 시험에 안나옴
 
 ![2017cv14nn2-42](https://user-images.githubusercontent.com/3623889/26906831-4db9df28-4c2a-11e7-8fec-f1d1852acd02.jpg)
 이미지 두개로 하는 알고리즘
@@ -343,7 +258,7 @@ Et 시간에 대한 밝기의 변화값
 영상이 여러개 있을 때 쓰는 알고리즘
 ![2017cv14nn2-44](https://user-images.githubusercontent.com/3623889/26906833-4dc1d02a-4c2a-11e7-8237-209b350e458b.jpg)
 
-# 결과
+## 결과
 ![2017cv14nn2-49](https://user-images.githubusercontent.com/3623889/26906837-4de26d1c-4c2a-11e7-8c7c-726dae095017.jpg)
 
 광류를 구한 결과임.
@@ -359,19 +274,15 @@ FOC : 멀어질 때....
 
 
 
-
-![2017cv14nn2-51](https://user-images.githubusercontent.com/3623889/26906840-4df68c2a-4c2a-11e7-99ab-5fbd616f9b5a.jpg)
-![2017cv14nn2-52](https://user-images.githubusercontent.com/3623889/26906841-4dfd4510-4c2a-11e7-8f7b-38a6b429a93d.jpg)
-![2017cv14nn2-53](https://user-images.githubusercontent.com/3623889/26906842-4e0065d8-4c2a-11e7-9de4-a1ccebd6747d.jpg)
-
 # Tracking
+
 ![2017cv14nn2-60](https://user-images.githubusercontent.com/3623889/26906851-4e393e62-4c2a-11e7-8282-e2c4cc630caf.jpg)
 
 흥미점을 연결해서 움직였다. 경로 일관성 구하는거.
 
 
 
-# 응용 사례
+## 응용 사례
 ![2017cv14nn2-61](https://user-images.githubusercontent.com/3623889/26906850-4e35f5ea-4c2a-11e7-80f2-cc5de6a25c7c.jpg) 
 ![2017cv14nn2-62](https://user-images.githubusercontent.com/3623889/26906852-4e447444-4c2a-11e7-8bdc-2eeadf043d9e.jpg)
 
@@ -380,7 +291,7 @@ FOC : 멀어질 때....
 
 ![2017cv14nn2-63](https://user-images.githubusercontent.com/3623889/26906853-4e54dee2-4c2a-11e7-81b7-0f9bb1f363c4.jpg)
 
-# Derivation Function for Path Coherence
+## Derivation Function for Path Coherence
 
 시험 냈다고 함.
 ![2017cv14nn2-64](https://user-images.githubusercontent.com/3623889/26906855-4e5c9f24-4c2a-11e7-8874-f8d57442ef13.jpg)
@@ -438,7 +349,7 @@ $ weight = w_1 + w_2 = 1 $
 
 ![2017cv14nn2-67](https://user-images.githubusercontent.com/3623889/26906858-4e7103b0-4c2a-11e7-8b2a-771306877219.jpg)
 
-# example
+## example
 ![2017cv14nn2-68](https://user-images.githubusercontent.com/3623889/26906857-4e6e214a-4c2a-11e7-8a47-91b8e5ed2041.jpg)
 
 
@@ -452,42 +363,7 @@ $ weight = w_1 + w_2 = 1 $
 ![2017cv14nn2-74](https://user-images.githubusercontent.com/3623889/26906863-4e957286-4c2a-11e7-8aed-578551e259df.jpg)
 ![2017cv14nn2-75](https://user-images.githubusercontent.com/3623889/26906865-4ea22512-4c2a-11e7-9145-88a20de48028.jpg)
 ![2017cv14nn2-76](https://user-images.githubusercontent.com/3623889/26906866-4ead7cc8-4c2a-11e7-86d9-861d90e901ca.jpg)
-![2017cv14nn2-77](https://user-images.githubusercontent.com/3623889/26906867-4eb0caf4-4c2a-11e7-89bd-a01c6f2630a5.jpg)
-![2017cv14nn2-78](https://user-images.githubusercontent.com/3623889/26906868-4eb2188c-4c2a-11e7-91f9-474524e2c07b.jpg)
-![2017cv14nn2-79](https://user-images.githubusercontent.com/3623889/26906869-4ebef32c-4c2a-11e7-8fbe-d9bed06fd697.jpg)
-![2017cv14nn2-80](https://user-images.githubusercontent.com/3623889/26906870-4ec166c0-4c2a-11e7-9e41-ed678d6f6763.jpg)
 
 
 
 
-
-![2017cv14nn2 1 -01](https://cloud.githubusercontent.com/assets/3623889/26661005/a3faf95e-46b6-11e7-836b-2ece817da6db.jpg)
-![2017cv14nn2 1 -02](https://cloud.githubusercontent.com/assets/3623889/26661008/a3ff3000-46b6-11e7-86de-97a2f7f9f227.jpg)
-![2017cv14nn2 1 -03](https://cloud.githubusercontent.com/assets/3623889/26661007/a3fee1f4-46b6-11e7-8594-fe226129d25d.jpg)
-![2017cv14nn2 1 -04](https://cloud.githubusercontent.com/assets/3623889/26661009/a3ff86d6-46b6-11e7-9317-54e9915b5214.jpg)
-![2017cv14nn2 1 -05](https://cloud.githubusercontent.com/assets/3623889/26661006/a3fdbb76-46b6-11e7-89b6-b6d5bc655fcb.jpg)
-![2017cv14nn2 1 -06](https://cloud.githubusercontent.com/assets/3623889/26661011/a42d0624-46b6-11e7-80a9-03089f434d3b.jpg)
-![2017cv14nn2 1 -07](https://cloud.githubusercontent.com/assets/3623889/26661010/a42a7e40-46b6-11e7-9bf1-7beb2701af82.jpg)
-![2017cv14nn2 1 -08](https://cloud.githubusercontent.com/assets/3623889/26661012/a42cfe4a-46b6-11e7-86ea-967f2a92e9f5.jpg)
-![2017cv14nn2 1 -09](https://cloud.githubusercontent.com/assets/3623889/26661013/a42fd3ea-46b6-11e7-9727-ed37e8a67cb2.jpg)
-![2017cv14nn2 1 -10](https://cloud.githubusercontent.com/assets/3623889/26661014/a4410f02-46b6-11e7-9975-8a19aa27e2b5.jpg)
-![2017cv14nn2 1 -11](https://cloud.githubusercontent.com/assets/3623889/26661019/a45ec556-46b6-11e7-9479-7ddc23632501.jpg)
-![2017cv14nn2 1 -12](https://cloud.githubusercontent.com/assets/3623889/26661015/a454ee46-46b6-11e7-8373-61bd677040cc.jpg)
-![2017cv14nn2 1 -13](https://cloud.githubusercontent.com/assets/3623889/26661016/a45567ae-46b6-11e7-9cdf-76eb31e4f79c.jpg)
-![2017cv14nn2 1 -14](https://cloud.githubusercontent.com/assets/3623889/26661018/a45b2356-46b6-11e7-9f87-055c0be33426.jpg)
-![2017cv14nn2 1 -15](https://cloud.githubusercontent.com/assets/3623889/26661017/a45a9f3a-46b6-11e7-8bf5-8dcbe20c8007.jpg)
-![2017cv14nn2 1 -16](https://cloud.githubusercontent.com/assets/3623889/26661020/a47957e0-46b6-11e7-97d7-ff75b2c2ce1d.jpg)
-![2017cv14nn2 1 -17](https://cloud.githubusercontent.com/assets/3623889/26661022/a481a954-46b6-11e7-87c4-59c87af1221a.jpg)
-![2017cv14nn2 1 -18](https://cloud.githubusercontent.com/assets/3623889/26661021/a47f933a-46b6-11e7-97a8-7b9e8e069e18.jpg)
-![2017cv14nn2 1 -19](https://cloud.githubusercontent.com/assets/3623889/26661023/a488284c-46b6-11e7-8b4b-461f6fc77935.jpg)
-![2017cv14nn2 1 -20](https://cloud.githubusercontent.com/assets/3623889/26661025/a48c7e74-46b6-11e7-9a09-459b4b4d217d.jpg)
-![2017cv14nn2 1 -21](https://cloud.githubusercontent.com/assets/3623889/26661024/a48a48a2-46b6-11e7-8bbe-c4a742a07f79.jpg)
-![2017cv14nn2 1 -22](https://cloud.githubusercontent.com/assets/3623889/26661027/a4b0257c-46b6-11e7-84a7-287116dda704.jpg)
-![2017cv14nn2 1 -23](https://cloud.githubusercontent.com/assets/3623889/26661031/a4c1b38c-46b6-11e7-9121-ad139a2b80db.jpg)
-![2017cv14nn2 1 -24](https://cloud.githubusercontent.com/assets/3623889/26661026/a4ae781c-46b6-11e7-94c8-a659c863d3c0.jpg)
-![2017cv14nn2 1 -25](https://cloud.githubusercontent.com/assets/3623889/26661030/a4ba8daa-46b6-11e7-9c10-f060f7305eb4.jpg)
-![2017cv14nn2 1 -26](https://cloud.githubusercontent.com/assets/3623889/26661029/a4b93dc4-46b6-11e7-9bca-2b643e2f63b1.jpg)
-![2017cv14nn2 1 -27](https://cloud.githubusercontent.com/assets/3623889/26661028/a4b78894-46b6-11e7-92be-61dbf929a70c.jpg)
-![2017cv14nn2 1 -28](https://cloud.githubusercontent.com/assets/3623889/26661032/a4e018ea-46b6-11e7-8940-e3eefd30556e.jpg)
-![2017cv14nn2 1 -29](https://cloud.githubusercontent.com/assets/3623889/26661033/a4e16d94-46b6-11e7-963f-11cf01adc373.jpg)
-![2017cv14nn2 1 -30](https://cloud.githubusercontent.com/assets/3623889/26661034/a4e1ccd0-46b6-11e7-9020-cbebd2c7d52c.jpg)
