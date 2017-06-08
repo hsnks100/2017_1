@@ -512,6 +512,8 @@ $ w_1 = 0.5, w_2 = 0.5 $
 
 진짜 풀면 14.82 로 나옴
 
+밑에꺼는 벡터의 크기, 위는 벡터
+
 첫항을 방향 일관성
 
 둘째항은 속도 일관성
@@ -528,8 +530,10 @@ $ weight = w_1 + w_2 = 1 $
 
 
 ![2017cv14nn2-69](https://user-images.githubusercontent.com/3623889/26906859-4e7aeb8c-4c2a-11e7-8098-4eb35ef1f58a.jpg)
+
 ![2017cv14nn2-70](https://user-images.githubusercontent.com/3623889/26906860-4e85b134-4c2a-11e7-8c22-7bcad590176f.jpg)
 ![2017cv14nn2-71](https://user-images.githubusercontent.com/3623889/26906862-4e8676fa-4c2a-11e7-9070-e0818aa6ebac.jpg)
+보니까 $ P_1P_2B $ 로 가는게 맞네!! ^^
 ![2017cv14nn2-72](https://user-images.githubusercontent.com/3623889/26906861-4e8620e2-4c2a-11e7-903d-7ee10b27ca82.jpg)
 ![2017cv14nn2-73](https://user-images.githubusercontent.com/3623889/26906864-4e99717e-4c2a-11e7-8d6e-8afe6590cf97.jpg)
 ![2017cv14nn2-74](https://user-images.githubusercontent.com/3623889/26906863-4e957286-4c2a-11e7-8aed-578551e259df.jpg)
