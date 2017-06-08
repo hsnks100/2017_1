@@ -45,18 +45,110 @@ G_y =
 -1 & 1 \\ 
 \end{matrix} 
 $$
+
+와 같이 합칠 수 있다.
+
+
 ![2017cv05f-09](https://user-images.githubusercontent.com/3623889/26906698-ff2f92f8-4c29-11e7-9583-384bb3b6dc69.jpg)
-![2017cv05f-10](https://user-images.githubusercontent.com/3623889/26906697-ff2f5a36-4c29-11e7-9e67-d16ed9c0c8de.jpg)
+
+
+# Roberts Operator
+
+* sobel,~prewitt 에 비해 매우 빠른 속도를 가짐
+* 주변과 상관없이 경계과 확실한 에지가 추출됨
+* 다른 마스크보다 크기가 작아서 돌출한 화소를 처리할 수가 없어서 잡음 해결이 안됨.
+
+$$
+
+G_x = 
+\begin{matrix}
+1 && 0
+0 && -1 
+\end{matrix}
+\\
+
+G_y = 
+\begin{matrix}
+0 && -1
+1 && 0
+\end{matrix}
+\\
+$$
+
+위 식으로 계산 된다.
+
+
+# Sobel Operator
+
 ![2017cv05f-11](https://user-images.githubusercontent.com/3623889/26906696-ff2d6f0a-4c29-11e7-8783-fbfc4a42af62.jpg)
-![2017cv05f-12](https://user-images.githubusercontent.com/3623889/26906700-ff38efec-4c29-11e7-9b71-41280aed9e14.jpg)
-![2017cv05f-13](https://user-images.githubusercontent.com/3623889/26906699-ff38f0f0-4c29-11e7-8c7e-c6f13efda89c.jpg)
-![2017cv05f-14](https://user-images.githubusercontent.com/3623889/26906701-ff46cb12-4c29-11e7-9ac6-3d1ecd72da00.jpg)
-![2017cv05f-15](https://user-images.githubusercontent.com/3623889/26906702-ff53c8e4-4c29-11e7-869a-e924c9064179.jpg)
-![2017cv05f-16](https://user-images.githubusercontent.com/3623889/26906703-ff592726-4c29-11e7-98bf-ef6f46e20536.jpg)
+
+* 에지 추출의 대표적인 operator
+* 모든 방향의 에지 추출 가능
+* 수직, 수평보다 대각에 민감
+
+위 수식을 보면 현재 가운데 값에 가중치를 c 로 주는 방법이다.
+
+보통 c = 2 로 놓는다.
+
+convolution mask 로 나타내면
+
+$$
+G_x = 
+\begin{matrix}
+-1 & 0 & 1
+-2 & 0 & 2
+-1 & 0 & 1 
+\end{matrix}
+\\
+G_y = 
+\begin{matrix}
+1 & 2 & 1
+0 & 0 & 0
+-1 & -2 & -1
+\end{matrix}
+$$
+
+# prewitt Operator
+
+* 소벨마스크의 c=1 버전
+* 밝기 변화를 좀 둔감하게 둔 버전
+* 대각보다 수평, 수직에 민감함 
+
+$$
+G_x = 
+\begin{matrix}
+-1 & 0 & 1
+-1 & 0 & 1
+-1 & 0 & 1 
+\end{matrix}
+\\
+G_y = 
+\begin{matrix}
+1 & 1 & 1
+0 & 0 & 0
+-1 & -1 & -1
+\end{matrix}
+$$ 
+
+
+# Second Derivative Operators
+
+지금까지 다룬 sobel, prewitt 은 1차 미분 연산자였다.
+
+1차 미분의 크기는 에지의 존재 여부를 알기 위해 사용된다.
+
+2차 미분은 현재 밝은곳에서 어두운곳으로 가는지를 파악할 수 있다.
+
+2차 미분은 윤곽선이 얇게 나옴.
+
+단점은 서서히 변화하는 영역에 대해서는 반응을 보이지 않음.ㅁ 
+
 ![2017cv05f-17](https://user-images.githubusercontent.com/3623889/26906704-ff5938c4-4c29-11e7-9fdf-7e61169bcf1a.jpg)
-![2017cv05f-18](https://user-images.githubusercontent.com/3623889/26906705-ff6c3136-4c29-11e7-9ce0-70a4869895a9.jpg)
+![2017cv05f-18](https://user-images.githubusercontent.com/3623889/26906705-ff6c3136-4c29-11e7-9ce0-70a4869895a9.jpg) 
 ![2017cv05f-19](https://user-images.githubusercontent.com/3623889/26906706-ff71ff94-4c29-11e7-96f6-556b75180054.jpg)
 ![2017cv05f-20](https://user-images.githubusercontent.com/3623889/26906707-ff7a42f8-4c29-11e7-840f-14c3010cb198.jpg)
+
+위 17~20 자료는 버릴게 없다.
 ![2017cv05f-21](https://user-images.githubusercontent.com/3623889/26906708-ff85092c-4c29-11e7-9165-663a53349ac6.jpg)
 ![2017cv05f-22](https://user-images.githubusercontent.com/3623889/26906710-ff872a2c-4c29-11e7-9643-141ca7e2f438.jpg)
 ![2017cv05f-23](https://user-images.githubusercontent.com/3623889/26906709-ff85e1c6-4c29-11e7-847f-8f1a3eed440a.jpg)
