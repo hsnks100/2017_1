@@ -56,56 +56,14 @@ comments: true
 ![2017cv14nn2-28](https://user-images.githubusercontent.com/3623889/26906814-4d3dc21c-4c2a-11e7-9703-b11479613f0e.jpg)
 ![2017cv14nn2-29](https://user-images.githubusercontent.com/3623889/26906818-4d58b4dc-4c2a-11e7-9352-4e738a41f598.jpg)
 ![2017cv14nn2-30](https://user-images.githubusercontent.com/3623889/26906819-4d64aba2-4c2a-11e7-98c6-213c4c62f6bf.jpg)
-![2017cv14nn2-31](https://user-images.githubusercontent.com/3623889/26906821-4d6d8cc2-4c2a-11e7-9fab-0ec39592c440.jpg)
-![2017cv14nn2-32](https://user-images.githubusercontent.com/3623889/26906824-4d80affa-4c2a-11e7-867c-1d37bb8cf906.jpg)
-![2017cv14nn2-33](https://user-images.githubusercontent.com/3623889/26906820-4d6ade28-4c2a-11e7-8b58-f2f70ea94cb1.jpg)
-![2017cv14nn2-34](https://user-images.githubusercontent.com/3623889/26906822-4d7de2de-4c2a-11e7-88d1-25752c331f63.jpg)
-![2017cv14nn2-35](https://user-images.githubusercontent.com/3623889/26906823-4d7edd7e-4c2a-11e7-86f1-f0d80816831c.jpg)
-![2017cv14nn2-36](https://user-images.githubusercontent.com/3623889/26906825-4d90efc8-4c2a-11e7-88c2-1faea7ccc5c8.jpg)
-![2017cv14nn2-37](https://user-images.githubusercontent.com/3623889/26906826-4d91f030-4c2a-11e7-82dd-4987f35f3f33.jpg)
-![2017cv14nn2-38](https://user-images.githubusercontent.com/3623889/26906827-4d995514-4c2a-11e7-9f0a-ae19af65e1aa.jpg)
-![2017cv14nn2-39](https://user-images.githubusercontent.com/3623889/26906829-4da90072-4c2a-11e7-9fd8-a38d6c87fa7a.jpg)
-![2017cv14nn2-40](https://user-images.githubusercontent.com/3623889/26906828-4da57010-4c2a-11e7-88bf-f381287ad9d3.jpg)
-![2017cv14nn2-41](https://user-images.githubusercontent.com/3623889/26906830-4dac1802-4c2a-11e7-8959-a5431173ded0.jpg)
-![2017cv14nn2-42](https://user-images.githubusercontent.com/3623889/26906831-4db9df28-4c2a-11e7-8fec-f1d1852acd02.jpg)
-![2017cv14nn2-43](https://user-images.githubusercontent.com/3623889/26906832-4dbac424-4c2a-11e7-9ee9-209d3dcf585d.jpg)
-![2017cv14nn2-44](https://user-images.githubusercontent.com/3623889/26906833-4dc1d02a-4c2a-11e7-8237-209b350e458b.jpg)
-![2017cv14nn2-45](https://user-images.githubusercontent.com/3623889/26906834-4dccf324-4c2a-11e7-9515-0e5417e027c2.jpg)
-![2017cv14nn2-46](https://user-images.githubusercontent.com/3623889/26906835-4dd107de-4c2a-11e7-8f6d-418ac07785c1.jpg)
-![2017cv14nn2-47](https://user-images.githubusercontent.com/3623889/26906836-4dd71e08-4c2a-11e7-8710-3bf22937a371.jpg)
-![2017cv14nn2-48](https://user-images.githubusercontent.com/3623889/26906838-4de4c512-4c2a-11e7-899c-12e4fd30ebe9.jpg)
-![2017cv14nn2-49](https://user-images.githubusercontent.com/3623889/26906837-4de26d1c-4c2a-11e7-8c7c-726dae095017.jpg)
-![2017cv14nn2-50](https://user-images.githubusercontent.com/3623889/26906839-4deaf522-4c2a-11e7-80e6-699c8a83d31c.jpg)
-![2017cv14nn2-51](https://user-images.githubusercontent.com/3623889/26906840-4df68c2a-4c2a-11e7-99ab-5fbd616f9b5a.jpg)
-![2017cv14nn2-52](https://user-images.githubusercontent.com/3623889/26906841-4dfd4510-4c2a-11e7-8f7b-38a6b429a93d.jpg)
-![2017cv14nn2-53](https://user-images.githubusercontent.com/3623889/26906842-4e0065d8-4c2a-11e7-9de4-a1ccebd6747d.jpg)
-![2017cv14nn2-54](https://user-images.githubusercontent.com/3623889/26906844-4e0c03f2-4c2a-11e7-989f-ed52bdc817bc.jpg)
-![2017cv14nn2-55](https://user-images.githubusercontent.com/3623889/26906843-4e0bbc58-4c2a-11e7-9de8-e9483fc8cd65.jpg)
-![2017cv14nn2-56](https://user-images.githubusercontent.com/3623889/26906845-4e13d884-4c2a-11e7-938e-d9dc170ce683.jpg)
-![2017cv14nn2-57](https://user-images.githubusercontent.com/3623889/26906847-4e2f8b56-4c2a-11e7-9d1a-eb6c08b0dd46.jpg)
-![2017cv14nn2-58](https://user-images.githubusercontent.com/3623889/26906848-4e319176-4c2a-11e7-8999-43e6cea5ac85.jpg)
-![2017cv14nn2-59](https://user-images.githubusercontent.com/3623889/26906849-4e345d0c-4c2a-11e7-9462-11fc1c2d3392.jpg)
-![2017cv14nn2-60](https://user-images.githubusercontent.com/3623889/26906851-4e393e62-4c2a-11e7-8282-e2c4cc630caf.jpg)
-![2017cv14nn2-61](https://user-images.githubusercontent.com/3623889/26906850-4e35f5ea-4c2a-11e7-80f2-cc5de6a25c7c.jpg)
-![2017cv14nn2-62](https://user-images.githubusercontent.com/3623889/26906852-4e447444-4c2a-11e7-8bdc-2eeadf043d9e.jpg)
-![2017cv14nn2-63](https://user-images.githubusercontent.com/3623889/26906853-4e54dee2-4c2a-11e7-81b7-0f9bb1f363c4.jpg)
-![2017cv14nn2-64](https://user-images.githubusercontent.com/3623889/26906855-4e5c9f24-4c2a-11e7-8874-f8d57442ef13.jpg)
-![2017cv14nn2-65](https://user-images.githubusercontent.com/3623889/26906854-4e5c6004-4c2a-11e7-96a8-9da2e234175f.jpg)
-![2017cv14nn2-66](https://user-images.githubusercontent.com/3623889/26906856-4e5d75a2-4c2a-11e7-87e1-82899961c27e.jpg)
-![2017cv14nn2-67](https://user-images.githubusercontent.com/3623889/26906858-4e7103b0-4c2a-11e7-8b2a-771306877219.jpg)
-![2017cv14nn2-68](https://user-images.githubusercontent.com/3623889/26906857-4e6e214a-4c2a-11e7-8a47-91b8e5ed2041.jpg)
-![2017cv14nn2-69](https://user-images.githubusercontent.com/3623889/26906859-4e7aeb8c-4c2a-11e7-8098-4eb35ef1f58a.jpg)
-![2017cv14nn2-70](https://user-images.githubusercontent.com/3623889/26906860-4e85b134-4c2a-11e7-8c22-7bcad590176f.jpg)
-![2017cv14nn2-71](https://user-images.githubusercontent.com/3623889/26906862-4e8676fa-4c2a-11e7-9070-e0818aa6ebac.jpg)
-![2017cv14nn2-72](https://user-images.githubusercontent.com/3623889/26906861-4e8620e2-4c2a-11e7-903d-7ee10b27ca82.jpg)
-![2017cv14nn2-73](https://user-images.githubusercontent.com/3623889/26906864-4e99717e-4c2a-11e7-8d6e-8afe6590cf97.jpg)
-![2017cv14nn2-74](https://user-images.githubusercontent.com/3623889/26906863-4e957286-4c2a-11e7-8aed-578551e259df.jpg)
-![2017cv14nn2-75](https://user-images.githubusercontent.com/3623889/26906865-4ea22512-4c2a-11e7-9145-88a20de48028.jpg)
-![2017cv14nn2-76](https://user-images.githubusercontent.com/3623889/26906866-4ead7cc8-4c2a-11e7-86d9-861d90e901ca.jpg)
-![2017cv14nn2-77](https://user-images.githubusercontent.com/3623889/26906867-4eb0caf4-4c2a-11e7-89bd-a01c6f2630a5.jpg)
-![2017cv14nn2-78](https://user-images.githubusercontent.com/3623889/26906868-4eb2188c-4c2a-11e7-91f9-474524e2c07b.jpg)
-![2017cv14nn2-79](https://user-images.githubusercontent.com/3623889/26906869-4ebef32c-4c2a-11e7-8fbe-d9bed06fd697.jpg)
-![2017cv14nn2-80](https://user-images.githubusercontent.com/3623889/26906870-4ec166c0-4c2a-11e7-9e41-ed678d6f6763.jpg)
+
+광류...?
+
+앞에서는 흑미점?
+
+흥미점
+
+
 
 
 
@@ -372,54 +330,217 @@ cube 오른쪽 그림은 화살표다.
 ![2017cv14nn2 1 -34](https://cloud.githubusercontent.com/assets/3623889/26661038/a50ba12c-46b6-11e7-81c3-dcc1c9d33d4f.jpg)
 
 시험  
-![2017cv14nn2 1 -35](https://cloud.githubusercontent.com/assets/3623889/26661039/a50e2cf8-46b6-11e7-9cc5-25d3183f9cf1.jpg)
-![2017cv14nn2 1 -36](https://cloud.githubusercontent.com/assets/3623889/26661041/a5107d64-46b6-11e7-893b-fd1dcfa70aa1.jpg)
-![2017cv14nn2 1 -37](https://cloud.githubusercontent.com/assets/3623889/26661040/a50fa8b2-46b6-11e7-8d5f-28c6450f7be6.jpg)
-![2017cv14nn2 1 -38](https://cloud.githubusercontent.com/assets/3623889/26661042/a51147f8-46b6-11e7-94d2-210a4b700c27.jpg)
-![2017cv14nn2 1 -39](https://cloud.githubusercontent.com/assets/3623889/26661043/a51e849a-46b6-11e7-9a7e-2b86421fcb49.jpg)
-![2017cv14nn2 1 -40](https://cloud.githubusercontent.com/assets/3623889/26661048/a54adda6-46b6-11e7-811b-fbebfb589588.jpg)
-![2017cv14nn2 1 -41](https://cloud.githubusercontent.com/assets/3623889/26661044/a53ad1b8-46b6-11e7-864b-b554dd7fa37e.jpg)
-![2017cv14nn2 1 -42](https://cloud.githubusercontent.com/assets/3623889/26661046/a53d5d98-46b6-11e7-9f0d-af485fa4c31e.jpg)
-![2017cv14nn2 1 -43](https://cloud.githubusercontent.com/assets/3623889/26661047/a53d9c04-46b6-11e7-90a1-7e053d48bd67.jpg)
-![2017cv14nn2 1 -44](https://cloud.githubusercontent.com/assets/3623889/26661045/a53c70c2-46b6-11e7-87a7-70642dfd4125.jpg)
-![2017cv14nn2 1 -45](https://cloud.githubusercontent.com/assets/3623889/26661049/a55c110c-46b6-11e7-9958-fb5acb2e6396.jpg)
-![2017cv14nn2 1 -46](https://cloud.githubusercontent.com/assets/3623889/26661052/a56ff744-46b6-11e7-9034-76b7bbaf24c3.jpg)
-![2017cv14nn2 1 -47](https://cloud.githubusercontent.com/assets/3623889/26661050/a56f1126-46b6-11e7-88ab-1d792f1c4405.jpg)
-![2017cv14nn2 1 -48](https://cloud.githubusercontent.com/assets/3623889/26661053/a572f8ae-46b6-11e7-9c73-011f9fcd3db2.jpg)
-![2017cv14nn2 1 -49](https://cloud.githubusercontent.com/assets/3623889/26661051/a56fd1ba-46b6-11e7-909a-c5d55a9950de.jpg)
-![2017cv14nn2 1 -50](https://cloud.githubusercontent.com/assets/3623889/26661054/a576f148-46b6-11e7-96cb-9657650c7f18.jpg)
-![2017cv14nn2 1 -51](https://cloud.githubusercontent.com/assets/3623889/26661055/a593be40-46b6-11e7-82a0-b3c7f5b10884.jpg)
-![2017cv14nn2 1 -52](https://cloud.githubusercontent.com/assets/3623889/26661056/a59ca23a-46b6-11e7-834b-4f399104fc22.jpg)
-![2017cv14nn2 1 -53](https://cloud.githubusercontent.com/assets/3623889/26661058/a59fde64-46b6-11e7-965a-5d72b511a1fa.jpg)
-![2017cv14nn2 1 -54](https://cloud.githubusercontent.com/assets/3623889/26661057/a59f46de-46b6-11e7-95f8-79e137b3c5ba.jpg)
-![2017cv14nn2 1 -55](https://cloud.githubusercontent.com/assets/3623889/26661059/a5a08440-46b6-11e7-8f6b-19b407b666f3.jpg)
-![2017cv14nn2 1 -56](https://cloud.githubusercontent.com/assets/3623889/26661060/a5a372d6-46b6-11e7-9884-c611a716fd67.jpg)
-![2017cv14nn2 1 -57](https://cloud.githubusercontent.com/assets/3623889/26661061/a5c2af70-46b6-11e7-8a3d-ef88daf81f47.jpg)
-![2017cv14nn2 1 -58](https://cloud.githubusercontent.com/assets/3623889/26661062/a5ca1224-46b6-11e7-8290-c455e05a2317.jpg)
-![2017cv14nn2 1 -59](https://cloud.githubusercontent.com/assets/3623889/26661064/a5cb709c-46b6-11e7-8315-7956455118c5.jpg)
-![2017cv14nn2 1 -60](https://cloud.githubusercontent.com/assets/3623889/26661066/a5d026b4-46b6-11e7-97b4-7430ac960716.jpg)
-![2017cv14nn2 1 -61](https://cloud.githubusercontent.com/assets/3623889/26661063/a5ca5126-46b6-11e7-8419-9942e1e8bcfc.jpg)
-![2017cv14nn2 1 -62](https://cloud.githubusercontent.com/assets/3623889/26661065/a5cc8342-46b6-11e7-9cf9-0db7a147a9ad.jpg)
-![2017cv14nn2 1 -63](https://cloud.githubusercontent.com/assets/3623889/26661067/a5f405ac-46b6-11e7-8afc-858aa9c89e64.jpg)
-![2017cv14nn2 1 -64](https://cloud.githubusercontent.com/assets/3623889/26661068/a5f6ee0c-46b6-11e7-9a13-a982a058cf7b.jpg)
 
-시험
-![2017cv14nn2 1 -65](https://cloud.githubusercontent.com/assets/3623889/26661069/a5f73650-46b6-11e7-83f7-fbdf43e9e44c.jpg)
-![2017cv14nn2 1 -66](https://cloud.githubusercontent.com/assets/3623889/26661072/a60cb30e-46b6-11e7-9d0d-4da83a73c3e9.jpg)
-![2017cv14nn2 1 -67](https://cloud.githubusercontent.com/assets/3623889/26661071/a60be42e-46b6-11e7-84b0-fb3928a161ab.jpg)
-![2017cv14nn2 1 -68](https://cloud.githubusercontent.com/assets/3623889/26661070/a5fa2edc-46b6-11e7-9371-af31efac9b20.jpg)
-![2017cv14nn2 1 -69](https://cloud.githubusercontent.com/assets/3623889/26661073/a621435a-46b6-11e7-9866-bc1c57b74575.jpg)
-![2017cv14nn2 1 -70](https://cloud.githubusercontent.com/assets/3623889/26661074/a6351f38-46b6-11e7-81f6-3fd16587dc4a.jpg)
-![2017cv14nn2 1 -71](https://cloud.githubusercontent.com/assets/3623889/26661075/a635f7c8-46b6-11e7-8bb8-7d7a09646fff.jpg)
-![2017cv14nn2 1 -72](https://cloud.githubusercontent.com/assets/3623889/26661076/a63729d6-46b6-11e7-84a7-1855c7bc3fa0.jpg)
-![2017cv14nn2 1 -73](https://cloud.githubusercontent.com/assets/3623889/26661078/a6386a1c-46b6-11e7-8d4d-91e6849cfe65.jpg)
-![2017cv14nn2 1 -74](https://cloud.githubusercontent.com/assets/3623889/26661077/a6377bde-46b6-11e7-8964-d71566f32e19.jpg)
-![2017cv14nn2 1 -75](https://cloud.githubusercontent.com/assets/3623889/26661079/a64dadc8-46b6-11e7-8dcd-45781a884d0c.jpg)
-![2017cv14nn2 1 -76](https://cloud.githubusercontent.com/assets/3623889/26661080/a65dcff0-46b6-11e7-890d-0b29ce7feaac.jpg)
-![2017cv14nn2 1 -77](https://cloud.githubusercontent.com/assets/3623889/26661081/a666f7b0-46b6-11e7-8898-dbf2e28bdd4a.jpg)
-![2017cv14nn2 1 -78](https://cloud.githubusercontent.com/assets/3623889/26661083/a6682798-46b6-11e7-989c-472118d06d25.jpg)
-![2017cv14nn2 1 -79](https://cloud.githubusercontent.com/assets/3623889/26661082/a667b272-46b6-11e7-9edc-314afdc8bcd6.jpg)
-![2017cv14nn2 1 -80](https://cloud.githubusercontent.com/assets/3623889/26661084/a669a8c0-46b6-11e7-9a9c-6b86eba824dd.jpg)
+
+![2017cv14nn2-31](https://user-images.githubusercontent.com/3623889/26906821-4d6d8cc2-4c2a-11e7-9fab-0ec39592c440.jpg)
+![2017cv14nn2-32](https://user-images.githubusercontent.com/3623889/26906824-4d80affa-4c2a-11e7-867c-1d37bb8cf906.jpg)
+
+# Computing Image Flow
+![2017cv14nn2-33](https://user-images.githubusercontent.com/3623889/26906820-4d6ade28-4c2a-11e7-8b58-f2f70ea94cb1.jpg)
+
+특징 기반은 앞에서 했음. 영상 프레임에서 코너점 찾고,,.. 에지 찾는다 등등 
+
+특징 정보를 연결했다. 매칭 시킨다. 그 사이에서 나오는 차이값을 계산함.
+
+두개의 프레임에서 어떤 f(x, y) 을 생각한다. 
+
+$ E = f(x, y, t)\\
+E = f(x, y, t + 1) 
+$
+
+짧은 시간에서 $ dE over {dt} = 0 $ 이기 때문에 밑의 식을 쓴다. 
+
+
+![2017cv14nn2-34](https://user-images.githubusercontent.com/3623889/26906822-4d7de2de-4c2a-11e7-88d1-25752c331f63.jpg)
+
+시험 :  14.1 를 유도해보자.
+E 를 전 미분하면 14.1 식이 나온다. 아래 보충설명 ㄱ ㄱ 
+
+우리는 속도장을 구하는거니까 velocity vector(u, v) 를 구해야 한다. 식이 하나라서 풀 수가 없음.
+
+
+
+# 편미분과 전미분 차이
+![2017cv14nn2-35](https://user-images.githubusercontent.com/3623889/26906823-4d7edd7e-4c2a-11e7-86f1-f0d80816831c.jpg)
+
+편미분은 나머지 변수를 상수로 보고 계산한다.  
+
+# 고차 편미분과 전미분
+![2017cv14nn2-36](https://user-images.githubusercontent.com/3623889/26906825-4d90efc8-4c2a-11e7-88c2-1faea7ccc5c8.jpg)
+
+그냥 두번 미분하는거임. 딴거 없음 ㅇㅇ
+
+전미분은 그냥 모든것을 변수로 보고 $ df / dx $ 를 붙여준다.
+
+
+
+
+
+
+위에서 언급한 u, v 에 대해서  설명을 좀 더 하자면
+![2017cv14nn2-37](https://user-images.githubusercontent.com/3623889/26906826-4d91f030-4c2a-11e7-82dd-4987f35f3f33.jpg)
+
+식은 하난데 식은 하나다.
+
+빨간 직선위의 점중에 하나다.
+
+그래서 14.1 를 다시 쓰면 
+
+Ex 는 x 방향의 밝기의 변화값
+
+Uv 는 운동벡터
+
+Et 시간에 대한 밝기의 변화값
+
+
+# aperture problem
+![2017cv14nn2-38](https://user-images.githubusercontent.com/3623889/26906827-4d995514-4c2a-11e7-9f0a-ae19af65e1aa.jpg)
+이런것을 aperture problem 이라고 한다.
+
+동그란 구멍으로 뭘 들여다 보고 있다고 한다.
+
+여기서 사각형이 그 구멍에서 움직였다면 그 구멍에서 코너가 포함됐으면 운동 방향 알지만
+
+코너가 드러나지 않았으면 정보가 없다. 어디로 갔는지 알 수 없다. 
+
+그럼 우야노?? 반복 계산법으로 풀어봄
+
+# 테일러 시리즈
+
+![2017cv14nn2-39](https://user-images.githubusercontent.com/3623889/26906829-4da90072-4c2a-11e7-9fd8-a38d6c87fa7a.jpg)
+
+여기서 나온 식은 14.1 과 같은 표현임. 근데 왜 쓴거야??
+
+
+
+
+
+
+![2017cv14nn2-40](https://user-images.githubusercontent.com/3623889/26906828-4da57010-4c2a-11e7-88bf-f381287ad9d3.jpg)
+![2017cv14nn2-41](https://user-images.githubusercontent.com/3623889/26906830-4dac1802-4c2a-11e7-8959-a5431173ded0.jpg)
+
+# 완화 계산 광자 플로우... 시험에 안나옴
+
+![2017cv14nn2-42](https://user-images.githubusercontent.com/3623889/26906831-4db9df28-4c2a-11e7-8fec-f1d1852acd02.jpg)
+이미지 두개로 하는 알고리즘
+
+
+![2017cv14nn2-43](https://user-images.githubusercontent.com/3623889/26906832-4dbac424-4c2a-11e7-9ee9-209d3dcf585d.jpg)
+
+영상이 여러개 있을 때 쓰는 알고리즘
+![2017cv14nn2-44](https://user-images.githubusercontent.com/3623889/26906833-4dc1d02a-4c2a-11e7-8237-209b350e458b.jpg)
+
+# 결과
+![2017cv14nn2-49](https://user-images.githubusercontent.com/3623889/26906837-4de26d1c-4c2a-11e7-8c7c-726dae095017.jpg)
+
+광류를 구한 결과임.
+
+
+# 광류에서의 정보
+
+![2017cv14nn2-50](https://user-images.githubusercontent.com/3623889/26906839-4deaf522-4c2a-11e7-80e6-699c8a83d31c.jpg)
+
+FOE : 그림에서의 점들을 FOE 라고 한다. 가까워질 때....
+FOC : 멀어질 때....
+
+
+
+
+
+![2017cv14nn2-51](https://user-images.githubusercontent.com/3623889/26906840-4df68c2a-4c2a-11e7-99ab-5fbd616f9b5a.jpg)
+![2017cv14nn2-52](https://user-images.githubusercontent.com/3623889/26906841-4dfd4510-4c2a-11e7-8f7b-38a6b429a93d.jpg)
+![2017cv14nn2-53](https://user-images.githubusercontent.com/3623889/26906842-4e0065d8-4c2a-11e7-9de4-a1ccebd6747d.jpg)
+
+# Tracking
+![2017cv14nn2-60](https://user-images.githubusercontent.com/3623889/26906851-4e393e62-4c2a-11e7-8282-e2c4cc630caf.jpg)
+
+흥미점을 연결해서 움직였다. 경로 일관성 구하는거.
+
+
+
+# 응용 사례
+![2017cv14nn2-61](https://user-images.githubusercontent.com/3623889/26906850-4e35f5ea-4c2a-11e7-80f2-cc5de6a25c7c.jpg) 
+![2017cv14nn2-62](https://user-images.githubusercontent.com/3623889/26906852-4e447444-4c2a-11e7-8bdc-2eeadf043d9e.jpg)
+
+뭔가 놓고 갔다. 그러면 의심.
+
+
+![2017cv14nn2-63](https://user-images.githubusercontent.com/3623889/26906853-4e54dee2-4c2a-11e7-81b7-0f9bb1f363c4.jpg)
+
+# Derivation Function for Path Coherence
+
+시험 냈다고 함.
+![2017cv14nn2-64](https://user-images.githubusercontent.com/3623889/26906855-4e5c9f24-4c2a-11e7-8874-f8d57442ef13.jpg)
+
+o -> 세모 -> 네모
+
+어떻게 움직인게 가장 좋은 궤적이냐??
+
+항상 function 값 양수다, 방향의 편차가 제한이 있다.
+
+속도가 일정하게 증가한다고 본다. 정규화 값의 범위를 0~0.1 사이로 해야한다.
+
+t1 의 궤적은 
+$ T_1 = P_1^1,P_1^2, P_1^3 $
+
+
+
+
+
+![2017cv14nn2-65](https://user-images.githubusercontent.com/3623889/26906854-4e5c6004-4c2a-11e7-96a8-9da2e234175f.jpg)
+동글-세모 벡터가 있을거다. 두점씩 이어가는것은 벡터로 나타낸다.
+
+경로에서의 편차는 
+
+$ d_i^k = \phi(...) $
+
+
+D 가 최소값이 되는 경로의 지합
+
+$ d_i $ 는 전체 점 개수보다 하나 작음
+
+
+![2017cv14nn2-66](https://user-images.githubusercontent.com/3623889/26906856-4e5d75a2-4c2a-11e7-87e1-82899961c27e.jpg)
+
+$ \phi $ 의 정체... 14.81 
+
+꺾이는 값이 변화가 없으면 0 이 나오게 디자인 됨.
+
+$ w_1, w_2 $ 는 각각 방향, 속도의 가중치
+
+$ w_1 = 0.5, w_2 = 0.5 $
+
+진짜 풀면 14.82 로 나옴
+
+첫항을 방향 일관성
+
+둘째항은 속도 일관성
+
+$ weight = w_1 + w_2 = 1 $
+
+
+
+
+![2017cv14nn2-67](https://user-images.githubusercontent.com/3623889/26906858-4e7103b0-4c2a-11e7-8b2a-771306877219.jpg)
+
+# example
+![2017cv14nn2-68](https://user-images.githubusercontent.com/3623889/26906857-4e6e214a-4c2a-11e7-8a47-91b8e5ed2041.jpg)
+
+
+![2017cv14nn2-69](https://user-images.githubusercontent.com/3623889/26906859-4e7aeb8c-4c2a-11e7-8098-4eb35ef1f58a.jpg)
+![2017cv14nn2-70](https://user-images.githubusercontent.com/3623889/26906860-4e85b134-4c2a-11e7-8c22-7bcad590176f.jpg)
+![2017cv14nn2-71](https://user-images.githubusercontent.com/3623889/26906862-4e8676fa-4c2a-11e7-9070-e0818aa6ebac.jpg)
+![2017cv14nn2-72](https://user-images.githubusercontent.com/3623889/26906861-4e8620e2-4c2a-11e7-903d-7ee10b27ca82.jpg)
+![2017cv14nn2-73](https://user-images.githubusercontent.com/3623889/26906864-4e99717e-4c2a-11e7-8d6e-8afe6590cf97.jpg)
+![2017cv14nn2-74](https://user-images.githubusercontent.com/3623889/26906863-4e957286-4c2a-11e7-8aed-578551e259df.jpg)
+![2017cv14nn2-75](https://user-images.githubusercontent.com/3623889/26906865-4ea22512-4c2a-11e7-9145-88a20de48028.jpg)
+![2017cv14nn2-76](https://user-images.githubusercontent.com/3623889/26906866-4ead7cc8-4c2a-11e7-86d9-861d90e901ca.jpg)
+![2017cv14nn2-77](https://user-images.githubusercontent.com/3623889/26906867-4eb0caf4-4c2a-11e7-89bd-a01c6f2630a5.jpg)
+![2017cv14nn2-78](https://user-images.githubusercontent.com/3623889/26906868-4eb2188c-4c2a-11e7-91f9-474524e2c07b.jpg)
+![2017cv14nn2-79](https://user-images.githubusercontent.com/3623889/26906869-4ebef32c-4c2a-11e7-8fbe-d9bed06fd697.jpg)
+![2017cv14nn2-80](https://user-images.githubusercontent.com/3623889/26906870-4ec166c0-4c2a-11e7-9e41-ed678d6f6763.jpg)
+
+
 
 
 
