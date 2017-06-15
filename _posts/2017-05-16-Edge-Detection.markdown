@@ -149,11 +149,27 @@ $$
 ![2017cv05f-20](https://user-images.githubusercontent.com/3623889/26906707-ff7a42f8-4c29-11e7-840f-14c3010cb198.jpg)
 
 위 17~20 자료는 버릴게 없다.
+
+
+# Laplacian Of Gaussian
+
+
 ![2017cv05f-21](https://user-images.githubusercontent.com/3623889/26906708-ff85092c-4c29-11e7-9165-663a53349ac6.jpg)
 ![2017cv05f-22](https://user-images.githubusercontent.com/3623889/26906710-ff872a2c-4c29-11e7-9643-141ca7e2f438.jpg)
 ![2017cv05f-23](https://user-images.githubusercontent.com/3623889/26906709-ff85e1c6-4c29-11e7-847f-8f1a3eed440a.jpg)
+
+g 는 가우시안 함수고, 역삼각형은 라플라시안 함수다. 
+
+convolution 형태로 만들기 위해서 라플^2 * g 로 묶으면 위와 같은 mask 가 나온다.
+
+
 ![2017cv05f-24](https://user-images.githubusercontent.com/3623889/26906711-ff9b17c6-4c29-11e7-8662-51e043f26871.jpg)
 ![2017cv05f-25](https://user-images.githubusercontent.com/3623889/26906712-ff9cd26e-4c29-11e7-908b-b85e97b1988a.jpg)
+
+
+# Image Approximation
+
+
 ![2017cv05f-26](https://user-images.githubusercontent.com/3623889/26906713-ffa8a616-4c29-11e7-8fe5-d606c7899d7d.jpg)
 ![2017cv05f-27](https://user-images.githubusercontent.com/3623889/26906716-ffb775d8-4c29-11e7-9104-464ca4c8bb9f.jpg)
 ![2017cv05f-28](https://user-images.githubusercontent.com/3623889/26906717-ffbc4e1e-4c29-11e7-815d-b3aa7634e04d.jpg)
