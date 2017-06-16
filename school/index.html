@@ -37,7 +37,7 @@ layout: default
     {% endfor %}
 </ul>
 
-{% for cat in page.categories %}
+{% for cat in site.categories %}
   <h1>{{ cat }}</h1>
   <ul>
     {% for post in site.categories[cat] %}
