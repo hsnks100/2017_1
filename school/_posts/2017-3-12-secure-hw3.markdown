@@ -3,7 +3,7 @@ layout: post
 tags: 
 categories: [computer]
 title2: 컴퓨터보안 bezout's identity 와 확장 유클리드
-title: 컴퓨터보안 유클리디안 알고리즘 SAGEMATH HW1
+title: 컴퓨터보안 bezout's identity 와 확장 유클리드
 comments: true
 ---
 
