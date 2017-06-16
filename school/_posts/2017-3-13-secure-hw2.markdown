@@ -3,6 +3,7 @@ layout: post
 tags: 
 title2: 컴퓨터보안 SAESAR cipher 구현 HW2
 title: 컴퓨터보안 유클리디안 알고리즘 SAGEMATH HW1
+categories: [computer]
 comments: true
 ---
 
