@@ -4,6 +4,7 @@ tags:
 title2: 컴퓨터보안 bezout's identity 와 확장 유클리드
 comments: true
 ---
+categories: [school]
 
 
 # 유클리드 호제법
