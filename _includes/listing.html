@@ -4,12 +4,12 @@
 
         {% assign cat = page.category %}
 
-        {% if include.category == "" %}
+        {% if cat == "" %}
             {% assign posts = site.posts %}
         {% else %}
-            {% assign posts = site.categories[include.category] %} 
+            {% assign posts = site.categories.[cat] %}
         {% endif %}
-        {% assign posts = site.categories.[cat] %}
+
         {% for post in posts %}
             {% if post.publish != false %}
                 <li class="post-item">
