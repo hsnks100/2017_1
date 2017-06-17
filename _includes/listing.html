@@ -3,6 +3,7 @@
     <ul class="posts list-type-none">
 
         {% assign cat = page.category %}
+        category !!!! : {{ cat }}
 
         {% if cat == "" %}
             {% assign posts = paginator.posts %}
