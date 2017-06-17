@@ -1,13 +1,10 @@
 ---
-layout: default
-
-category: computer 
+layout: default 
 ---
 
 
-{% assign base_path = site.baseurl %}
-{% include listing.html posts=site.categories.computer %}
-
+{% include category.html %}
+{% include listing.html posts=site.categories.computer %} 
 {% include pagination.html %}
 
 
