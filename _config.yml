@@ -16,7 +16,6 @@ description: > # this means to ignore newlines until "baseurl:"
 
     포스팅과 관련된 댓글과 문의는 언제나 환영합니다.
 
-baseurl: "/2017_1" # the subpath of your site, e.g. /blog
 url: "https://hsnks100.github.io" # the base hostname & protocol for your site
 #github_username:  hsnks100
 disqus_shortname: codingdosa
@@ -55,7 +54,7 @@ excerpt_separator: "\n\n"
 detach:  false
 port:    4000
 host:   0.0.0.0
-baseurl: "" # does not include hostname
+baseurl: "/2017_1" # does not include hostname
 
 # Outputting
 permalink:     /post/:year-:month-:day-:title.html
