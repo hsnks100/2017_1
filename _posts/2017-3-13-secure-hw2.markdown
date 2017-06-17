@@ -3,6 +3,7 @@ layout: post
 tags: 
 title2: 컴퓨터보안 SAESAR cipher 구현 HW2
 comments: true
+category: secure
 ---
 
 

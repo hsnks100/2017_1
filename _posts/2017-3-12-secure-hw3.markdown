@@ -3,6 +3,7 @@ layout: post
 tags: 
 title2: 컴퓨터보안 bezout's identity 와 확장 유클리드
 comments: true
+category: secure
 ---
 
 

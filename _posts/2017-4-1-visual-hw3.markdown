@@ -3,6 +3,7 @@ layout: post
 tags: 
 title2: 교수 차의영, 시각개론 Histogram equalization 
 comments: true
+category: imageprocessing
 ---
 
 

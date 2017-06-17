@@ -5,6 +5,7 @@ author: 코딩도사(hsnks100@gmail.com)
 date: 2017-05-30 10:42 +0900
 tags: 
 comments: true
+category: imageprocessing
 ---
 * table of contents
 {:toc}

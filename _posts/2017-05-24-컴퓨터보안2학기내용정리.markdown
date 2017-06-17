@@ -4,6 +4,7 @@ tags:
 title2: 컴퓨터보안 기말고사 정리
 author: 코딩도사(hsnks100@gmail.com)
 comments: true
+category: secure
 ---
 
 

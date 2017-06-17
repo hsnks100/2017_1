@@ -3,6 +3,7 @@ layout: post
 tags: 
 title2: 컴퓨터보안 AES Contruction S-Box
 comments: true
+category: secure
 ---
 
 

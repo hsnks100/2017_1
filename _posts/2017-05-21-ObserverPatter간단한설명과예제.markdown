@@ -5,6 +5,7 @@ author: 코딩도사(hsnks100@gmail.com)
 date: 2017-05-21 22:09 +0900
 tags: 
 comments: true
+category: designpattern
 ---
 * table of contents
 {:toc}

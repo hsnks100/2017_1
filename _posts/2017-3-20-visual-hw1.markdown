@@ -3,6 +3,7 @@ layout: post
 tags: 
 title2: 시각개론 문자 세그먼테이션 HW1
 comments: true
+category: imageprocessing
 ---
 
 # 문자 세그먼테이션
