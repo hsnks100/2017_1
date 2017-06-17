@@ -1,12 +1,15 @@
 
 <div class="posts">
     <ul class="posts list-type-none">
+
+        {% assign cat = page.category %}
+
         {% if include.category == "" %}
             {% assign posts = site.posts %}
         {% else %}
             {% assign posts = site.categories[include.category] %} 
         {% endif %}
-        {% assign posts = site.categories.[page.category] %}
+        {% assign posts = site.categories.[cat] %}
         {% for post in posts %}
             {% if post.publish != false %}
                 <li class="post-item">
