@@ -3,7 +3,8 @@
     {% assign categories = site.categories | sort %}
     {% for category in categories %}
         <span class="site-tag">
-            <a href="{{ site.baseurl | append:category[0] }}">
+            {% assign url = site.baseurl | append : '/' %}
+            <a href="{{url | append:category[0] }}">
                 {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
             </a>
             <a href="#{{ category | first | slugify }}">
