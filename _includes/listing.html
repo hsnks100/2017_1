@@ -4,6 +4,7 @@
 
         {% assign cat = page.category %}
         category !!!! : {{ cat }}
+        {% assign posts = paginator.posts %}
 
         {% if cat != '' %}
             {% assign posts = site.categories.[cat] %}
