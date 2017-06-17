@@ -64,7 +64,7 @@ layout: default
             {% if paginator.page == 1 %}
                 <span class="current-page">1</span>
             {% else %}
-                <a href={% url | append '/' %}>1</a>
+                <a href={% url | append: '/' %}>1</a>
             {% endif %}
         </li>
 
@@ -73,7 +73,7 @@ layout: default
                 {% if count == paginator.page %}
                     <span class="current-page">{{count}}</span>
                 {% else %}
-                    <a href="{% url | append /page{{count}} %}">{{count}}</a>
+                    <a href="{% url | append: /page{{count}} %}">{{count}}</a>
                 {% endif %}
             </li>
         {% endfor %}
@@ -81,7 +81,7 @@ layout: default
 
     {% if paginator.next_page %}
         <p class="next">
-            <a href="{% url | append /page{{paginator.next_page}} %}">다음 페이지</a>
+            <a href="{% url | append: /page{{paginator.next_page}} %}">다음 페이지</a>
         </p>
     {% else %}
         <p class="next disabled">
