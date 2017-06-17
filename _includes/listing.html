@@ -2,17 +2,8 @@
 <div class="posts">
     <ul class="posts list-type-none">
 
-        {% assign cat = page.category %}
-        category !!!! : '{{ cat }}'
-        {% assign posts = paginator.posts %}
 
-        {% if cat != '' %}
-            {% assign posts = site.categories.[cat] %}
-        {% else %}
-            {% assign posts = paginator.posts %}
-        {% endif %}
-
-        {% for post in posts %}
+        {% for post in include.posts %}
             {% if post.publish != false %}
                 <li class="post-item">
 

@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign base_path = site.baseurl %}
-{% include listing.html category = ""%}
+{% include listing.html posts = paginator.posts %}
 
 {% include pagination.html %}
 
