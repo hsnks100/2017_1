@@ -9,6 +9,7 @@
         {% else %}
             {% assign posts = site.categories.[cat] %}
         {% endif %}
+        {% assign posts = paginator.posts %}
 
         {% for post in posts %}
             {% if post.publish != false %}
