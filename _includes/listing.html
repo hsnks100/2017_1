@@ -5,10 +5,10 @@
         {% assign cat = page.category %}
         category !!!! : {{ cat }}
 
-        {% if cat == "" %}
-            {% assign posts = paginator.posts %}
-        {% else %}
+        {% if cat != '' %}
             {% assign posts = site.categories.[cat] %}
+        {% else %}
+            {% assign posts = paginator.posts %}
         {% endif %}
         {% assign posts = paginator.posts %}
 
