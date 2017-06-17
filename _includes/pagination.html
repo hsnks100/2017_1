@@ -25,9 +25,9 @@
     {% if paginator.previous_page %}
         <p class="previous">
             {% if paginator.previous_page == 1 %}
-                <a href="{% url | append: '/' %}">이전 페이지</a>
+                <a href="{{ url | append: '/' }}">이전 페이지</a>
             {% else %}
-                <a href="{% url | append: /page{{paginator.previous_page}} %}">이전 페이지</a>
+                <a href="{{ url | append: '/page' | append: paginator.previous_page }}">이전 페이지</a>
             {% endif %}
         </p>
     {% else %}
@@ -41,7 +41,7 @@
             {% if paginator.page == 1 %}
                 <span class="current-page">1</span>
             {% else %}
-                <a href={% url | append: '/' %}>1</a>
+                <a href={{ url | append: '/' }}>1</a>
             {% endif %}
         </li>
 
@@ -50,7 +50,7 @@
                 {% if count == paginator.page %}
                     <span class="current-page">{{count}}</span>
                 {% else %}
-                    <a href="{% url | append: /page{{count}} %}">{{count}}</a>
+                    <a href="{{ url | append: '/page' | append:count }}">{{count}}</a>
                 {% endif %}
             </li>
         {% endfor %}
