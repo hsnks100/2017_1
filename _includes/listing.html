@@ -6,7 +6,7 @@
         {% else %}
             {% assign posts = site.categories[include.category] %} 
         {% endif %}
-        {% assign posts = site.categories[computer] %} 
+        {% assign posts = site.categories.computer %}
         {% for post in posts %}
             {% if post.publish != false %}
                 <li class="post-item">
